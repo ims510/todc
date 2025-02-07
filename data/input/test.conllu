@@ -1,0 +1,58 @@
+# newdoc id = 1984Orwell-b1-ttl
+# sent_id = train-1
+# text = Lui Winston îi displăcuse fata asta din primul moment când o văzuse.
+1	Lui	lui	DET	Tf-so	Case=Dat,Gen|Definite=Def|Number=Sing|PronType=Art	2	det	_	_
+2	Winston	Winston	PROPN	Np	_	4	iobj	_	_
+3	îi	el	PRON	Pp3-sd--------w	Case=Dat|Number=Sing|Person=3|PronType=Prs|Strength=Weak	4	expl	_	_
+4	displăcuse	displăcea	VERB	Vmil3s	Mood=Ind|Number=Sing|Person=3|Tense=Pqp|VerbForm=Fin	0	root	_	_
+5	fata	fată	NOUN	Ncfsry	Case=Acc,Nom|Definite=Def|Gender=Fem|Number=Sing	4	nsubj	_	_
+6	asta	acesta	DET	Dd3fsr---o	Case=Acc,Nom|Gender=Fem|Number=Sing|Person=3|Position=Postnom|PronType=Dem	5	det	_	_
+7	din	din	ADP	Spsa	AdpType=Prep|Case=Acc	9	case	_	_
+8	primul	prim	NUM	Momsrly	Case=Acc,Nom|Definite=Def|Gender=Masc|Number=Sing|NumForm=Word|NumType=Ord	9	nummod	_	_
+9	moment	moment	NOUN	Ncms-n	Definite=Ind|Gender=Masc|Number=Sing	4	obl	_	_
+10	când	când	ADV	Rw	PronType=Int,Rel	12	advmod	_	_
+11	o	el	PRON	Pp3fsa--------w	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs|Strength=Weak	12	obj	_	_
+12	văzuse	vedea	VERB	Vmil3s	Mood=Ind|Number=Sing|Person=3|Tense=Pqp|VerbForm=Fin	9	acl	_	SpaceAfter=No
+13	.	.	PUNCT	PERIOD	_	4	punct	_	_
+
+# sent_id = train-2
+# text = Știa și de ce.
+1	Știa	ști	VERB	Vmii3s	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
+2	și	și	CCONJ	Crssp	Polarity=Pos	4	advmod	_	_
+3	de	de	ADP	Spsa	AdpType=Prep|Case=Acc	4	case	_	_
+4	ce	ce	PRON	Pw3--r	Case=Acc,Nom|Person=3|PronType=Int,Rel	1	ccomp	_	SpaceAfter=No
+5	.	.	PUNCT	PERIOD	_	1	punct	_	_
+
+# sent_id = train-3
+# text = Din cauza atmosferei de gazon de hochei și de băi reci și de excursii în grup și în general de castitate pe care reușea s-o creeze în jurul ei.
+1	Din	din	ADP	Spsa	AdpType=Prep|Case=Acc	3	case	_	_
+2	cauza	cauză	NOUN	Ncfsry	Case=Acc,Nom|Definite=Def|Gender=Fem|Number=Sing	1	fixed	_	_
+3	atmosferei	atmosferă	NOUN	Ncfsoy	Case=Dat,Gen|Definite=Def|Gender=Fem|Number=Sing	0	root	_	_
+4	de	de	ADP	Spsa	AdpType=Prep|Case=Acc	5	case	_	_
+5	gazon	gazon	NOUN	Ncms-n	Definite=Ind|Gender=Masc|Number=Sing	3	nmod	_	_
+6	de	de	ADP	Spsa	AdpType=Prep|Case=Acc	7	case	_	_
+7	hochei	hochei	NOUN	Ncms-n	Definite=Ind|Gender=Masc|Number=Sing	5	nmod	_	_
+8	și	și	CCONJ	Crssp	Polarity=Pos	10	cc	_	_
+9	de	de	ADP	Spsa	AdpType=Prep|Case=Acc	10	case	_	_
+10	băi	baie	NOUN	Ncfp-n	Definite=Ind|Gender=Fem|Number=Plur	5	conj	_	_
+11	reci	rece	ADJ	Afp-p-n	Definite=Ind|Degree=Pos|Number=Plur	10	amod	_	_
+12	și	și	CCONJ	Crssp	Polarity=Pos	14	cc	_	_
+13	de	de	ADP	Spsa	AdpType=Prep|Case=Acc	14	case	_	_
+14	excursii	excursie	NOUN	Ncfp-n	Definite=Ind|Gender=Fem|Number=Plur	5	conj	_	_
+15	în	în	ADP	Spsa	AdpType=Prep|Case=Acc	16	case	_	_
+16	grup	grup	NOUN	Ncms-n	Definite=Ind|Gender=Masc|Number=Sing	14	nmod	_	_
+17	și	și	CCONJ	Crssp	Polarity=Pos	21	cc	_	_
+18	în	în	ADP	Spsa	AdpType=Prep|Case=Acc	21	advmod	_	_
+19	general	general	NOUN	Ncms-n	Definite=Ind|Gender=Masc|Number=Sing	18	fixed	_	_
+20	de	de	ADP	Spsa	AdpType=Prep|Case=Acc	21	case	_	_
+21	castitate	castitate	NOUN	Ncfsrn	Case=Acc,Nom|Definite=Ind|Gender=Fem|Number=Sing	5	conj	_	_
+22	pe	pe	ADP	Spsa	AdpType=Prep|Case=Acc	23	case	_	_
+23	care	care	PRON	Pw3--r	Case=Acc,Nom|Person=3|PronType=Int,Rel	27	obj	_	_
+24	reușea	reuși	VERB	Vmii3s	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	3	acl	_	_
+25	s-	să	PART	Qs-y	Mood=Sub|Variant=Short	27	mark	_	SpaceAfter=No
+26	o	el	PRON	Pp3fsa--------w	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs|Strength=Weak	27	expl	_	_
+27	creeze	crea	VERB	Vmsp3	Mood=Sub|Person=3|Tense=Pres|VerbForm=Fin	24	ccomp	_	_
+28	în	în	ADP	Spsa	AdpType=Prep|Case=Acc	30	case	_	_
+29	jurul	jur	NOUN	Ncmsry	Case=Acc,Nom|Definite=Def|Gender=Masc|Number=Sing	28	fixed	_	_
+30	ei	lui	DET	Ds3---s	Number[psor]=Sing|Person=3|Poss=Yes|PronType=Prs	27	obl	_	SpaceAfter=No
+31	.	.	PUNCT	PERIOD	_	3	punct	_	_
