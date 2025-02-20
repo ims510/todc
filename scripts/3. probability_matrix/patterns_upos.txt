@@ -1,0 +1,46 @@
+scope: pattern { X[upos] }
+conclusion: X[upos<>PUNCT]
+
+templates:
+    base:
+        own:
+            method: exclude
+            regexp: ["form", "textform", "wordform", "lemma", "SpaceAfter", "Typo", "xpos", "CorrectForm", 
+            "CorrectGender", "CorrectMood", "CorrectNumber", "CorrectPerson", "CorrectSpaceAfter",
+            "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom", "upos"]            
+            lemma_top_k: 0
+        parent:
+            method: exclude
+            regexp: ["form", "textform", "wordform", "lemma", "SpaceAfter", "Typo", "xpos", "CorrectForm",
+            "CorrectGender", "CorrectMood", "CorrectNumber", "CorrectPerson", "CorrectSpaceAfter",
+            "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom"]            
+            lemma_top_k: 0
+        child:
+            method: exclude
+            regexp: ["form", "textform", "wordform", "lemma", "SpaceAfter", "Typo", "xpos", "CorrectForm", 
+            "CorrectGender", "CorrectMood", "CorrectNumber", "CorrectPerson", "CorrectSpaceAfter",
+            "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom"]            
+            lemma_top_k: 0
+
+features:
+    X: 
+        own:
+            method: exclude
+            regexp: ["form", "textform", "wordform", "lemma", "SpaceAfter", "Typo", "xpos", "CorrectForm", 
+            "CorrectGender", "CorrectMood", "CorrectNumber", "CorrectPerson", "CorrectSpaceAfter",
+            "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom", "Shared", "upos"]            
+            lemma_top_k: 0
+        parent:
+            method: exclude
+            regexp: ["form", "textform", "wordform", "lemma", "SpaceAfter", "Typo", "xpos", "CorrectForm",
+            "CorrectGender", "CorrectMood", "CorrectNumber", "CorrectPerson", "CorrectSpaceAfter",
+            "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom", "Shared"]            
+            lemma_top_k: 0
+        child:
+            method: exclude
+            regexp: ["form", "textform", "wordform", "lemma", "SpaceAfter", "Typo", "xpos", "CorrectForm", 
+            "CorrectGender", "CorrectMood", "CorrectNumber", "CorrectPerson", "CorrectSpaceAfter",
+            "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom", "Shared"]            
+            lemma_top_k: 0
+
+    
