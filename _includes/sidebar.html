@@ -1,0 +1,31 @@
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="{{ site.baseurl }}/">
+          {{ site.title }}
+        </a>
+      </h1>
+      <p class="lead">{{ site.description }}</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item{% if page.url == '/' %} active{% endif %}" href="{{ site.baseurl }}/">Page d'accueil</a>
+
+      {% for item in site.sidebar %}
+        {% assign url = '/' | append: item.name | append: '/' %}
+        <a class="sidebar-nav-item{% if page.url contains url %} active{% endif %}" href="{{ site.baseurl }}/{{ item.name }}/">{{ item.title }}</a>
+        {% if page.url contains url %}
+          {% for child in item.children %}
+            {% assign child_url = url | append: child.name | append: '/' %}
+            <a class="sidebar-nav-item child sidebar-nav-item{% if page.url == child_url %} active{% endif %}" href="{{ site.baseurl }}/{{ item.name }}/{{ child.name }}">{{ child.title }}</a>
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+      
+      
+    </nav>
+
+    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+  </div>
+</div>
