@@ -1,0 +1,22 @@
+# Setup
+title:               Treebank categories clustering and outlier detection
+# tagline:             'A Jekyll theme'
+description:         'Unsupervised approach to clustering treebank categories and detecting outliers building on the grew library and GREX'
+# url:                 http://lanyon.getpoole.com
+# baseurl:             ''
+paginate:            5
+permalink:           pretty
+
+# About/contact
+author:
+  name:              Ioana-Madalina Silai
+  url:               https://github.com/ims510/todc
+  email:             madalina.silai@icloud.com
+
+# Gems
+plugins:
+  - jekyll-paginate
+
+# Custom vars
+# version:             1.1.0
+# google_analytics_id: #UA-XXXX-Y
