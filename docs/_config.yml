@@ -3,7 +3,7 @@ title:               Treebank categories clustering and outlier detection
 # tagline:             'A Jekyll theme'
 description:         'Unsupervised approach to clustering treebank categories and detecting outliers building on the grew library and GREX'
 # url:                 http://lanyon.getpoole.com
-# baseurl:             ''
+baseurl:             'https://ims510.github.io/todc/'
 paginate:            5
 permalink:           pretty
 

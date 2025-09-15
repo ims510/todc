@@ -1,0 +1,10 @@
+support,itemsets
+0.983739837398374,frozenset({'node:X:own:rel_shallow=advmod'})
+0.6341463414634146,frozenset({'node:X:parent:position=after'})
+0.8211382113821138,frozenset({'node:X:parent:Number=Sing'})
+0.7235772357723578,frozenset({'node:X:parent:upos=VERB'})
+0.6341463414634146,"frozenset({'node:X:own:rel_shallow=advmod', 'node:X:parent:position=after'})"
+0.8211382113821138,"frozenset({'node:X:parent:Number=Sing', 'node:X:own:rel_shallow=advmod'})"
+0.7073170731707317,"frozenset({'node:X:own:rel_shallow=advmod', 'node:X:parent:upos=VERB'})"
+0.6260162601626016,"frozenset({'node:X:parent:Number=Sing', 'node:X:parent:upos=VERB'})"
+0.6260162601626016,"frozenset({'node:X:parent:Number=Sing', 'node:X:own:rel_shallow=advmod', 'node:X:parent:upos=VERB'})"

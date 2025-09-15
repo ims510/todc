@@ -1,4 +1,4 @@
-scope: pattern { X[lemma] }
+scope: pattern { X[lemma] } without {X[InIdiom]} without {X[Idiom]}
 conclusion: X[upos=ADV]
 
 templates:
@@ -7,20 +7,37 @@ templates:
             method: exclude
             regexp: ["form", "textform", "wordform", "lemma", "SpaceAfter", "Typo", "xpos", "CorrectForm", 
             "CorrectGender", "CorrectMood", "CorrectNumber", "CorrectPerson", "CorrectSpaceAfter",
-            "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom", "upos"]            
+            "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom", "upos", ExtPos, Title, InTitle, Idiom, InIdiom,
+            Foreign, Lang, Scrap]            
             lemma_top_k: 0
         parent:
             method: exclude
-            regexp: ["form", "textform", "wordform", "lemma", "SpaceAfter", "Typo", "xpos", "CorrectForm",
+            regexp: ["form", "textform", "wordform", "lemma", "SpaceAfter", "Typo", "xpos", "CorrectForm", 
             "CorrectGender", "CorrectMood", "CorrectNumber", "CorrectPerson", "CorrectSpaceAfter",
-            "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom"]            
+            "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom", Title, InTitle, Idiom, InIdiom,
+            Foreign, Lang, Scrap]               
             lemma_top_k: 0
         child:
             method: exclude
             regexp: ["form", "textform", "wordform", "lemma", "SpaceAfter", "Typo", "xpos", "CorrectForm", 
             "CorrectGender", "CorrectMood", "CorrectNumber", "CorrectPerson", "CorrectSpaceAfter",
-            "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom"]            
+            "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom", Title, InTitle, Idiom, InIdiom,
+            Foreign, Lang, Scrap]             
             lemma_top_k: 0
+        prev:
+            method: exclude
+            regexp: ["form", "textform", "wordform", "lemma", "SpaceAfter", "Typo", "xpos", "CorrectForm", 
+            "CorrectGender", "CorrectMood", "CorrectNumber", "CorrectPerson", "CorrectSpaceAfter",
+            "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom", Title, InTitle, Idiom, InIdiom,
+            Foreign, Lang, Scrap]   
+            lemma_top_k: -1
+        next:
+            method: exclude
+            regexp: ["form", "textform", "wordform", "lemma", "SpaceAfter", "Typo", "xpos", "CorrectForm", 
+            "CorrectGender", "CorrectMood", "CorrectNumber", "CorrectPerson", "CorrectSpaceAfter",
+            "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom", Title, InTitle, Idiom, InIdiom,
+            Foreign, Lang, Scrap]   
+            lemma_top_k: -1
 
 features:
     X: 
@@ -28,19 +45,36 @@ features:
             method: exclude
             regexp: ["form", "textform", "wordform", "lemma", "SpaceAfter", "Typo", "xpos", "CorrectForm", 
             "CorrectGender", "CorrectMood", "CorrectNumber", "CorrectPerson", "CorrectSpaceAfter",
-            "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom", "Shared", "upos"]            
+            "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom", Title, InTitle, Idiom, InIdiom,
+            Foreign, Lang, Scrap, upos, ExtPos]              
             lemma_top_k: 0
         parent:
             method: exclude
-            regexp: ["form", "textform", "wordform", "lemma", "SpaceAfter", "Typo", "xpos", "CorrectForm",
+            regexp: ["form", "textform", "wordform", "lemma", "SpaceAfter", "Typo", "xpos", "CorrectForm", 
             "CorrectGender", "CorrectMood", "CorrectNumber", "CorrectPerson", "CorrectSpaceAfter",
-            "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom", "Shared"]            
+            "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom", Title, InTitle, Idiom, InIdiom,
+            Foreign, Lang, Scrap]          
             lemma_top_k: 0
         child:
             method: exclude
             regexp: ["form", "textform", "wordform", "lemma", "SpaceAfter", "Typo", "xpos", "CorrectForm", 
             "CorrectGender", "CorrectMood", "CorrectNumber", "CorrectPerson", "CorrectSpaceAfter",
-            "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom", "Shared"]            
+            "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom", Title, InTitle, Idiom, InIdiom,
+            Foreign, Lang, Scrap]            
             lemma_top_k: 0
+        prev:
+            method: exclude
+            regexp: ["form", "textform", "wordform", "lemma", "SpaceAfter", "Typo", "xpos", "CorrectForm", 
+            "CorrectGender", "CorrectMood", "CorrectNumber", "CorrectPerson", "CorrectSpaceAfter",
+            "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom", Title, InTitle, Idiom, InIdiom,
+            Foreign, Lang, Scrap] 
+            lemma_top_k: -1
+        next:
+            method: exclude
+            regexp: ["form", "textform", "wordform", "lemma", "SpaceAfter", "Typo", "xpos", "CorrectForm", 
+            "CorrectGender", "CorrectMood", "CorrectNumber", "CorrectPerson", "CorrectSpaceAfter",
+            "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom", Title, InTitle, Idiom, InIdiom,
+            Foreign, Lang, Scrap] 
+            lemma_top_k: -1
 
     

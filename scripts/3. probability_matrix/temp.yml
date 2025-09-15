@@ -1,0 +1,137 @@
+conclusion: X[upos=ADP]
+features:
+  X:
+    child:
+      lemma_top_k: 0
+      method: exclude
+      regexp:
+      - form
+      - textform
+      - wordform
+      - lemma
+      - SpaceAfter
+      - Typo
+      - xpos
+      - CorrectForm
+      - CorrectGender
+      - CorrectMood
+      - CorrectNumber
+      - CorrectPerson
+      - CorrectSpaceAfter
+      - CorrectTense
+      - CorrectVerbForm
+      - CorrectVoice
+      - wordfom
+      - Shared
+    own:
+      lemma_top_k: 0
+      method: exclude
+      regexp:
+      - form
+      - textform
+      - wordform
+      - lemma
+      - SpaceAfter
+      - Typo
+      - xpos
+      - CorrectForm
+      - CorrectGender
+      - CorrectMood
+      - CorrectNumber
+      - CorrectPerson
+      - CorrectSpaceAfter
+      - CorrectTense
+      - CorrectVerbForm
+      - CorrectVoice
+      - wordfom
+      - Shared
+      - upos
+    parent:
+      lemma_top_k: 0
+      method: exclude
+      regexp:
+      - form
+      - textform
+      - wordform
+      - lemma
+      - SpaceAfter
+      - Typo
+      - xpos
+      - CorrectForm
+      - CorrectGender
+      - CorrectMood
+      - CorrectNumber
+      - CorrectPerson
+      - CorrectSpaceAfter
+      - CorrectTense
+      - CorrectVerbForm
+      - CorrectVoice
+      - wordfom
+      - Shared
+scope: pattern { X[upos=CCONJ|ADP] }
+templates:
+  base:
+    child:
+      lemma_top_k: 0
+      method: exclude
+      regexp:
+      - form
+      - textform
+      - wordform
+      - lemma
+      - SpaceAfter
+      - Typo
+      - xpos
+      - CorrectForm
+      - CorrectGender
+      - CorrectMood
+      - CorrectNumber
+      - CorrectPerson
+      - CorrectSpaceAfter
+      - CorrectTense
+      - CorrectVerbForm
+      - CorrectVoice
+      - wordfom
+    own:
+      lemma_top_k: 0
+      method: exclude
+      regexp:
+      - form
+      - textform
+      - wordform
+      - lemma
+      - SpaceAfter
+      - Typo
+      - xpos
+      - CorrectForm
+      - CorrectGender
+      - CorrectMood
+      - CorrectNumber
+      - CorrectPerson
+      - CorrectSpaceAfter
+      - CorrectTense
+      - CorrectVerbForm
+      - CorrectVoice
+      - wordfom
+      - upos
+    parent:
+      lemma_top_k: 0
+      method: exclude
+      regexp:
+      - form
+      - textform
+      - wordform
+      - lemma
+      - SpaceAfter
+      - Typo
+      - xpos
+      - CorrectForm
+      - CorrectGender
+      - CorrectMood
+      - CorrectNumber
+      - CorrectPerson
+      - CorrectSpaceAfter
+      - CorrectTense
+      - CorrectVerbForm
+      - CorrectVoice
+      - wordfom
