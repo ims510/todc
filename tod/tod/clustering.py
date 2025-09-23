@@ -4,8 +4,9 @@ from scipy.spatial.distance import pdist
 from scipy.cluster.hierarchy import linkage, fcluster
 from sklearn.metrics import silhouette_score
 from sklearn.cluster import DBSCAN
+from sklearn.cluster import KMeans as SKLearnKMeans
 import numpy as np
-
+import pysparcl
 
 class Clustering(ABC):
     def __init__(self):
@@ -44,7 +45,7 @@ class HierarchicalClustering(Clustering):
         distance_matrix = pdist(corpus.feature_matrix, metric="cosine")
         self.linked = linkage(
             distance_matrix, method="complete", optimal_ordering=True
-        )  # TODO: check these parameters
+        )  
         labels = fcluster(self.linked, optimal_clusters, criterion="maxclust")
         self.clusters = {i: [] for i in range(1, optimal_clusters + 1)}
         for i, label in enumerate(labels):
@@ -73,6 +74,19 @@ class HierarchicalClustering(Clustering):
         )  # +2 because range starts from 2
         return optimal_clusters, silhouette_scores
 
+class KMeans(Clustering):
+    def __init__(self, corpus: Corpus, k: int = 10, n_init: int = 20):
+        super().__init__()
+ 
+
+        kmeans = SKLearnKMeans(n_clusters=k, init='random', n_init=n_init).fit(corpus.feature_matrix)
+        labels = kmeans.labels_
+        self.clusters = {i: [] for i in range(k)}
+        for i, label in enumerate(labels):
+            self.clusters[label].append(i)
+
+        self._generate_cluster2lexunit(self.clusters, corpus)
+        self._generate_lexunit2cluster(self.clusters, corpus)
 
 class DBScan(Clustering):
     """
@@ -92,3 +106,48 @@ class DBScan(Clustering):
 
         self._generate_cluster2lexunit(self.clusters, corpus)
         self._generate_lexunit2cluster(self.clusters, corpus)
+
+class SparseHierarchical(Clustering):
+    def __init__(self, corpus: Corpus, max_clusters: int = 50, method="average", metric="cosine"):
+        super().__init__()
+
+        optimal_clusters, silhouette_scores, perm, result = self.find_optimal_clusters(
+            corpus, max_clusters, method=method, metric=metric
+        )
+ 
+        self.linked = linkage(
+            result["u"], method=method, optimal_ordering=True
+        )  
+        labels = fcluster(self.linked, optimal_clusters, criterion="maxclust")
+        self.clusters = {i: [] for i in range(1, optimal_clusters + 1)}
+        for i, label in enumerate(labels):
+            self.clusters[label].append(i)
+
+        self._generate_cluster2lexunit(self.clusters, corpus)
+        self._generate_lexunit2cluster(self.clusters, corpus)
+
+    def find_optimal_clusters(
+        self, corpus: Corpus, max_clusters: int = 50, metric="cosine", method="average"
+    ):
+        
+        perm = pysparcl.hierarchy.permute(corpus.feature_matrix)
+        best_weight_bound = perm['bestw']
+        result = pysparcl.hierarchy.pdist(
+            corpus.feature_matrix, wbound=best_weight_bound
+        )
+        distance_matrix = result["u"]
+        linked = linkage(distance_matrix, method=method, optimal_ordering=True)
+
+        silhouette_scores = []
+        for num_clusters in range(2, max_clusters + 1):
+            labels = fcluster(linked, num_clusters, criterion="maxclust")
+            if len(np.unique(labels)) > 1:  # Ensure there is more than one cluster
+                score = silhouette_score(corpus.feature_matrix, labels, metric=metric)
+                silhouette_scores.append(score)
+            else:
+                silhouette_scores.append(-1)  # Append a low score if only one cluster
+        
+        optimal_clusters = (
+            np.argmax(silhouette_scores) + 2
+        )  # +2 because range starts from 2
+        return optimal_clusters, silhouette_scores, perm, result     
