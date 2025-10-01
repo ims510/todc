@@ -39,8 +39,8 @@ def annotate_treebank_with_clusters(treebank_path, cluster_assignments, config, 
         f.write(conll_string)
 
 treebank_path = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/data/input/Universal_Dependencies/ud-treebanks-v2.15/UD_French-GSD"
-output_path = "adverbs_cluster_annotated.conllu"
-cluster_assignment_csv = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/scripts/19.investigate_verbs_sequoia/adverbs_cluster_assignments.csv"
+output_path = "all_nodes_cluster_annotated.conllu"
+cluster_assignment_csv = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/scripts/20.sparse_vs_grex/all_nodes_cluster_assignments.csv"
 config = "ud"
 
 cluster_assignments = get_dict_from_csv(cluster_assignment_csv)
