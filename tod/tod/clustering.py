@@ -111,7 +111,7 @@ class SparseHierarchical(Clustering):
     def __init__(self, corpus: Corpus, max_clusters: int = 50, method="average", metric="cosine"):
         super().__init__()
 
-        optimal_clusters, silhouette_scores, perm, result = self.find_optimal_clusters(
+        optimal_clusters, silhouette_scores, perm, result, weights = self.find_optimal_clusters(
             corpus, max_clusters, method=method, metric=metric
         )
  
@@ -126,6 +126,9 @@ class SparseHierarchical(Clustering):
         self._generate_cluster2lexunit(self.clusters, corpus)
         self._generate_lexunit2cluster(self.clusters, corpus)
 
+        important_features = np.argsort(-weights)
+        for i in important_features[:5]:
+            print(f"Feature {corpus._idx2feature[i]}: weight {weights[i]:.3f}")
     def find_optimal_clusters(
         self, corpus: Corpus, max_clusters: int = 50, metric="cosine", method="average"
     ):
@@ -136,6 +139,7 @@ class SparseHierarchical(Clustering):
             corpus.feature_matrix, wbound=best_weight_bound
         )
         distance_matrix = result["u"]
+        weights = result["w"]
         linked = linkage(distance_matrix, method=method, optimal_ordering=True)
 
         silhouette_scores = []
@@ -150,4 +154,4 @@ class SparseHierarchical(Clustering):
         optimal_clusters = (
             np.argmax(silhouette_scores) + 2
         )  # +2 because range starts from 2
-        return optimal_clusters, silhouette_scores, perm, result     
+        return optimal_clusters, silhouette_scores, perm, result, weights     
