@@ -81,6 +81,7 @@ class KMeans(Clustering):
 
         kmeans = SKLearnKMeans(n_clusters=k, init='random', n_init=n_init).fit(corpus.feature_matrix)
         labels = kmeans.labels_
+        self.labels = labels
         self.clusters = {i: [] for i in range(k)}
         for i, label in enumerate(labels):
             self.clusters[label].append(i)
@@ -154,4 +155,42 @@ class SparseHierarchical(Clustering):
         optimal_clusters = (
             np.argmax(silhouette_scores) + 2
         )  # +2 because range starts from 2
-        return optimal_clusters, silhouette_scores, perm, result, weights     
+        return optimal_clusters, silhouette_scores, perm, result, weights
+    
+class SparseKMeans(Clustering):
+    def __init__(self, top_n_features, corpus: Corpus, k: int = 10, nperms: int = 25, nvals: int = 10):
+        super().__init__()
+ 
+        perm = pysparcl.cluster.permute(corpus.feature_matrix, k=k, nperms=nperms, nvals=nvals)
+        best_weight_bound = perm['bestw']
+        result = pysparcl.cluster.kmeans(corpus.feature_matrix, k=k, wbound=best_weight_bound)[0]
+        weights = result['ws']
+
+        feature_importance = []
+        for feat_idx in range(len(weights)):
+            feature_name = corpus.idx2feature(feat_idx)
+            feature_weight = weights[feat_idx]
+            feature_importance.append((feat_idx, feature_name, feature_weight))
+
+        feature_importance_sorted = sorted(feature_importance, key=lambda x: x[2], reverse=True)
+
+        all_features_printing = False
+        if not top_n_features or top_n_features > len(feature_importance_sorted):
+            top_n_features = len(feature_importance_sorted)
+            all_features_printing = True
+        if all_features_printing:
+            print("All features ranked by importance:")
+        else:
+            print(f"Top {top_n_features} features ranked by importance:")
+        print("=" * 80)
+        for rank, (feat_idx, feature_name, feature_weight) in enumerate(feature_importance_sorted[:top_n_features], start=1):
+            print(f"{rank:3d}. {feature_name:<50} weight: {feature_weight:.6f}")
+
+        cluster_assignments = result['cs']
+        self.clusters = {i: [] for i in range(k)}
+        for i, cluster_idx in enumerate(cluster_assignments):
+            self.clusters[cluster_idx].append(i) 
+
+        self._generate_cluster2lexunit(self.clusters, corpus)
+        self._generate_lexunit2cluster(self.clusters, corpus)   
+
