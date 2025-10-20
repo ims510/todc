@@ -158,33 +158,36 @@ class SparseHierarchical(Clustering):
         return optimal_clusters, silhouette_scores, perm, result, weights
     
 class SparseKMeans(Clustering):
-    def __init__(self, top_n_features, corpus: Corpus, k: int = 10, nperms: int = 25, nvals: int = 10):
+    def __init__(self, corpus: Corpus, k: int = 10, nperms: int = 25, nvals: int = 10, top_n_features = None, cluster_defining_features: bool = True):
         super().__init__()
  
         perm = pysparcl.cluster.permute(corpus.feature_matrix, k=k, nperms=nperms, nvals=nvals)
         best_weight_bound = perm['bestw']
-        result = pysparcl.cluster.kmeans(corpus.feature_matrix, k=k, wbound=best_weight_bound)[0]
+        result = pysparcl.cluster.kmeans(corpus.feature_matrix, k=k, wbounds=best_weight_bound)[0]
         weights = result['ws']
 
-        feature_importance = []
-        for feat_idx in range(len(weights)):
-            feature_name = corpus.idx2feature(feat_idx)
-            feature_weight = weights[feat_idx]
-            feature_importance.append((feat_idx, feature_name, feature_weight))
-
-        feature_importance_sorted = sorted(feature_importance, key=lambda x: x[2], reverse=True)
-
-        all_features_printing = False
-        if not top_n_features or top_n_features > len(feature_importance_sorted):
-            top_n_features = len(feature_importance_sorted)
-            all_features_printing = True
-        if all_features_printing:
-            print("All features ranked by importance:")
+        if cluster_defining_features:
+            self.get_cluster_defining_features(corpus, result, top_n_features)
         else:
-            print(f"Top {top_n_features} features ranked by importance:")
-        print("=" * 80)
-        for rank, (feat_idx, feature_name, feature_weight) in enumerate(feature_importance_sorted[:top_n_features], start=1):
-            print(f"{rank:3d}. {feature_name:<50} weight: {feature_weight:.6f}")
+            feature_importance = []
+            for feat_idx in range(len(weights)):
+                feature_name = corpus.idx2feature(feat_idx)
+                feature_weight = weights[feat_idx]
+                feature_importance.append((feat_idx, feature_name, feature_weight))
+
+            feature_importance_sorted = sorted(feature_importance, key=lambda x: x[2], reverse=True)
+
+            all_features_printing = False
+            if top_n_features == None or top_n_features > len(feature_importance_sorted):
+                top_n_features = len(feature_importance_sorted)
+                all_features_printing = True
+            if all_features_printing:
+                print("All features ranked by importance:")
+            else:
+                print(f"Top {top_n_features} features ranked by importance:")
+            print("=" * 80)
+            for rank, (feat_idx, feature_name, feature_weight) in enumerate(feature_importance_sorted[:top_n_features], start=1):
+                print(f"{rank:3d}. {feature_name:<50} weight: {feature_weight:.6f}")
 
         cluster_assignments = result['cs']
         self.clusters = {i: [] for i in range(k)}
@@ -192,5 +195,89 @@ class SparseKMeans(Clustering):
             self.clusters[cluster_idx].append(i) 
 
         self._generate_cluster2lexunit(self.clusters, corpus)
-        self._generate_lexunit2cluster(self.clusters, corpus)   
+        self._generate_lexunit2cluster(self.clusters, corpus)
+
+    def get_cluster_defining_features(self, corpus, result, top_n_features, weight_threshold=0.0):
+        """
+        Extract the defining features for each cluster from a sparse k-means result.
+        
+        Parameters
+        ----------
+        x : np.ndarray
+            Data matrix of shape (n_samples, n_features).
+        results : list of dict
+            Output from the `kmeans` function. Each dict must contain:
+            - 'ws': feature weights (array of length n_features)
+            - 'cs': cluster assignments (array of length n_samples)
+        top_n : int, optional
+            Number of top features to return per cluster (default=10).
+        result_index : int, optional
+            Index of which result in the list to use (default=-1, i.e. the last one).
+        weight_threshold : float, optional
+            Minimum absolute weight for a feature to be considered (default=0.0).
+
+        Returns
+        -------
+        cluster_features : dict
+            Dictionary mapping cluster index → pandas DataFrame with columns:
+            ['feature_index', 'weight', 'centroid_value', 'global_mean', 'importance'].
+            Sorted by importance (descending).
+        """
+        # Select the desired result
+        ws = np.array(result['ws'])
+        cs = np.array(result['cs'])
+        x = corpus.feature_matrix
+        
+        # Optional normalization of weights
+        if np.sum(np.abs(ws)) > 0:
+            ws = ws / np.sum(np.abs(ws))
+        
+        # Filter by threshold
+        if weight_threshold > 0:
+            ws_mask = ws > weight_threshold
+        else:
+            ws_mask = np.ones_like(ws, dtype=bool)
+        
+        k = len(np.unique(cs))
+        p = x.shape[1]
+        
+        # Compute centroids and global mean
+        centroids = np.zeros((k, p))
+        for j in range(k):
+            centroids[j, :] = x[cs == j].mean(axis=0)
+        global_mean = x.mean(axis=0)
+        
+        # Build output
+        cluster_features = {}
+        for j in range(k):
+            diffs = np.abs(centroids[j, :] - global_mean)
+            importance = ws * diffs
+            
+            # Filter low-weight features
+            importance[~ws_mask] = 0
+            
+            # Get top features
+            top_idx = np.argsort(importance)[::-1]
+            
+            feature_importance = [(idx, corpus.idx2feature(idx), importance[idx]) for idx in top_idx]
+
+            all_features_printing = False
+            if top_n_features == None or top_n_features > len(feature_importance):
+                top_n_features = len(feature_importance)
+                all_features_printing = True
+
+            print("=" * 80)
+            if all_features_printing:
+                print(f"All Cluster {j} features ranked by importance:")
+            else:
+                print(f"Cluster {j} - Top {top_n_features} defining features:")
+            print("=" * 80)
+
+            for rank, (feat_idx, feature_name, feature_imp) in enumerate(feature_importance[:top_n_features], start=1):
+                print(f"{rank:3d}. {feature_name:<50} importance: {feature_imp:.6f}")
+
+            print()
+            cluster_features[j] = feature_importance
+        
+        return cluster_features   
 

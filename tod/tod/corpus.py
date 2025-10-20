@@ -95,11 +95,10 @@ class Corpus:
                 new_match_upos[key] = value
         match_upos = new_match_upos
 
-        nb_matches = 0
         for key, value in match_upos.items():
-            nb_matches += len(value)
-        # print(f"Number of matches after filtering: {nb_matches}")
-
+            if len(value) < min_occurrences:
+                print(f"WARNING: {key} has only {len(value)} occurrences but passed filtering!")
+        
         # grex stuff
         with open(patterns_text_file) as in_stream:
             config = yaml.load(in_stream, Loader=yaml.Loader)
