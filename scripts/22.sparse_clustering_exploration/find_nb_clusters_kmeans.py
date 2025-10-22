@@ -160,12 +160,12 @@ grew_pattern = "pattern{X[upos<>PUNCT]}"
 patterns_text_file = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/scripts/3. probability_matrix/patterns_all_nodes.txt"
 analysed_category = "all_nodes"
 
-corpus = tod.corpus.Corpus(
-    treebank_path=treebank_path,
-    grew_pattern=grew_pattern,
-    patterns_text_file=patterns_text_file,
-    matrix_type="coverage"
-)
+# corpus = tod.corpus.Corpus(
+#     treebank_path=treebank_path,
+#     grew_pattern=grew_pattern,
+#     patterns_text_file=patterns_text_file,
+#     matrix_type="coverage"
+# )
 
 # for testing with adverbs (it's much quicker)
 # corpus = tod.corpus.Corpus(
@@ -174,6 +174,18 @@ corpus = tod.corpus.Corpus(
 #     patterns_text_file="/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/scripts/3. probability_matrix/patterns_adv.txt",
 #     matrix_type="coverage"
 # )
+
+# for testing with no syntactic relations (just the dependencies, no labels), or no upos or no both
+corpus = tod.corpus.Corpus(
+    treebank_path=treebank_path,
+    grew_pattern=grew_pattern,
+    patterns_text_file=patterns_text_file,
+    matrix_type="coverage",
+    # excluded_feature_patterns=[r"rel_shallow="],
+    # excluded_feature_patterns=[r"upos="],
+    excluded_feature_patterns=[r"rel_shallow=", r"upos="]
+)
+
 print("Made corpus")
 print("Feature matrix shape:", corpus.feature_matrix.shape)
 print("="*50)

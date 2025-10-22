@@ -1,0 +1,140 @@
+================================================================================
+Cluster 0 - Top 10 defining features:
+================================================================================
+  1. node:X:parent:position=after                       importance: 0.004201
+  2. node:X:parent:position=before                      importance: 0.002134
+  3. node:X:own:rel_shallow=advmod                      importance: 0.001111
+  4. node:X:own:Gender=Masc                             importance: 0.000898
+  5. node:X:own:Number=Sing                             importance: 0.000887
+  6. node:X:own:Gender=Fem                              importance: 0.000768
+  7. node:X:own:rel_shallow=amod                        importance: 0.000669
+  8. node:X:own:rel_shallow=nmod                        importance: 0.000651
+  9. node:X:child:Number=Sing                           importance: 0.000578
+ 10. node:X:child:rel_shallow=det                       importance: 0.000553
+
+================================================================================
+Cluster 1 - Top 10 defining features:
+================================================================================
+  1. node:X:own:Gender=Fem                              importance: 0.001910
+  2. node:X:parent:position=after                       importance: 0.001326
+  3. node:X:own:Gender=Masc                             importance: 0.001065
+  4. node:X:child:rel_shallow=det                       importance: 0.000703
+  5. node:X:own:rel_shallow=amod                        importance: 0.000669
+  6. node:X:child:rel_shallow=case                      importance: 0.000485
+  7. node:X:child:PronType=Art                          importance: 0.000478
+  8. node:X:own:Number=Sing                             importance: 0.000365
+  9. node:X:child:Number=Sing                           importance: 0.000354
+ 10. node:X:own:NumType=Card                            importance: 0.000336
+
+================================================================================
+Cluster 2 - Top 10 defining features:
+================================================================================
+  1. node:X:own:NumType=Card                            importance: 0.005056
+  2. node:X:parent:position=after                       importance: 0.004439
+  3. node:X:parent:position=before                      importance: 0.001246
+  4. node:X:own:Number=Sing                             importance: 0.001203
+  5. node:X:own:Gender=Masc                             importance: 0.001074
+  6. node:X:next:Gender=Masc                            importance: 0.001068
+  7. node:X:own:Gender=Fem                              importance: 0.000842
+  8. node:X:own:rel_shallow=nummod                      importance: 0.000766
+  9. node:X:parent:Gender=Masc                          importance: 0.000741
+ 10. node:X:own:rel_shallow=amod                        importance: 0.000669
+
+================================================================================
+Cluster 3 - Top 10 defining features:
+================================================================================
+  1. node:X:parent:position=after                       importance: 0.007129
+  2. node:X:parent:position=before                      importance: 0.003179
+  3. node:X:own:rel_shallow=amod                        importance: 0.000944
+  4. node:X:parent:Number=Sing                          importance: 0.000797
+  5. node:X:next:Number=Sing                            importance: 0.000679
+  6. node:X:own:rel_shallow=nmod                        importance: 0.000629
+  7. node:X:child:Number=Sing                           importance: 0.000600
+  8. node:X:child:rel_shallow=case                      importance: 0.000575
+  9. node:X:child:rel_shallow=det                       importance: 0.000530
+ 10. node:X:own:rel_shallow=case                        importance: 0.000516
+
+================================================================================
+Cluster 4 - Top 10 defining features:
+================================================================================
+  1. node:X:parent:position=before                      importance: 0.002556
+  2. node:X:own:rel_shallow=nmod                        importance: 0.001938
+  3. node:X:own:Number=Sing                             importance: 0.001730
+  4. node:X:child:rel_shallow=case                      importance: 0.001637
+  5. node:X:own:Gender=Masc                             importance: 0.001586
+  6. node:X:parent:position=after                       importance: 0.000965
+  7. node:X:parent:Number=Sing                          importance: 0.000822
+  8. node:X:own:rel_shallow=amod                        importance: 0.000669
+  9. node:X:parent:Gender=Masc                          importance: 0.000551
+ 10. node:X:prev:Number=Sing                            importance: 0.000536
+
+================================================================================
+Cluster 5 - Top 10 defining features:
+================================================================================
+  1. node:X:parent:position=before                      importance: 0.005228
+  2. node:X:own:NumType=Card                            importance: 0.004106
+  3. node:X:own:rel_shallow=nmod                        importance: 0.004083
+  4. node:X:parent:Number=Sing                          importance: 0.002462
+  5. node:X:parent:position=after                       importance: 0.001718
+  6. node:X:prev:Number=Sing                            importance: 0.001538
+  7. node:X:parent:Gender=Masc                          importance: 0.001249
+  8. node:X:own:Number=Sing                             importance: 0.001203
+  9. node:X:prev:Gender=Masc                            importance: 0.001078
+ 10. node:X:own:Gender=Masc                             importance: 0.001074
+
+================================================================================
+Cluster 6 - Top 10 defining features:
+================================================================================
+  1. node:X:parent:position=after                       importance: 0.001911
+  2. node:X:own:rel_shallow=nmod                        importance: 0.000663
+  3. node:X:parent:Number=Sing                          importance: 0.000626
+  4. node:X:child:rel_shallow=det                       importance: 0.000541
+  5. node:X:child:rel_shallow=case                      importance: 0.000539
+  6. node:X:own:rel_shallow=amod                        importance: 0.000528
+  7. node:X:own:Gender=Fem                              importance: 0.000523
+  8. node:X:own:Gender=Masc                             importance: 0.000455
+  9. node:X:child:PronType=Art                          importance: 0.000384
+ 10. node:X:parent:Gender=Masc                          importance: 0.000363
+
+================================================================================
+Cluster 7 - Top 10 defining features:
+================================================================================
+  1. node:X:own:Gender=Masc                             importance: 0.001348
+  2. node:X:parent:position=after                       importance: 0.001240
+  3. node:X:child:rel_shallow=det                       importance: 0.000831
+  4. node:X:own:Gender=Fem                              importance: 0.000826
+  5. node:X:own:rel_shallow=amod                        importance: 0.000669
+  6. node:X:child:PronType=Art                          importance: 0.000597
+  7. node:X:child:rel_shallow=case                      importance: 0.000399
+  8. node:X:prev:PronType=Art                           importance: 0.000380
+  9. node:X:own:NumType=Card                            importance: 0.000336
+ 10. node:X:child:Definite=Def                          importance: 0.000313
+
+================================================================================
+Cluster 8 - Top 10 defining features:
+================================================================================
+  1. node:X:own:rel_shallow=amod                        importance: 0.005946
+  2. node:X:parent:position=before                      importance: 0.003661
+  3. node:X:parent:position=after                       importance: 0.001974
+  4. node:X:own:Number=Sing                             importance: 0.001075
+  5. node:X:own:Gender=Masc                             importance: 0.000849
+  6. node:X:parent:Number=Sing                          importance: 0.000842
+  7. node:X:own:Gender=Fem                              importance: 0.000831
+  8. node:X:prev:Number=Sing                            importance: 0.000825
+  9. node:X:own:rel_shallow=nmod                        importance: 0.000669
+ 10. node:X:prev:Gender=Masc                            importance: 0.000619
+
+================================================================================
+Cluster 9 - Top 10 defining features:
+================================================================================
+  1. node:X:own:Gender=Masc                             importance: 0.002577
+  2. node:X:parent:position=before                      importance: 0.002292
+  3. node:X:own:rel_shallow=nmod                        importance: 0.001560
+  4. node:X:parent:position=after                       importance: 0.001183
+  5. node:X:own:Gender=Fem                              importance: 0.000757
+  6. node:X:own:rel_shallow=amod                        importance: 0.000669
+  7. node:X:child:rel_shallow=nmod                      importance: 0.000654
+  8. node:X:prev:Number=Sing                            importance: 0.000650
+  9. node:X:child:NumType=Card                          importance: 0.000569
+ 10. node:X:child:rel_shallow=case                      importance: 0.000477
+

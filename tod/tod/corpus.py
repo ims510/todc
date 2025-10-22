@@ -22,7 +22,8 @@ class Corpus:
         patterns_text_file: str,
         use_sud: bool = False,
         min_occurrences: int = 10,
-        matrix_type: str = "PMI"
+        matrix_type: str = "PMI",
+        excluded_feature_patterns: list = None
     ):
         if use_sud:
             grewpy.set_config("sud")
@@ -125,6 +126,8 @@ class Corpus:
                 ]
                 # so what we did is go from features = {('key1', 'key2'): 'value1', ('key3',): {'value2', 'value3'}} to ['key1:key2=value1', 'key3=value2', 'key3=value3']
                 # and now we append the features to the data dict for the corresponding (lemma, pos) key
+                if excluded_feature_patterns:
+                    formatted_features = self._filter_features(formatted_features, excluded_feature_patterns)
                 data[lex_unit].append(formatted_features)
 
         unique_lemma = sorted(set([k for k in data]))
@@ -301,6 +304,20 @@ class Corpus:
         fig.show()
 
         return X_coverage, X_precision, X_pmi, X_geometric_mean, X_tfidf
+    
+    def _filter_features(self, features, excluded_patterns):
+        """Filter out features matching any of the excluded patterns."""
+        import re
+        filtered_features = []
+        for feature in features:
+            should_exclude = False
+            for pattern in excluded_patterns:
+                if re.search(pattern, feature):
+                    should_exclude = True
+                    break
+            if not should_exclude:
+                filtered_features.append(feature)
+        return filtered_features
 
 class CorpusSyntacticFunctions:
     def __init__(
