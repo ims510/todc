@@ -227,6 +227,10 @@ class SparseKMeans(Clustering):
         ws = np.array(result['ws'])
         cs = np.array(result['cs'])
         x = corpus.feature_matrix
+        cooc = corpus.co_occurrence_matrix
+
+        n_clusters = len(np.unique(cs))
+        n_features = x.shape[1]
         
         # Optional normalization of weights
         if np.sum(np.abs(ws)) > 0:
@@ -238,46 +242,58 @@ class SparseKMeans(Clustering):
         else:
             ws_mask = np.ones_like(ws, dtype=bool)
         
-        k = len(np.unique(cs))
-        p = x.shape[1]
+        C_f = cooc.sum(axis=0) # global counts per feature
+        N = C_f.sum()   # total co-ocurrences globally
         
-        # Compute centroids and global mean
-        centroids = np.zeros((k, p))
-        for j in range(k):
-            centroids[j, :] = x[cs == j].mean(axis=0)
-        global_mean = x.mean(axis=0)
+        # # Compute centroids and global mean
+        # centroids = np.zeros((k, p))
+        # for j in range(k):
+        #     centroids[j, :] = x[cs == j].mean(axis=0)
+        # global_mean = x.mean(axis=0)
         
         # Build output
         cluster_features = {}
-        for j in range(k):
-            diffs = np.abs(centroids[j, :] - global_mean)
-            importance = ws * diffs
-            
-            # Filter low-weight features
-            importance[~ws_mask] = 0
-            
-            # Get top features
-            top_idx = np.argsort(importance)[::-1]
-            
-            feature_importance = [(idx, corpus.idx2feature(idx), importance[idx]) for idx in top_idx]
+        for j in range(n_clusters):
+            in_cluster = cs == j # boolean mask for lex units in cluster j
+            n_j = cooc[in_cluster, :].sum()  # total co-ocurrences in cluster j
 
-            all_features_printing = False
-            if top_n_features == None or top_n_features > len(feature_importance):
-                top_n_features = len(feature_importance)
-                all_features_printing = True
+            importance = np.zeros(n_features) # making the importance array that we will fill in
 
+            for f in range(n_features):
+                if not ws_mask[f]:
+                    continue
+                
+                # Frequency = lex units in cluster j that have feature f / total lex units in cluster j
+                f_values_in_cluster = x[in_cluster, f] # a 1d array of the values of feature f for lex units in cluster j (e.g. [0.2, 0.6, 0, 0.1 ...])
+                # if f_values_in_cluster > 0 then the lex unit has the feature so i'd have [1, 1, 0, 1 ...] for the example above
+                freq_fj = (f_values_in_cluster > 0).sum() / in_cluster.sum() 
+
+                # Stability = inverse of 1 + variance within the cluster
+                stab_fj = 1 / (1 + np.var(f_values_in_cluster))
+
+                # Contrast = p(f|j) / p(f)
+                c_fj = cooc[in_cluster, f].sum() 
+                contrast_fj = 0
+                if C_f[f] > 0 and n_j > 0:
+                    p_f_given_j = c_fj / n_j
+                    p_f_global = C_f[f] / N
+                    contrast_fj = p_f_given_j / p_f_global
+                
+                # Importance
+                importance[f] = ws[f] * freq_fj * stab_fj * contrast_fj
+
+            top_idx = np.argsort(importance)[::-1][:top_n_features]
+            feature_names = [corpus.idx2feature(idx) for idx in top_idx]
+            top_importance = importance[top_idx]
+
+            
             print("=" * 80)
-            if all_features_printing:
-                print(f"All Cluster {j} features ranked by importance:")
-            else:
-                print(f"Cluster {j} - Top {top_n_features} defining features:")
+            print(f"Cluster {j} - Top {len(top_idx)} defining features:")
             print("=" * 80)
-
-            for rank, (feat_idx, feature_name, feature_imp) in enumerate(feature_importance[:top_n_features], start=1):
-                print(f"{rank:3d}. {feature_name:<50} importance: {feature_imp:.6f}")
-
+            for rank, (name, imp) in enumerate(zip(feature_names, top_importance), 1):
+                print(f"{rank:3d}. {name:<50} importance: {imp:.6f}")
             print()
-            cluster_features[j] = feature_importance
-        
-        return cluster_features   
 
+            cluster_features[j] = list(zip(top_idx, feature_names, top_importance))
+
+        return cluster_features
