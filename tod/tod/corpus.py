@@ -79,14 +79,21 @@ class Corpus:
                         # ExtPos is used for example in 10% -> % has upos SYM but ExtPos Noun , so we want to use noun
                         # and what we're doing is creating a dictionary with keys (lemma, pos) and values as a list of matches
                         # so for example ('reason', 'NOUN') -> [match1, match2, match3] where a match looks like this: {'sent_id': 'fr-ud-train_11309', 'matching': {'nodes': {'X': '7'}, 'edges': {}}}
+                       
                         if "ExtPos" in current_token_features:
                             match_upos.setdefault(
                                 (key, current_token_features["ExtPos"]), []
                             ).append(m)
                         else:
-                            match_upos.setdefault(
-                                (key, current_token_features["upos"]), []
-                            ).append(m)
+                            try:
+                                match_upos.setdefault(
+                                    (key, current_token_features["upos"]), []
+                                ).append(m)
+                            except KeyError:
+                                print(f"WARNING: Token with lemma '{key}' in sentence '{match_sent_id}' does not have a 'upos' feature.")
+                            #     match_upos.setdefault(
+                            #         (key, "NA"), []
+                            #     ).append(m)
 
         # remove those that have less than 10 occurrences again because now we've split by pos so we might have some that are less than 10 
         # for example if we had reason with 11 occurrences before and now we have reason:VERB with 5 occurrences and reason:NOUN with 6 occurrences
