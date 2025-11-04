@@ -114,6 +114,119 @@ def cluster_scatter_plot(
     )
     return fig
 
+def cluster_scatter_plot_shapes(
+    corpus: Corpus, dimension_reduction: DimensionReduction, clustering: Clustering
+):
+    """
+    Scatter plot where color encodes cluster and marker shape encodes treebank.
+    Works with lexical units as triplets: (word, POS, treebank).
+    """
+
+    # Gather lexical units and unpack (word, POS, treebank)
+    lexunits = [corpus.idx2lexunit(i) for i in range(len(dimension_reduction.reduced_matrix))]
+
+    def unpack_triplet(u):
+        # Robustly unpack to (word, pos, treebank) even if older formats slip in
+        if isinstance(u, (list, tuple)):
+            w = u[0] if len(u) > 0 else str(u)
+            p = u[1] if len(u) > 1 else ""
+            tb = u[2] if len(u) > 2 else "default"
+            return w, p, tb
+        return str(u), "", "default"
+
+    words, pos_tags, treebanks = zip(*(unpack_triplet(u) for u in lexunits))
+    clusters = [clustering.lexunit2cluster(u) for u in lexunits]
+
+    data = pd.DataFrame(
+        {
+            "Component 1": dimension_reduction.reduced_matrix[:, 0],
+            "Component 2": dimension_reduction.reduced_matrix[:, 1],
+            "Cluster": clusters,
+            "Word": words,
+            "POS": pos_tags,
+            "Treebank": treebanks,
+        }
+    )
+
+    # Distinct clusters and treebanks
+    unique_clusters = sorted(data["Cluster"].unique())
+    unique_treebanks = sorted(data["Treebank"].unique())
+
+    # Color per cluster
+    palette = px.colors.qualitative.Plotly
+    color_map = {c: palette[i % len(palette)] for i, c in enumerate(unique_clusters)}
+
+    # Shape per treebank
+    symbol_pool = [
+        "circle", "square", "diamond", "triangle-up", "triangle-down",
+        "cross", "x", "star", "pentagon", "hexagon", "octagon",
+        "circle-open", "square-open", "diamond-open"
+    ]
+    symbol_map = {tb: symbol_pool[i % len(symbol_pool)] for i, tb in enumerate(unique_treebanks)}
+
+    fig = go.Figure()
+    trace_cluster_labels = []  # Track which cluster each trace belongs to for dropdown filtering
+
+    # One trace per (cluster, treebank) to get both color (cluster) and shape (treebank) in legend
+    for c in unique_clusters:
+        cluster_df = data[data["Cluster"] == c]
+        for tb in unique_treebanks:
+            sub = cluster_df[cluster_df["Treebank"] == tb]
+            if sub.empty:
+                continue
+            fig.add_trace(
+                go.Scatter(
+                    x=sub["Component 1"],
+                    y=sub["Component 2"],
+                    mode="markers",
+                    marker=dict(
+                        size=10,
+                        color=color_map[c],
+                        symbol=symbol_map[tb],
+                        line=dict(width=1, color="rgba(0,0,0,0.5)"),
+                    ),
+                    name=f"Cluster {c} • {tb}",
+                    text=[f"{w} ({p}) • {tb}" for w, p in zip(sub["Word"], sub["POS"])],
+                    hovertemplate="%{text}<extra></extra>",
+                )
+            )
+            trace_cluster_labels.append(c)
+
+    # Build dropdown to filter by cluster
+    n_traces = len(fig.data)
+    buttons = [
+        {
+            "label": "All Clusters",
+            "method": "update",
+            "args": [{"visible": [True] * n_traces}, {"title": "All Clusters"}],
+        }
+    ]
+    for c in unique_clusters:
+        visible = [lbl == c for lbl in trace_cluster_labels]
+        buttons.append(
+            {
+                "label": f"Cluster {c}",
+                "method": "update",
+                "args": [{"visible": visible}, {"title": f"Cluster {c}"}],
+            }
+        )
+
+    fig.update_layout(
+        title="Clusters Scatter Plot (shape = treebank)",
+        xaxis_title="Component 1",
+        yaxis_title="Component 2",
+        updatemenus=[
+            {
+                "buttons": buttons,
+                "direction": "down",
+                "showactive": True,
+            }
+        ],
+        legend_title_text="Cluster • Treebank",
+    )
+
+    return fig
+
 def cluster_piechart_pos(corpus: Corpus, clustering: Clustering, dropdown: bool = True):
     clusters = {i: clustering.cluster2lexunit(i) for i in range(1,len(clustering.clusters))}
     pie_chart = {}
