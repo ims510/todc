@@ -9,7 +9,7 @@ from collections import Counter
 from itertools import combinations
 sys.path.insert(1, "/Users/madalina/Documents/M2TAL/stage/grex/grex2")
 import pyximport
-
+import pandas as pd
 pyximport.install()
 import grex.data
 import grex.utils
@@ -329,6 +329,47 @@ class Corpus:
         return filtered_features
 
 
+class CorpusFromMatrix:
+    def __init__(self, matrix_path, lexunits_path, feature_names_path, coocc_matrix_path=None):
+        # Load matrix
+        self.feature_matrix = np.load(matrix_path)
+
+        # Load lexical units
+        df = pd.read_csv(lexunits_path)
+        lexunits = df["lexunit"].tolist()
+
+        # Load feature names
+        feature_names = np.load(feature_names_path)
+
+        # Build indices
+        self._idx2lexunit = {i: lu for i, lu in enumerate(lexunits)}
+        self._lexunit2idx = {lu: i for i, lu in self._idx2lexunit.items()}
+
+        self._idx2feature = {i: f for i, f in enumerate(feature_names)}
+        self._feature2idx = {f: i for i, f in self._idx2feature.items()}
+
+        if coocc_matrix_path is not None:
+            self.co_occurrence_matrix = np.load(coocc_matrix_path)
+        # Sanity checks
+        if self.feature_matrix.shape != (len(lexunits), len(feature_names)):
+            raise ValueError(
+                f"Matrix shape {self.feature_matrix.shape} does not match "
+                f"{len(lexunits)} lexunits x {len(feature_names)} features."
+            )
+        
+    def idx2feature(self, idx: int) -> str:
+        return self._idx2feature[idx]
+
+    def feature2idx(self, feature: str) -> int:
+        return self._feature2idx[feature]
+
+    def idx2lexunit(self, idx: int) -> str:
+        return self._idx2lexunit[idx]
+
+    def lexunit2idx(self, lexunit: str) -> int:
+        return self._lexunit2idx[lexunit]
+
+    
 class CorpusTriplet:
     """A class which implements the lexical units as triplets (lemma, pos, treebank)"""
     def __init__(

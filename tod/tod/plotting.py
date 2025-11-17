@@ -114,6 +114,139 @@ def cluster_scatter_plot(
     )
     return fig
 
+def fuzzy_cluster_scatter_plot(
+    corpus: Corpus,
+    dimension_reduction: DimensionReduction,
+    membership: np.ndarray,
+    cluster_names: list[str] | None = None,
+):
+    """
+    Scatter plot for fuzzy clustering:
+    - Default view: hard clusters (argmax of membership).
+    - Dropdown per cluster: color points by membership to that cluster.
+    membership: array shape (n_samples, n_clusters) with values in [0,1].
+    cluster_names: optional display names per cluster (len = n_clusters).
+    """
+    if membership.ndim != 2:
+        raise ValueError("membership must be 2D (n_samples, n_clusters)")
+    n_samples, n_clusters = membership.shape
+
+    # Check sizes
+    if len(dimension_reduction.reduced_matrix) != n_samples:
+        raise ValueError("membership rows must match reduced_matrix rows")
+
+    # 1-based labels for consistency with your UI
+    hard_labels = membership.argmax(axis=1) + 1
+
+    # Names
+    if cluster_names is None:
+        cluster_names = [f"Cluster {i}" for i in range(1, n_clusters + 1)]
+
+    # DataFrame for convenience
+    lexunits = [corpus.idx2lexunit(i) for i in range(n_samples)]
+    df = pd.DataFrame(
+        {
+            "Component 1": dimension_reduction.reduced_matrix[:, 0],
+            "Component 2": dimension_reduction.reduced_matrix[:, 1],
+            "Hard Cluster": hard_labels,
+            "Lexical Unit": lexunits,
+        }
+    )
+
+    fig = go.Figure()
+    trace_labels = []
+
+    # A) Hard cluster view (one trace per cluster)
+    for i in range(1, n_clusters + 1):
+        sub = df[df["Hard Cluster"] == i]
+        fig.add_trace(
+            go.Scatter(
+                x=sub["Component 1"],
+                y=sub["Component 2"],
+                mode="markers",
+                marker=dict(size=10),
+                name=cluster_names[i - 1],
+                text=[str(u) for u in sub["Lexical Unit"]],
+                hovertemplate="%{text}<extra></extra>",
+                showlegend=True,
+            )
+        )
+        trace_labels.append(("hard", i))
+
+    # B) Membership view (one trace per cluster, all points colored by membership)
+    for i in range(1, n_clusters + 1):
+        mi = membership[:, i - 1]
+        fig.add_trace(
+            go.Scatter(
+                x=df["Component 1"],
+                y=df["Component 2"],
+                mode="markers",
+                marker=dict(
+                    size=(6 + 8 * mi).tolist(),     # size encodes membership
+                    color=mi,                        # color encodes membership
+                    colorscale="Viridis",
+                    cmin=0.0,
+                    cmax=1.0,
+                    colorbar=dict(title=f"{cluster_names[i - 1]} membership"),
+                ),
+                name=f"{cluster_names[i - 1]} (membership)",
+                text=[
+                    f"{str(u)}<br>m={mi_val:.3f}" for u, mi_val in zip(df["Lexical Unit"], mi)
+                ],
+                hovertemplate="%{text}<extra></extra>",
+                showlegend=False,
+                visible=False,  # hidden by default; toggled via dropdown
+            )
+        )
+        trace_labels.append(("mem", i))
+
+    # Build dropdown buttons
+    n_traces = len(fig.data)
+    hard_visible = [idx < n_clusters for idx in range(n_traces)]  # first block visible
+    mem_visible_template = [False] * n_traces
+
+    buttons = [
+        {
+            "label": "Hard clusters",
+            "method": "update",
+            "args": [
+                {"visible": hard_visible},
+                {"title": "Clusters Scatter Plot (hard labels)"},
+            ],
+        }
+    ]
+
+    for i in range(1, n_clusters + 1):
+        visible = mem_visible_template.copy()
+        # Show only the membership trace for cluster i
+        membership_trace_index = n_clusters + (i - 1)
+        visible[membership_trace_index] = True
+        buttons.append(
+            {
+                "label": f"{cluster_names[i - 1]} membership",
+                "method": "update",
+                "args": [
+                    {"visible": visible},
+                    {"title": f"Membership in {cluster_names[i - 1]}"},
+                ],
+            }
+        )
+
+    fig.update_layout(
+        title="Clusters Scatter Plot (hard labels)",
+        xaxis_title="Component 1",
+        yaxis_title="Component 2",
+        updatemenus=[
+            {
+                "buttons": buttons,
+                "direction": "down",
+                "showactive": True,
+            }
+        ],
+    )
+
+    return fig
+
 def cluster_scatter_plot_shapes(
     corpus: Corpus, dimension_reduction: DimensionReduction, clustering: Clustering
 ):

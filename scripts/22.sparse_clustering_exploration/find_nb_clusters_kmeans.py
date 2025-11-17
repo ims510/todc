@@ -128,8 +128,8 @@ def find_optimal_nb_clusters(corpus: tod.corpus.Corpus, max_clusters: int = 50):
         # print(f"Dunn index for k={i}: {dunn_score}")
         kmeans_db_scores.append(db_score)
         # print(f"Davies-Bouldin score for k={i}: {db_score}")
-        mean_jaccard = bootstrap_stability_kmeans(corpus.feature_matrix, n_bootstrap=100, n_clusters=i, random_state=42)
-        kmeans_jaccard_scores.append(mean_jaccard)
+        # mean_jaccard = bootstrap_stability_kmeans(corpus.feature_matrix, n_bootstrap=100, n_clusters=i, random_state=42)
+        # kmeans_jaccard_scores.append(mean_jaccard)
     
     print("Cluster evaluation metrics:")
     print("---------------------------")
@@ -148,30 +148,31 @@ def find_optimal_nb_clusters(corpus: tod.corpus.Corpus, max_clusters: int = 50):
     plot_score_values(kmeans_db_scores, "Davies-Bouldin Score")
     print(f"Optimal number of clusters according to Davies-Bouldin score: {db_optimal_k} with score {min_db_value}")
 
-    max_jaccard_value = max(kmeans_jaccard_scores)
-    jaccard_optimal_k = kmeans_jaccard_scores.index(max_jaccard_value) + 2
-    print("== Jaccard Stability ==")
-    print("Measures the stability of clustering results across bootstrap samples. 0 to 1 scale, higher values = more stable clusters.")
-    plot_score_values(kmeans_jaccard_scores, "Jaccard Stability")
-    print(f"Optimal number of clusters according to Jaccard stability: {jaccard_optimal_k} with score {max_jaccard_value}")
+    # max_jaccard_value = max(kmeans_jaccard_scores)
+    # jaccard_optimal_k = kmeans_jaccard_scores.index(max_jaccard_value) + 2
+    # print("== Jaccard Stability ==")
+    # print("Measures the stability of clustering results across bootstrap samples. 0 to 1 scale, higher values = more stable clusters.")
+    # plot_score_values(kmeans_jaccard_scores, "Jaccard Stability")
+    # print(f"Optimal number of clusters according to Jaccard stability: {jaccard_optimal_k} with score {max_jaccard_value}")
 
-# treebank_path = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/data/input/Universal_Dependencies/ud-treebanks-v2.15/UD_French-Sequoia"
+# treebank_path = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/data/input/Universal_Dependencies/ud-treebanks-v2.15/UD_French-GSD"
 # grew_pattern = "pattern{X[upos<>PUNCT]}"
 # patterns_text_file = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/scripts/3. probability_matrix/patterns_all_nodes.txt"
 # analysed_category = "all_nodes"
-treebank_path = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/scripts/23.degrading_treebank/sequoia_small_pos_removed.conllu"
-grew_pattern = "pattern{X[upos<>PUNCT]}"
-patterns_text_file = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/scripts/3. probability_matrix/patterns_all_nodes.txt"
-analysed_category = "all_nodes"
 
-corpus = tod.corpus.Corpus(
-    treebank_path=treebank_path,
-    grew_pattern=grew_pattern,
-    patterns_text_file=patterns_text_file,
-    use_sud=True,
-    matrix_type="coverage",
-    excluded_feature_patterns=[r"upos=NA", r"rel_shallow=", r"rel_deep="]
-)
+# treebank_path = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/scripts/23.degrading_treebank/sequoia_small_pos_removed.conllu"
+# grew_pattern = "pattern{X[upos<>PUNCT]}"
+# patterns_text_file = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/scripts/3. probability_matrix/patterns_all_nodes.txt"
+# analysed_category = "all_nodes"
+
+# corpus = tod.corpus.Corpus(
+#     treebank_path=treebank_path,
+#     grew_pattern=grew_pattern,
+#     patterns_text_file=patterns_text_file,
+#     use_sud=False,
+#     matrix_type="coverage",
+#     # excluded_feature_patterns=[r"upos=NA", r"rel_shallow=", r"rel_deep="]
+# )
 
 # for testing with adverbs (it's much quicker)
 # corpus = tod.corpus.Corpus(
@@ -193,6 +194,13 @@ corpus = tod.corpus.Corpus(
 #     excluded_feature_patterns=[r"upos=ADP", r"upos=AUX", r"upos=CCONJ", r"upos=DET", r"upos=PRON", r"upos=SCONJ", r"upos=NUM", r"upos=INTJ", r"upos=ADV", r"upos=PROPN", r"upos=SYM" ],
 #     # excluded_feature_patterns=[r"rel_shallow=", r"upos="]
 # )
+
+# treebank_name = "UD_French-GSD"
+corpus = tod.corpus.CorpusFromMatrix(
+    matrix_path=f"/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/UD_French-GSD_features_gt2clusters.npy",
+    lexunits_path=f"/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/UD_French-GSD_lexunits_gt2clusters.csv",
+    feature_names_path=f"/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/UD_French-GSD_feature_names.npy"
+)
 
 print("Made corpus")
 print("Feature matrix shape:", corpus.feature_matrix.shape)
