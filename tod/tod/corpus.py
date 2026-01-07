@@ -466,9 +466,10 @@ class CorpusTriplet:
         for key, value in match_upos.items():
             if len(value) < min_occurrences:
                 print(f"WARNING: {key} has only {len(value)} occurrences but passed filtering!")
-        pair_counts = Counter(k[:2] for k in match_upos.keys())
-        new_dict = {k: v for k, v in match_upos.items() if pair_counts[k[:2]] == 2}
-        match_upos = new_dict
+        # UNCOMMENT THIS if comparing treebanks of the same language so you want to compare the same word-pos pairs
+        # pair_counts = Counter(k[:2] for k in match_upos.keys())
+        # new_dict = {k: v for k, v in match_upos.items() if pair_counts[k[:2]] >= 2}
+        # match_upos = new_dict
         # print(match_upos.keys())
         # grex stuff
         with open(patterns_text_file) as in_stream:
@@ -483,7 +484,11 @@ class CorpusTriplet:
         data = {k: list() for k in match_upos}
         for lex_unit, mts in match_upos.items():
             for match in mts:
-                features = grex.data.extract_features(draft, match, feature_predicate)
+                try:
+                    features = grex.data.extract_features(draft, match, feature_predicate)
+                except AssertionError:
+                    print(f"WARNING: Skipping sent_id={match.get('sent_id')}")
+                    continue
                 # features looks like this: features={('node', 'X', 'own', 'Number'): 'Plur', ('node', 'X', 'own', 'rel_shallow'): 'comp:obj'
                 formatted_features = [
                     (
@@ -711,6 +716,7 @@ class CorpusTriplet:
         top_k: int = 50,
         only_cross_treebank: bool = True,
         print_results: bool = True,
+        same_lemma: bool = False,
     ):
         """
         Compute distances between vectors of the same (lemma, POS) across treebanks
@@ -737,7 +743,12 @@ class CorpusTriplet:
         for idx, lexunit in self._idx2lexunit.items():
   
             lemma, pos, treebank = lexunit
-            groups.setdefault((lemma, pos), []).append(idx)
+
+            if same_lemma:
+                key = (lemma, pos)
+            else:
+                key = (pos)
+            groups.setdefault(key, []).append(idx)
 
 
         # Distance selector
@@ -749,14 +760,16 @@ class CorpusTriplet:
             raise ValueError("Unsupported metric. Use 'cosine' or 'euclidean'.")
 
         results = []
-        for (lemma, pos), idxs in groups.items():
+        for group_key, idxs in groups.items():
             if len(idxs) < 2:
                 continue
             for i, j in combinations(idxs, 2):
                 lu_i = self._idx2lexunit[i]
                 lu_j = self._idx2lexunit[j]
-                tb_i = lu_i[2]
-                tb_j = lu_j[2]
+
+                lemma_i, pos_i, tb_i = lu_i
+                lemma_j, pos_j, tb_j = lu_j
+
                 if only_cross_treebank and tb_i == tb_j:
                     continue
                 vi = self._row_vector(i)
@@ -765,8 +778,9 @@ class CorpusTriplet:
                 if threshold is None or d >= threshold:
                     results.append(
                         {
-                            "lemma": lemma,
-                            "pos": pos,
+                            "lemma_a": lemma_i,
+                            "lemma_b": lemma_j,
+                            "pos": pos_i,
                             "treebank_a": tb_i,
                             "treebank_b": tb_j,
                             "idx_a": i,
@@ -779,14 +793,20 @@ class CorpusTriplet:
         results.sort(key=lambda r: r["distance"], reverse=True)
         if top_k is not None:
             results = results[:top_k]
-
+    
         if print_results:
-            print(f"Farthest lexical units (metric={metric}) between {results[0]['treebank_a']} and {results[0]['treebank_b']}:")
-            for r in results:
-                print(
-                    f"{r['lemma']}:{r['pos']} "
-                    f"-> distance={r['distance']:.4f}"
-                )
+            if not results:
+                print(f"There are no lexical units farther apart than the given threshold ({threshold}) using metric={metric}.")
+            else:
+                print(f"Top {len(results)} farthest lexical unit pairs (metric={metric}):")
+                print(f"{'PAIR':<30} {'TREEBANKS':<40} {'DISTANCE'}")
+                print("-" * 80)
+            
+                for r in results:
+                    # Format: "le vs il (DET)"
+                    pair_str = f"{r['lemma_a']} vs {r['lemma_b']} ({r['pos']})"
+                    tb_str = f"{r['treebank_a']} vs {r['treebank_b']}"
+                    print(f"{pair_str:<30} {tb_str:<40} {r['distance']:.4f}")
 
         return results
 

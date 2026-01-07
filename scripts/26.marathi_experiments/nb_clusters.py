@@ -155,27 +155,22 @@ def find_optimal_nb_clusters(corpus: tod.corpus.Corpus, max_clusters: int = 50):
     # plot_score_values(kmeans_jaccard_scores, "Jaccard Stability")
     # print(f"Optimal number of clusters according to Jaccard stability: {jaccard_optimal_k} with score {max_jaccard_value}")
 
-# treebank_path = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/romance_tbs.conllu"
-# grew_pattern = "pattern{X[upos=DET]}"
-# patterns_text_file = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/scripts/3. probability_matrix/patterns_det.txt"
-# analysed_category = "det"
 
-# treebank_path = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/scripts/23.degrading_treebank/sequoia_small_pos_removed.conllu"
-# grew_pattern = "pattern{X[upos<>PUNCT]}"
-# patterns_text_file = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/scripts/3. probability_matrix/patterns_all_nodes.txt"
-# analysed_category = "all_nodes"
+treebank_path = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/data/input/Universal_Dependencies/ud-treebanks-v2.15/UD_Romanian-RRT"
+grew_pattern = "pattern{X[upos<>PUNCT]}"
+patterns_text_file = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/scripts/3. probability_matrix/patterns_all_nodes.txt"
+analysed_category = "all_nodes"
 
-# corpus = tod.corpus.Corpus(
-#     treebank_path=treebank_path,
-#     grew_pattern=grew_pattern,
-#     patterns_text_file=patterns_text_file,
-#     use_sud=False,
-#     matrix_type="coverage",
-#     excluded_feature_patterns=[r"MWE=", r"Entity=", r"PunctType=", r"MissingHead=", r"MWEPOS=", r"ToDo=", r"__MISC__Proper", r"SplitAnte=", r"Position=", r"CxnElt=", r"ArgTem=", r"orig_deprel=", r"SplitAnte__", r"Cxn=",
-#                                r"Definite=", r"Number=", r"rel_shallow=det:", r"rel_shallow=det", r"PronType=", r"Gender=", r"own", r"Acc,Nom", r"Acc"]
-# )
+corpus = tod.corpus.Corpus(
+    treebank_path=treebank_path,
+    grew_pattern=grew_pattern,
+    patterns_text_file=patterns_text_file,
+    use_sud=False,
+    matrix_type="coverage"
 
-# print(corpus._feature2idx)
+    # excluded_feature_patterns=[r"Translit=", r"Ltranslit="]
+)
+
 # for testing with adverbs (it's much quicker)
 # corpus = tod.corpus.Corpus(
 #     treebank_path="/Users/madalina/Documents/M1TAL/stage-SK/Treebanks/UD_French-GSD-master",
@@ -203,30 +198,6 @@ def find_optimal_nb_clusters(corpus: tod.corpus.Corpus, max_clusters: int = 50):
 #     lexunits_path=f"/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/UD_French-GSD_lexunits_gt2clusters.csv",
 #     feature_names_path=f"/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/UD_French-GSD_feature_names.npy"
 # )
-
-treebank_path = "/Users/madalina/Downloads/bUD_English-GUM"
-grew_pattern = "pattern{X[upos=AUX|VERB]}"
-patterns_text_file = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/scripts/3. probability_matrix/patterns_verbsaux.txt"
-
-corpus = tod.corpus.Corpus(
-    treebank_path=treebank_path,
-    grew_pattern=grew_pattern,
-    patterns_text_file=patterns_text_file,
-    matrix_type="coverage",
-    excluded_feature_patterns=[r"CxnElt=", r"Cxn=", r"XML=", r"PDTB=", r"SplitAnte=", r"MSeg=", r"Entity=", r"Discourse=", r"Bridge=", r"own"])
-
-# treebank_path = "/Users/madalina/Downloads/bUD_English-GUM"
-# grew_pattern = "pattern{X[upos=AUX]}"
-# patterns_text_file = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/scripts/3. probability_matrix/patterns_aux.txt"
-
-# corpus = tod.corpus.Corpus(
-#     treebank_path=treebank_path,
-#     grew_pattern=grew_pattern,
-#     patterns_text_file=patterns_text_file,
-#     matrix_type="coverage",
-#     excluded_feature_patterns=[r"CxnElt=", r"Cxn=", r"XML=", r"PDTB=", r"SplitAnte=", r"MSeg=", r"Entity=", r"Discourse=", r"Bridge=", r"own"]
-# )
-
 
 print("Made corpus")
 print("Feature matrix shape:", corpus.feature_matrix.shape)

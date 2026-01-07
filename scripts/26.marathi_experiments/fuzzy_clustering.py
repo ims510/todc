@@ -15,29 +15,20 @@ import pandas as pd
 # LOAD CORPUS AND FEATURES
 # -------------------------------------------------------------------
 
-treebank_path = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/romance_tbs.conllu"
-grew_pattern = "pattern{X[upos=DET]}"
-patterns_text_file = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/scripts/3. probability_matrix/patterns_det.txt"
-analysed_category = "det"
+treebank_path = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/data/input/Universal_Dependencies/ud-treebanks-v2.15/UD_Marathi-UFAL"
+grew_pattern = "pattern{X[upos<>PUNCT]}"
+patterns_text_file = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/scripts/3. probability_matrix/patterns_all_nodes.txt"
+analysed_category = "all_nodes"
 
-# treebank_name = treebank_path.split("/")[-1]
-treebank_name = "romance_dets_allfeats"
+treebank_name = treebank_path.split("/")[-1]
 
-# corpus = tod.corpus.Corpus(
-#     treebank_path=treebank_path,
-#     grew_pattern=grew_pattern,
-#     patterns_text_file=patterns_text_file,
-#     matrix_type="coverage",
-#     excluded_feature_patterns=[r"Ref=", r"Rhyme=", r"Type="]
-# )
-
-corpus = tod.corpus.CorpusTriplet(
+corpus = tod.corpus.Corpus(
     treebank_path=treebank_path,
     grew_pattern=grew_pattern,
     patterns_text_file=patterns_text_file,
+    use_sud=False,
     matrix_type="coverage",
-    excluded_feature_patterns=[r"MWE=", r"Entity=", r"PunctType=", r"MissingHead=", r"MWEPOS=", r"ToDo=", r"__MISC__Proper", r"SplitAnte=", r"Position=", r"CxnElt=", r"ArgTem=", r"orig_deprel=", r"SplitAnte__", r"Cxn=",]
-                            #    r"Definite=", r"Number=", r"rel_shallow=det:", r"rel_shallow=det", r"PronType=", r"Gender=", r"own", r"Acc,Nom", r"Acc"]
+    excluded_feature_patterns=[r"Translit=", r"Ltranslit="]
 )
 
 X = np.asarray(corpus.feature_matrix, dtype=float)
@@ -67,8 +58,7 @@ centroids = np.asarray(centroids, dtype=float)
 # -------------------------------------------------------------------
 
 dim_red = tod.dimension_reduction_classic.Tsne_corpus(corpus, n_components=2)
-# fig = tod.plotting.cluster_scatter_plot(corpus, dim_red, clustering)
-fig = tod.plotting.cluster_scatter_plot_shapes(corpus, dim_red, clustering)
+fig = tod.plotting.cluster_scatter_plot(corpus, dim_red, clustering)
 fig.write_html(f"{treebank_name}_sparse_kmeans.html")
 
 

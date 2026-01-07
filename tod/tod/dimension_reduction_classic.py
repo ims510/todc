@@ -16,7 +16,9 @@ class Pca_corpus(DimensionReduction):
 
 class Tsne_corpus(DimensionReduction):
     def __init__(self, corpus: Corpus, n_components: int = 2, random_state: int = 42):
-        tsne = TSNE(n_components=n_components, random_state=random_state)
+        n = corpus.feature_matrix.shape[0]
+        perp = max (2, min(30, n-1))
+        tsne = TSNE(n_components=n_components, random_state=random_state, perplexity=perp)
         self.reduced_matrix = tsne.fit_transform(corpus.feature_matrix)
 
 class Pca_matrix(DimensionReduction):
