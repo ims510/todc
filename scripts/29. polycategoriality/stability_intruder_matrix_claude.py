@@ -72,7 +72,7 @@ def load_corpus():
         treebank_path=TREEBANK_PATH,
         grew_pattern=GREW_PATTERN,
         patterns_text_file=PATTERNS_TEXT_FILE,
-        use_sud=True,
+        use_sud=False,
         matrix_type="coverage",
         excluded_feature_patterns=EXCLUDED_FEATURE_PATTERNS,
         included_feature_patterns=INCLUDED_FEATURE_PATTERNS,

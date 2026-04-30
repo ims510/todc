@@ -1,0 +1,3 @@
+treebank,error
+cs_pdt,[Errno 2] No such file or directory: '/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Czech-PDTC/cs_pdt-ud-train.conllu'
+zh_gsd,No processors to load for language zh-hant.  Please check if your language or package is correctly set.
