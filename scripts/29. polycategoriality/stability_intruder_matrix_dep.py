@@ -71,6 +71,22 @@ INCLUDED_FEATURE_PATTERNS = [
 # Dep relations to exclude from the output matrices (e.g. catch-all / noise relations)
 EXCLUDED_DEPS = []   # e.g. ["dep", "root"] if you want to drop them
 
+# When True, subtypes are stripped before any category-level analysis, so e.g.
+# expl:pv / expl:pass / expl:subj / expl:comp all collapse to a single 'expl'
+# row/column in the heatmaps.  The underlying lex_unit keys are kept as-is
+# (this only affects category labelling and analysis grouping).
+STRIP_DEPREL_SUBTYPES = True
+
+
+def _base(deprel):
+    """Return 'expl' from 'expl:pv', 'nmod' from 'nmod:poss', etc.
+
+    If STRIP_DEPREL_SUBTYPES is False, returns *deprel* unchanged.
+    """
+    if STRIP_DEPREL_SUBTYPES and ":" in deprel:
+        return deprel.split(":", 1)[0]
+    return deprel
+
 # ===========================================================================
 # Step 1 - Load corpus & compute similarity matrix
 # ===========================================================================
@@ -105,7 +121,7 @@ def build_similarity_matrix(corpus):
 
 def _global_category_freqs(corpus):
     """Return a dict {dep_relation: relative_frequency} over all lexical units."""
-    all_deps = [lu[2] for lu in corpus._idx2lexunit.values()]
+    all_deps = [_base(lu[2]) for lu in corpus._idx2lexunit.values()]
     total = len(all_deps)
     return {dep: count / total for dep, count in Counter(all_deps).items()}
 
@@ -155,7 +171,7 @@ def compute_scores(corpus, similarity_matrix):
     scores = {}
 
     for idx, lex_unit in corpus._idx2lexunit.items():
-        current_cat = lex_unit[2]  # the dep relation
+        current_cat = _base(lex_unit[2])  # the dep relation (subtype stripped)
         neighbours = _get_neighbours(idx, similarity_matrix)
         if not neighbours:
             continue
@@ -164,7 +180,7 @@ def compute_scores(corpus, similarity_matrix):
         raw_weights = {}
         total_weight = 0.0
         for n_idx in neighbours:
-            n_cat = corpus._idx2lexunit[n_idx][2]  # neighbour's dep relation
+            n_cat = _base(corpus._idx2lexunit[n_idx][2])  # neighbour's dep relation
             sim   = float(similarity_matrix[idx][n_idx])
             raw_weights[n_cat] = raw_weights.get(n_cat, 0.0) + sim
             total_weight += sim
@@ -222,7 +238,7 @@ def build_matrices(corpus, similarity_matrix, excluded_deps=None):
     all_data = []
 
     for idx, lex_unit in corpus._idx2lexunit.items():
-        current_cat = lex_unit[2]  # the dep relation
+        current_cat = _base(lex_unit[2])  # the dep relation (subtype stripped)
         neighbours  = _get_neighbours(idx, similarity_matrix)
         if not neighbours:
             continue
@@ -230,7 +246,7 @@ def build_matrices(corpus, similarity_matrix, excluded_deps=None):
         raw_weights  = {}
         total_weight = 0.0
         for n_idx in neighbours:
-            n_cat = corpus._idx2lexunit[n_idx][2]  # neighbour's dep relation
+            n_cat = _base(corpus._idx2lexunit[n_idx][2])  # neighbour's dep relation
             sim   = float(similarity_matrix[idx][n_idx])
             raw_weights[n_cat] = raw_weights.get(n_cat, 0.0) + sim
             total_weight += sim
@@ -310,7 +326,7 @@ def get_top_bridge_words(scores, original_dep, rival_dep, top_n=100):
             "entropy":  data["entropy"],
         }
         for (lemma, pos, o_dep), data in scores.items()
-        if o_dep == original_dep and data["rival_category"] == rival_dep
+        if _base(o_dep) == original_dep and data["rival_category"] == rival_dep
     ]
 
     matches.sort(key=lambda x: 0.7 * x["purity"] - 0.3 * x["entropy"])
@@ -353,7 +369,7 @@ def get_pulling_features(lex_unit, rival_dep, corpus, similarity_matrix,
                                  max_n=n_neighbors)
 
     # Keep only those that belong to the rival dep relation
-    rival_idxs = [i for i in neighbours if corpus._idx2lexunit[i][2] == rival_dep]
+    rival_idxs = [i for i in neighbours if _base(corpus._idx2lexunit[i][2]) == rival_dep]
 
     if not rival_idxs:
         print(f"Warning: no neighbours found in '{rival_dep}' "
@@ -548,7 +564,7 @@ Notes
 """
 
 def _available_deps(scores):
-    return sorted({lu[2] for lu in scores})
+    return sorted({_base(lu[2]) for lu in scores})
 
 
 def _run_interactive(scores, corpus, similarity_matrix):
@@ -620,11 +636,21 @@ def _run_interactive(scores, corpus, similarity_matrix):
             # Optional specific unit: needs both lemma and POS
             if len(parts) >= 4:
                 lemma, pos = parts[2], parts[3]
-                lex_unit = (lemma, pos, orig)
-                if lex_unit not in corpus._lexunit2idx:
+                # Because the corpus still indexes lex_units by their full
+                # (subtype-bearing) deprel, look up by matching the stripped form.
+                candidates = [
+                    lu for lu in corpus._lexunit2idx
+                    if lu[0] == lemma and lu[1] == pos and _base(lu[2]) == orig
+                ]
+                if not candidates:
                     print(f"({lemma}, {pos}, {orig}) not found in the corpus. "
                           "Try one of the bridge units listed above.")
                     continue
+                if len(candidates) > 1:
+                    subtypes = [lu[2] for lu in candidates]
+                    print(f"Note: multiple subtypes match ({lemma}, {pos}, {orig}): "
+                          f"{subtypes}.  Showing analysis for '{candidates[0][2]}'.")
+                lex_unit = candidates[0]
                 print(f"\n── Pulling features: {lex_unit} → '{rival}' ──")
                 feats = get_pulling_features(
                     lex_unit          = lex_unit,
