@@ -3,3 +3,4 @@ data/input
 *.csv
 *.npy
 *.conllu
+scripts/31. diachronic_polycateg/TRIAD/
