@@ -1,0 +1,13 @@
+{
+  "name": "qpm_philotis",
+  "language": "Pomak",
+  "ud_lang": "qpm",
+  "ud_package": "philotis",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Pomak-Philotis",
+  "train_file": "qpm_philotis-ud-train.conllu",
+  "test_file": "qpm_philotis-ud-test.conllu",
+  "stanza_lang": "qpm",
+  "n_train": 16792,
+  "n_test": 8803,
+  "n_tokens": 25595
+}

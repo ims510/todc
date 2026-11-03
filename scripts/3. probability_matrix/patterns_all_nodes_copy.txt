@@ -38,7 +38,7 @@ templates:
             "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom", Title, InTitle, Idiom, InIdiom,
             Foreign, Lang, Scrap]   
             lemma_top_k: -1
-
+        
 features:
     X: 
         own:
@@ -76,5 +76,18 @@ features:
             "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom", Title, InTitle, Idiom, InIdiom,
             Foreign, Lang, Scrap] 
             lemma_top_k: -1
-
+        prevLastSubtoken:
+            method: exclude
+            regexp: ["form", "textform", "wordform", "lemma", "SpaceAfter", "Typo", "xpos", "CorrectForm", 
+            "CorrectGender", "CorrectMood", "CorrectNumber", "CorrectPerson", "CorrectSpaceAfter",
+            "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom", Title, InTitle, Idiom, InIdiom,
+            Foreign, Lang, Scrap]   
+            lemma_top_k: -1
+        nextFirstSubtoken:
+            method: exclude
+            regexp: ["form", "textform", "wordform", "lemma", "SpaceAfter", "Typo", "xpos", "CorrectForm", 
+            "CorrectGender", "CorrectMood", "CorrectNumber", "CorrectPerson", "CorrectSpaceAfter",
+            "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom", Title, InTitle, Idiom, InIdiom,
+            Foreign, Lang, Scrap]   
+            lemma_top_k: -1
     

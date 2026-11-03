@@ -1,0 +1,36 @@
+min_count filter: 100
+relations kept: 26
+pairs scored:   325
+
+Top 30 most disjoint relation pairs (highest TVD)
+rel1, rel2, count1, count2, tvd
+  acl          iobj           7218    813 1.0000
+  aux          nmod           6643  31538 1.0000
+  mark         nummod         5916   3191 1.0000
+  ccomp        det            1277  53726 1.0000
+  cc           nummod         9602   3191 1.0000
+  cc           csubj          9602    194 1.0000
+  case         nummod        51366   3191 1.0000
+  case         iobj          51366    813 1.0000
+  aux          orphan         6643    180 1.0000
+  aux          obl            6643  23189 1.0000
+  aux          obj            6643  12044 1.0000
+  aux          nummod         6643   3191 1.0000
+  aux          nsubj          6643  20209 1.0000
+  aux          mark           6643   5916 1.0000
+  aux          iobj           6643    813 1.0000
+  cc           iobj           9602    813 1.0000
+  aux          flat           6643   7221 1.0000
+  aux          expl           6643   2488 1.0000
+  aux          det            6643  53726 1.0000
+  aux          csubj          6643    194 1.0000
+  aux          cc             6643   9602 1.0000
+  advmod       aux           12133   6643 1.0000
+  aux          case           6643  51366 1.0000
+  appos        iobj           5633    813 1.0000
+  appos        cop            5633   4922 1.0000
+  advmod       cop           12133   4922 1.0000
+  amod         iobj          17690    813 1.0000
+  amod         expl          17690   2488 1.0000
+  amod         cop           17690   4922 1.0000
+  advmod       nummod        12133   3191 1.0000

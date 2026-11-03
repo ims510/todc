@@ -1,0 +1,99 @@
+Baseline WAS: 0.9163
+Treebank:     /Users/madalina/Documents/PHD/code/data/small_test/UD_French-GSD/
+
+Null distribution (random src->tgt collapses):
+  samples:  50
+  worst_category_loss percentiles:  p10=-0.0151  p50=-0.0000
+  max_offdiag_increase p90=0.0119
+
+Safety filters (null-calibrated):
+  worst_category_loss >= null p10 = -0.0151
+  max_offdiag_increase <= null p90 = 0.0119
+
+All candidates ranked by |ΔWAS|:
+
+[SAFE]  parataxis -> expl        ΔWAS=+0.00000  worst=   ADJ=+0.0000  best=   ADJ=+0.0000  max_off=+0.0000  merges=2
+[SAFE]     orphan -> obl         ΔWAS=+0.00000  worst=   ADJ=+0.0000  best=   ADJ=+0.0000  max_off=+0.0000  merges=1
+[SAFE]       expl -> obl         ΔWAS=+0.00000  worst=   ADJ=+0.0000  best=   ADJ=+0.0000  max_off=+0.0000  merges=4
+[SAFE]      ccomp -> fixed       ΔWAS=+0.00000  worst=   ADJ=+0.0000  best=   ADJ=+0.0000  max_off=+0.0000  merges=1
+[SAFE]     orphan -> fixed       ΔWAS=+0.00000  worst=   ADJ=+0.0000  best=   ADJ=+0.0000  max_off=+0.0000  merges=1
+[SAFE]      appos -> obl         ΔWAS=+0.00000  worst=   ADJ=+0.0000  best=   ADJ=+0.0000  max_off=+0.0000  merges=1
+[SAFE]  parataxis -> fixed       ΔWAS=+0.00000  worst=   ADJ=+0.0000  best=   ADJ=+0.0000  max_off=+0.0000  merges=2
+[SAFE]       expl -> nmod        ΔWAS=+0.00000  worst=   ADJ=+0.0000  best=   ADJ=+0.0000  max_off=+0.0000  merges=4
+[SAFE]        acl -> obl         ΔWAS=+0.00000  worst=   ADJ=+0.0000  best=   ADJ=+0.0000  max_off=+0.0000  merges=2
+[SAFE]       expl -> appos       ΔWAS=+0.00000  worst=   ADJ=+0.0000  best=   ADJ=+0.0000  max_off=+0.0000  merges=4
+[SAFE]       expl -> conj        ΔWAS=+0.00000  worst=   ADJ=+0.0000  best=   ADJ=+0.0000  max_off=+0.0000  merges=4
+[SAFE]     orphan -> advcl       ΔWAS=+0.00000  worst=  PRON=-0.0000  best=  NOUN=+0.0000  max_off=+0.0000  merges=1
+[SAFE]        obl -> nmod        ΔWAS=+0.00000  worst=   ADP=+0.0000  best=   ADJ=+0.0000  max_off=+0.0000  merges=4
+[SAFE]      csubj -> acl         ΔWAS=-0.00000  worst=  NOUN=-0.0000  best= PROPN=+0.0000  max_off=+0.0000  merges=2
+[SAFE]       flat -> nsubj       ΔWAS=+0.00000  worst=   ADJ=-0.0000  best=   NUM=+0.0000  max_off=+0.0000  merges=2
+[SAFE]     orphan -> xcomp       ΔWAS=-0.00000  worst=  PRON=-0.0000  best=   ADP=+0.0000  max_off=+0.0000  merges=1
+[SAFE]     orphan -> ccomp       ΔWAS=+0.00000  worst=   ADJ=-0.0000  best=  PRON=+0.0000  max_off=+0.0000  merges=1
+[SAFE]  parataxis -> flat        ΔWAS=-0.00000  worst=   ADJ=-0.0000  best=   NUM=+0.0000  max_off=+0.0000  merges=2
+[SAFE]     orphan -> obj         ΔWAS=+0.00000  worst=  PRON=-0.0000  best=   ADJ=+0.0000  max_off=+0.0000  merges=1
+[SAFE]  parataxis -> obl         ΔWAS=-0.00000  worst=   ADJ=-0.0000  best=  VERB=+0.0000  max_off=+0.0000  merges=2
+[SAFE]      advcl -> obl         ΔWAS=+0.00000  worst=  VERB=-0.0000  best=   ADJ=+0.0000  max_off=+0.0000  merges=2
+[SAFE]      xcomp -> obl         ΔWAS=-0.00000  worst=   ADJ=-0.0000  best=   ADV=+0.0000  max_off=+0.0000  merges=1
+[SAFE]      ccomp -> obl         ΔWAS=-0.00000  worst=   ADV=-0.0000  best=   ADJ=+0.0000  max_off=+0.0000  merges=1
+[SAFE]       conj -> obl         ΔWAS=-0.00000  worst=   ADJ=-0.0000  best=   ADV=+0.0000  max_off=+0.0000  merges=1
+[SAFE]      csubj -> obl         ΔWAS=+0.00000  worst=  VERB=-0.0000  best=   ADJ=+0.0000  max_off=+0.0000  merges=2
+[SAFE]       iobj -> obl         ΔWAS=+0.00000  worst=  VERB=-0.0000  best=   ADJ=+0.0000  max_off=+0.0000  merges=2
+[SAFE]       iobj -> parataxis   ΔWAS=+0.00000  worst=  VERB=-0.0000  best=  PRON=+0.0000  max_off=+0.0000  merges=2
+[SAFE]        cop -> aux         ΔWAS=-0.00000  worst=   ADJ=-0.0000  best=  VERB=+0.0000  max_off=+0.0000  merges=1
+[SAFE]      appos -> flat        ΔWAS=-0.00000  worst=  NOUN=-0.0000  best=   NUM=+0.0000  max_off=+0.0000  merges=1
+[SAFE]     orphan -> mark        ΔWAS=-0.00000  worst=  PRON=-0.0000  best=   ADV=+0.0000  max_off=+0.0000  merges=1
+[SAFE]      ccomp -> obj         ΔWAS=-0.00000  worst=  VERB=-0.0001  best=   ADJ=+0.0001  max_off=+0.0022  merges=1
+[SAFE]       flat -> nmod        ΔWAS=+0.00000  worst= PROPN=-0.0000  best=   NUM=+0.0000  max_off=+0.0000  merges=2
+[SAFE]      xcomp -> nsubj       ΔWAS=-0.00000  worst=   ADJ=-0.0012  best=   ADV=+0.0017  max_off=+0.0012  merges=1
+[SAFE]      xcomp -> acl         ΔWAS=-0.00000  worst=   ADV=-0.0000  best=  NOUN=+0.0000  max_off=+0.0001  merges=1
+[SAFE]      advcl -> acl         ΔWAS=-0.00000  worst=  NOUN=-0.0000  best=   ADV=+0.0000  max_off=+0.0000  merges=2
+[SAFE]  parataxis -> acl         ΔWAS=+0.00000  worst=  PRON=-0.0000  best= PROPN=+0.0001  max_off=+0.0000  merges=2
+[SAFE]      appos -> acl         ΔWAS=+0.00001  worst= PROPN=-0.0004  best=   ADJ=+0.0002  max_off=+0.0006  merges=1
+[SAFE]      ccomp -> appos       ΔWAS=-0.00001  worst=   ADV=-0.0002  best=  VERB=+0.0000  max_off=+0.0004  merges=1
+[SAFE]      ccomp -> acl         ΔWAS=-0.00001  worst=   ADV=-0.0003  best=   ADP=+0.0000  max_off=+0.0004  merges=1
+[SAFE]  parataxis -> appos       ΔWAS=-0.00001  worst= PROPN=-0.0003  best=   NUM=+0.0000  max_off=+0.0003  merges=2
+[SAFE]     orphan -> nummod      ΔWAS=+0.00002  worst=  NOUN=-0.0000  best=   NUM=+0.0003  max_off=+0.0000  merges=1
+[SAFE]     orphan -> flat        ΔWAS=+0.00002  worst=   ADP=+0.0000  best=   NUM=+0.0003  max_off=+0.0000  merges=1
+[SAFE]     advmod -> obl         ΔWAS=-0.00002  worst=   ADJ=-0.0001  best=  VERB=+0.0000  max_off=+0.0001  merges=1
+[SAFE]       mark -> obl         ΔWAS=-0.00002  worst=   ADJ=-0.0001  best=   ADV=+0.0000  max_off=+0.0001  merges=1
+[SAFE]     orphan -> appos       ΔWAS=-0.00002  worst=   NUM=-0.0003  best= PROPN=+0.0000  max_off=+0.0003  merges=1
+[SAFE]     orphan -> advmod      ΔWAS=-0.00002  worst=  NOUN=-0.0000  best= PROPN=+0.0000  max_off=+0.0001  merges=1
+[SAFE]     orphan -> nsubj       ΔWAS=-0.00002  worst=  NOUN=-0.0000  best=  PRON=+0.0000  max_off=+0.0001  merges=1
+[SAFE]        obj -> conj        ΔWAS=-0.00003  worst=   ADJ=-0.0004  best=   ADV=+0.0010  max_off=+0.0004  merges=3
+[SAFE]  parataxis -> obj         ΔWAS=-0.00003  worst=   ADJ=-0.0002  best=   ADV=+0.0001  max_off=+0.0002  merges=2
+[FAIL]       iobj -> nsubj       ΔWAS=+0.00003  worst=  VERB=-0.0003  best=   ADV=+0.0018  max_off=+0.0328  merges=2
+[SAFE]     orphan -> cc          ΔWAS=-0.00004  worst= PROPN=-0.0003  best=   NUM=+0.0000  max_off=+0.0003  merges=1
+[SAFE]     orphan -> conj        ΔWAS=-0.00004  worst= PROPN=-0.0003  best=  PRON=+0.0000  max_off=+0.0003  merges=1
+[SAFE]        acl -> nsubj       ΔWAS=-0.00005  worst=  NOUN=-0.0001  best= PROPN=+0.0001  max_off=+0.0001  merges=2
+[SAFE]       mark -> obj         ΔWAS=+0.00005  worst=  VERB=-0.0003  best=   ADV=+0.0014  max_off=+0.0007  merges=1
+[SAFE]  parataxis -> amod        ΔWAS=+0.00006  worst=   ADJ=-0.0000  best=  NOUN=+0.0001  max_off=+0.0000  merges=2
+[SAFE]      csubj -> xcomp       ΔWAS=-0.00008  worst=   ADV=-0.0006  best=   ADP=+0.0000  max_off=+0.0004  merges=2
+[FAIL]      advcl -> nmod        ΔWAS=-0.00008  worst=  PRON=-0.0152  best=  NOUN=+0.0003  max_off=+0.0079  merges=2
+[SAFE]      advcl -> obj         ΔWAS=+0.00008  worst=   ADJ=-0.0001  best=   ADV=+0.0008  max_off=+0.0001  merges=2
+[FAIL]      ccomp -> advmod      ΔWAS=+0.00009  worst=   AUX=-0.0000  best=   ADV=+0.0017  max_off=+0.0328  merges=1
+[FAIL]  parataxis -> nsubj       ΔWAS=+0.00010  worst=   ADP=+0.0000  best=   ADV=+0.0019  max_off=+0.0328  merges=2
+[FAIL]        obj -> advmod      ΔWAS=-0.00010  worst=   ADJ=-0.0020  best=   ADV=+0.0035  max_off=+0.0328  merges=3
+[SAFE]      advcl -> appos       ΔWAS=+0.00010  worst=  PRON=-0.0000  best=  NOUN=+0.0002  max_off=+0.0000  merges=2
+[SAFE]      csubj -> conj        ΔWAS=+0.00011  worst=   ADP=+0.0000  best=   ADJ=+0.0008  max_off=+0.0000  merges=2
+[SAFE]        acl -> conj        ΔWAS=+0.00012  worst=   ADJ=-0.0000  best=   ADV=+0.0011  max_off=+0.0009  merges=2
+[SAFE]     orphan -> nmod        ΔWAS=-0.00013  worst= PROPN=-0.0003  best=  PRON=+0.0000  max_off=+0.0006  merges=1
+[SAFE]      ccomp -> nsubj       ΔWAS=-0.00015  worst=   ADV=-0.0033  best=  PRON=+0.0000  max_off=+0.0018  merges=1
+[FAIL]         cc -> advmod      ΔWAS=+0.00016  worst=  PRON=-0.0151  best=   NUM=+0.0025  max_off=+0.0328  merges=1
+[FAIL]        acl -> amod        ΔWAS=-0.00017  worst=  PRON=-0.0152  best= PROPN=+0.0006  max_off=+0.0120  merges=2
+[FAIL]     orphan -> case        ΔWAS=-0.00021  worst=  PRON=-0.0152  best=   NUM=+0.0000  max_off=+0.0120  merges=1
+[SAFE]     orphan -> acl         ΔWAS=-0.00022  worst=  NOUN=-0.0005  best= PROPN=+0.0000  max_off=+0.0005  merges=1
+[SAFE]      advcl -> nsubj       ΔWAS=+0.00022  worst=   ADJ=-0.0003  best=   ADV=+0.0032  max_off=+0.0003  merges=2
+[FAIL]  parataxis -> nmod        ΔWAS=-0.00024  worst=  PRON=-0.0152  best= PROPN=+0.0002  max_off=+0.0098  merges=2
+[FAIL]     advmod -> case        ΔWAS=-0.00025  worst=  PRON=-0.0175  best=   NUM=+0.0038  max_off=+0.0075  merges=1
+[FAIL]       conj -> amod        ΔWAS=-0.00034  worst=  PRON=-0.0151  best=   ADV=+0.0011  max_off=+0.0120  merges=1
+[FAIL]     orphan -> amod        ΔWAS=-0.00043  worst=  PRON=-0.0152  best= PROPN=+0.0000  max_off=+0.0120  merges=1
+[FAIL]       mark -> case        ΔWAS=-0.00046  worst=  PRON=-0.0157  best=   NUM=+0.0003  max_off=+0.0123  merges=1
+[SAFE]        acl -> nmod        ΔWAS=+0.00049  worst=   ADP=+0.0000  best=  PRON=+0.0049  max_off=+0.0012  merges=2
+[SAFE]     advmod -> conj        ΔWAS=+0.00059  worst=   DET=-0.0021  best=   NUM=+0.0025  max_off=+0.0024  merges=1
+
+
+Combined effect of all SAFE rules applied together:
+  rules: {'orphan': 'mark', 'csubj': 'obl', 'parataxis': 'flat', 'xcomp': 'acl', 'ccomp': 'appos', 'advcl': 'appos', 'cop': 'aux', 'appos': 'obl', 'conj': 'obl', 'iobj': 'obl', 'expl': 'conj', 'acl': 'obl', 'flat': 'nsubj', 'obj': 'conj', 'obl': 'nmod', 'advmod': 'obl', 'mark': 'obl'}
+  ΔWAS = +0.00002
+  worst category: PRON (-0.0121)
+  max offdiag:    +0.0170

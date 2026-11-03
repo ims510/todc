@@ -1,0 +1,10 @@
+epoch   1  loss 1.4599  dev UAS 0.8776  LAS 0.8325
+epoch   2  loss 0.6936  dev UAS 0.9040  LAS 0.8662
+epoch   3  loss 0.5854  dev UAS 0.9112  LAS 0.8759
+epoch   4  loss 0.5295  dev UAS 0.9171  LAS 0.8830
+epoch   5  loss 0.4900  dev UAS 0.9220  LAS 0.8871
+epoch   6  loss 0.4654  dev UAS 0.9240  LAS 0.8903
+epoch   7  loss 0.4449  dev UAS 0.9279  LAS 0.8949
+epoch   8  loss 0.4276  dev UAS 0.9294  LAS 0.8971
+epoch   9  loss 0.4126  dev UAS 0.9292  LAS 0.8974
+epoch  10  loss 0.4016  dev UAS 0.9307  LAS 0.8999

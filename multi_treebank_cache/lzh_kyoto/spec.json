@@ -1,0 +1,13 @@
+{
+  "name": "lzh_kyoto",
+  "language": "Classical_Chinese",
+  "ud_lang": "lzh",
+  "ud_package": "kyoto",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Classical_Chinese-Kyoto",
+  "train_file": "lzh_kyoto-ud-train.conllu",
+  "test_file": "lzh_kyoto-ud-test.conllu",
+  "stanza_lang": "lzh",
+  "n_train": 374560,
+  "n_test": 27566,
+  "n_tokens": 402126
+}

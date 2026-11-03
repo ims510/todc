@@ -1,0 +1,13 @@
+{
+  "name": "es_ancora",
+  "language": "Spanish",
+  "ud_lang": "es",
+  "ud_package": "ancora",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Spanish-AnCora",
+  "train_file": "es_ancora-ud-train.conllu",
+  "test_file": "es_ancora-ud-test.conllu",
+  "stanza_lang": "es",
+  "n_train": 453039,
+  "n_test": 53622,
+  "n_tokens": 506661
+}

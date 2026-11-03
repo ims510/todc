@@ -1,0 +1,13 @@
+{
+  "name": "el_gdt",
+  "language": "Greek",
+  "ud_lang": "el",
+  "ud_package": "gdt",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Greek-GDT",
+  "train_file": "el_gdt-ud-train.conllu",
+  "test_file": "el_gdt-ud-test.conllu",
+  "stanza_lang": "el",
+  "n_train": 42326,
+  "n_test": 10672,
+  "n_tokens": 52998
+}

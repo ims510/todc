@@ -1,0 +1,13 @@
+{
+  "name": "hy_armtdp",
+  "language": "Armenian",
+  "ud_lang": "hy",
+  "ud_package": "armtdp",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Armenian-ArmTDP",
+  "train_file": "hy_armtdp-ud-train.conllu",
+  "test_file": "hy_armtdp-ud-test.conllu",
+  "stanza_lang": "hy",
+  "n_train": 82871,
+  "n_test": 10667,
+  "n_tokens": 93538
+}

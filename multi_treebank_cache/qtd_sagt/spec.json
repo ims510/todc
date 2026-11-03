@@ -1,0 +1,13 @@
+{
+  "name": "qtd_sagt",
+  "language": "Turkish_German",
+  "ud_lang": "qtd",
+  "ud_package": "sagt",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Turkish_German-SAGT",
+  "train_file": "qtd_sagt-ud-train.conllu",
+  "test_file": "qtd_sagt-ud-test.conllu",
+  "stanza_lang": "qtd",
+  "n_train": 10081,
+  "n_test": 14089,
+  "n_tokens": 24170
+}

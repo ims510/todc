@@ -1,0 +1,60 @@
+# sent_id = Rhap_D0001-6
+# prosodic_annotation = yes
+# speaker = L2
+# speaker_id = §LM1
+# macrosyntax = donc < moi < "ben" { je vais | { je | je } prends le mét~ | je prends le métro } le matin "bon" jusqu'au $- Palais Royal //+ $L1 à quelle heure // "excusez-moi" // -$
+# text = donc, moi, ben, je vais, je, je prends le mét~, je prends le métro le matin, bon, jusqu'au Palais Royal.
+1	donc	donc	ADV	_	_	9	mod	_	AlignBegin=12455|AlignEnd=12645|SpaceAfter=No
+1.1	_	_	_	_	_	1	Syl=1	_	AlignBegin=12455|AlignEnd=12645|AvgAmplitude=49.696|AvgHeightGlo=M|AvgHeightLoc=M|Duration=189|Glo=mm|Loc=mm|MaxAmplitude=56.549|MeanF0=100.103|MeanF0Step=112.361|PitchRangeGlo=L|PitchRangeLoc=L|Semiton=1.878|SemitonesFromUtteranceMean=-0.162|Slope=Rise|SlopeGlo=Flat|SlopeLoc=Flat|SylForm=do~k
+2	,	,	PUNCT	_	_	1	punct	_	AlignBegin=12645|AlignEnd=12645
+3	moi	moi	PRON	_	Emph=Yes|PronType=Prs	9	dislocated:subj	_	AlignBegin=12645|AlignEnd=12835|Number[lex]=Sing|Person[lex]=1|SpaceAfter=No
+3.1	_	_	_	_	_	3	Syl=1	_	AlignBegin=12645|AlignEnd=12835|AvgAmplitude=52.234|AvgHeightGlo=M|AvgHeightLoc=M|Duration=190|Glo=mm|Loc=mm|MaxAmplitude=54.971|MeanF0=101.359|MeanF0Step=113.772|PitchRangeGlo=L|PitchRangeLoc=L|Semiton=-0.879|SemitonesFromUtteranceMean=0.054|Slope=Fall|SlopeGlo=Flat|SlopeLoc=Flat|SylForm=mwa
+4	,	,	PUNCT	_	_	5	punct	_	AlignBegin=12835|AlignEnd=12835
+5	ben	ben	INTJ	_	_	3	discourse	_	AlignBegin=12835|AlignEnd=12992|SpaceAfter=No
+5.1	_	_	_	_	_	5	Syl=1	_	AlignBegin=12835|AlignEnd=12992|AvgAmplitude=39.365|AvgHeightGlo=M|AvgHeightLoc=M|Duration=156|Glo=mm|Loc=mm|MaxAmplitude=41.163|MeanF0=101|MeanF0Step=113.369|PitchRangeGlo=L|PitchRangeLoc=L|Semiton=0|SemitonesFromUtteranceMean=-0.008|Slope=Flat|SlopeGlo=Flat|SlopeLoc=Flat|SylForm=be~
+6	#	#	PUNCT	_	_	5	punct	_	AlignBegin=12992|AlignEnd=13261|BeforeAvgAmplitude=39.365|BeforeGlo=mm|BeforeLoc=mm|BeforeMeanF0=101.0|BeforeMeanF0Step=113.369|BeforePitchRangeGlo=L|BeforePitchRangeLoc=L|BeforeSemiton=0|BeforeSemitonesFromUtterance=-0.008|BeforeSlope=Flat|BeforeSlopeGlo=Flat|BeforeSlopeLoc=Flat|Duration=0.2695|ExtraNucleus=AssociatedNucleus|ExtraNucleusFrontiere=No|HesitationComposition=no_filler|HesitationPauseType=O|NextAvgAmplitude=42.543|NextGlo=mm|NextLoc=mm|NextMeanF0=103.583|NextMeanF0Step=116.268|NextPitchRangeGlo=L|NextPitchRangeLoc=L|NextSemiton=-0.333|NextSemitonesFromUtterance=0.429|NextSlope=Flat|NextSlopeGlo=Flat|NextSlopeLoc=Flat|pauseID=1-D0001-6
+7	,	,	PUNCT	_	_	3	punct	_	AlignBegin=12992|AlignEnd=13261
+8	je	moi	PRON	_	Case=Nom|Emph=No|PronType=Prs	9	subj	_	AlignBegin=13261|AlignEnd=13386|Number[lex]=Sing|Person[lex]=1
+8.1	_	_	_	_	_	8	Syl=1	_	AlignBegin=13261|AlignEnd=13386|AvgAmplitude=42.543|AvgHeightGlo=M|AvgHeightLoc=M|Duration=125|Glo=mm|Loc=mm|MaxAmplitude=42.543|MeanF0=103.583|MeanF0Step=116.268|PitchRangeGlo=L|PitchRangeLoc=L|Semiton=-0.333|SemitonesFromUtteranceMean=0.429|Slope=Flat|SlopeGlo=Flat|SlopeLoc=Flat|SylForm=Z@
+9	vais	aller	VERB	_	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	_	AlignBegin=13386|AlignEnd=13553|SpaceAfter=No
+9.1	_	_	_	_	_	9	Syl=1	_	AlignBegin=13386|AlignEnd=13553|AvgAmplitude=48.061|AvgHeightGlo=M|AvgHeightLoc=M|Duration=167|Glo=mm|Loc=mm|MaxAmplitude=52.773|MeanF0=105.667|MeanF0Step=118.607|PitchRangeGlo=L|PitchRangeLoc=L|Semiton=0|SemitonesFromUtteranceMean=0.774|Slope=Flat|SlopeGlo=Flat|SlopeLoc=Flat|SylForm=vE
+10	,	,	PUNCT	_	_	14	punct	_	AlignBegin=13553|AlignEnd=13553
+11	je	moi	PRON	_	Case=Nom|Emph=No|PronType=Prs	14	subj	_	AlignBegin=13553|AlignEnd=13766|Number[lex]=Sing|Person[lex]=1|SpaceAfter=No
+11.1	_	_	_	_	_	11	Syl=1	_	AlignBegin=13553|AlignEnd=13766|AvgAmplitude=52.104|AvgHeightGlo=M|AvgHeightLoc=M|Duration=212|Glo=mm|Loc=mm|MaxAmplitude=54.828|MeanF0=101.047|MeanF0Step=113.421|PitchRangeGlo=L|PitchRangeLoc=L|Semiton=-0.167|SemitonesFromUtteranceMean=0|Slope=Flat|SlopeGlo=Flat|SlopeLoc=Flat|SylForm=Z@
+12	,	,	PUNCT	_	_	13	punct	_	AlignBegin=13766|AlignEnd=13766
+13	je	moi	PRON	_	Case=Nom|Emph=No|PronType=Prs	11	conj:dicto	_	AlignBegin=13766|AlignEnd=13976|Number[lex]=Sing|Person[lex]=1
+13.1	_	_	_	_	_	13	Syl=1	_	AlignBegin=13766|AlignEnd=13976|AvgAmplitude=43.638|AvgHeightGlo=M|AvgHeightLoc=M|Duration=210|Glo=mm|Loc=mm|MaxAmplitude=44.128|MeanF0=105.686|MeanF0Step=118.628|PitchRangeGlo=L|PitchRangeLoc=L|Semiton=-0.166|SemitonesFromUtteranceMean=0.777|Slope=Flat|SlopeGlo=Flat|SlopeLoc=Flat|SylForm=Z@
+14	prends	prendre	VERB	_	Mood=Ind|Number=Sing|Tense=Pres|VerbForm=Fin	9	conj:dicto	_	AlignBegin=13976|AlignEnd=14236|Person[ctxt]=1
+14.1	_	_	_	_	_	14|15	Syl=1|Syl=1	_	AlignBegin=13976|AlignEnd=14266|AvgAmplitude=45.94|AvgHeightGlo=M|AvgHeightLoc=M|Duration=289|Fused=Yes|Glo=mm|Loc=mm|MaxAmplitude=48.133|MeanF0=105.2|MeanF0Step=118.083|PitchRangeGlo=L|PitchRangeLoc=L|Semiton=1.171|SemitonesFromUtteranceMean=0.697|Slope=Rise|SlopeGlo=Flat|SlopeLoc=Flat|SylForm=pRa~l
+15	le	le	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	AlignBegin=14236|AlignEnd=14266|HasSpokenGender=OnlySingExceptWithLiaison
+16	mét~	mét~	X	_	ExtPos=NOUN	14	comp:obj	_	AlignBegin=14266|AlignEnd=14506|SpaceAfter=No
+16.1	_	_	_	_	_	16	Syl=1	_	AlignBegin=14266|AlignEnd=14506|AvgAmplitude=42.032|AvgHeightGlo=M|AvgHeightLoc=M|Duration=240|Glo=mm|Loc=mm|MaxAmplitude=46.061|MeanF0=98.703|MeanF0Step=110.79|PitchRangeGlo=L|PitchRangeLoc=L|Semiton=0.533|SemitonesFromUtteranceMean=-0.406|Slope=Flat|SlopeGlo=Flat|SlopeLoc=Flat|SylForm=mE
+17	,	,	PUNCT	_	_	19	punct	_	AlignBegin=14506|AlignEnd=14506
+18	je	moi	PRON	_	Case=Nom|Emph=No|PronType=Prs	19	subj	_	AlignBegin=14506|AlignEnd=14696|Number[lex]=Sing|Person[lex]=1
+18.1	_	_	_	_	_	18|19|20	Syl=1|Syl=1|Syl=1	_	AlignBegin=14506|AlignEnd=14996|AvgAmplitude=43.695|AvgHeightGlo=H|AvgHeightLoc=M|Duration=490|Fused=Yes|Glo=mh|Loc=mm|MaxAmplitude=51.906|MeanF0=94.48|MeanF0Step=106.05|PitchRangeGlo=L|PitchRangeLoc=L|Semiton=-1.704|SemitonesFromUtteranceMean=-1.163|Slope=Fall|SlopeGlo=Rise|SlopeLoc=Flat|SylForm=ZpRa~l
+19	prends	prendre	VERB	_	Mood=Ind|Number=Sing|Tense=Pres|VerbForm=Fin	14	conj:dicto	_	AlignBegin=14696|AlignEnd=14966|Person[ctxt]=1
+20	le	le	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	AlignBegin=14966|AlignEnd=14996|HasSpokenGender=OnlySingExceptWithLiaison
+21	métro	métro	NOUN	_	_	19	comp:obj	_	AlignBegin=14996|AlignEnd=15306|Gender[lex]=Masc|Number[ctxt]=Sing
+21.1	_	_	_	_	_	21|22.1	Syl=1|ExternalOnset=Yes	_	AlignBegin=14996|AlignEnd=15116|AvgAmplitude=48.748|AvgHeightGlo=M|AvgHeightLoc=M|Duration=119|Glo=mm|Loc=mm|MaxAmplitude=48.748|MeanF0=96.158|MeanF0Step=107.934|PitchRangeGlo=L|PitchRangeLoc=L|Semiton=0|SemitonesFromUtteranceMean=-0.858|Slope=Flat|SlopeGlo=Flat|SlopeLoc=Flat|SylForm=me
+22	le	le	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	AlignBegin=15306|AlignEnd=15336|HasSpokenGender=OnlySingExceptWithLiaison
+22.1	_	_	_	_	_	22	Syl=1	_	AlignBegin=15116|AlignEnd=15336|AvgAmplitude=44.048|AvgHeightGlo=M|AvgHeightLoc=M|Duration=220|ExternalOnset=True|Glo=mm|Loc=mm|MaxAmplitude=51.417|MeanF0=97.562|MeanF0Step=109.51|PitchRangeGlo=L|PitchRangeLoc=L|Semiton=0.714|SemitonesFromUtteranceMean=-0.607|Slope=Flat|SlopeGlo=Flat|SlopeLoc=Flat|SylForm=tRol
+23	matin	matin	NOUN	_	_	19	mod	_	AlignBegin=15336|AlignEnd=15916|Gender[lex]=Masc|Number[ctxt]=Sing|SpaceAfter=No
+23.1	_	_	_	_	_	23	Syl=1	_	AlignBegin=15336|AlignEnd=15586|AvgAmplitude=40.928|AvgHeightGlo=M|AvgHeightLoc=M|Duration=250|Glo=mm|Loc=mm|MaxAmplitude=41.378|MeanF0=94.588|MeanF0Step=106.172|PitchRangeGlo=L|PitchRangeLoc=L|Semiton=0.185|SemitonesFromUtteranceMean=-1.143|Slope=Flat|SlopeGlo=Flat|SlopeLoc=Flat|SylForm=ma
+23.2	_	_	_	_	_	23	Syl=2	_	AlignBegin=15586|AlignEnd=15916|AvgAmplitude=49.685|AvgHeightGlo=M|AvgHeightLoc=M|Duration=330|Glo=mm|Loc=mm|MaxAmplitude=52.17|MeanF0=95.788|MeanF0Step=107.519|PitchRangeGlo=L|PitchRangeLoc=L|Semiton=2.783|SemitonesFromUtteranceMean=-0.925|Slope=Rise|SlopeGlo=Flat|SlopeLoc=Flat|SylForm=te~
+24	,	,	PUNCT	_	_	25	punct	_	AlignBegin=15916|AlignEnd=15916
+25	bon	bon	INTJ	_	_	23	discourse	_	AlignBegin=15916|AlignEnd=16216|SpaceAfter=No
+25.1	_	_	_	_	_	25	Syl=1	_	AlignBegin=15916|AlignEnd=16216|AvgAmplitude=44.635|AvgHeightGlo=M|AvgHeightLoc=M|Duration=299|Glo=mm|Loc=mm|MaxAmplitude=45.29|MeanF0=86.35|MeanF0Step=96.925|PitchRangeGlo=L|PitchRangeLoc=L|Semiton=1.05|SemitonesFromUtteranceMean=-2.721|Slope=Rise|SlopeGlo=Flat|SlopeLoc=Flat|SylForm=bo~
+26	#	#	PUNCT	_	_	25	punct	_	AlignBegin=16216|AlignEnd=16548|BeforeAvgAmplitude=44.635|BeforeGlo=mm|BeforeLoc=mm|BeforeMeanF0=86.35|BeforeMeanF0Step=96.925|BeforePitchRangeGlo=L|BeforePitchRangeLoc=L|BeforeSemiton=1.05|BeforeSemitonesFromUtterance=-2.721|BeforeSlope=Rise|BeforeSlopeGlo=Flat|BeforeSlopeLoc=Flat|Duration=0.3328|ExtraNucleus=AssociatedNucleus|ExtraNucleusFrontiere=No|NextAvgAmplitude=35.742|NextGlo=mm|NextLoc=mm|NextMeanF0=54.0|NextMeanF0Step=60.613|NextPitchRangeGlo=L|NextPitchRangeLoc=L|NextSemiton=0|NextSemitonesFromUtterance=-10.848|NextSlope=Flat|NextSlopeGlo=Flat|NextSlopeLoc=Flat|pauseID=2-D0001-6|SilentPauseType=M
+27	,	,	PUNCT	_	_	28	punct	_	AlignBegin=16216|AlignEnd=16548
+28	jusqu'	jusque	ADP	_	_	19	mod	_	AlignBegin=16548|AlignEnd=16693|SpaceAfter=No
+28.1	_	_	_	_	_	28	Syl=1	_	AlignBegin=16548|AlignEnd=16693|AvgAmplitude=35.742|AvgHeightGlo=M|AvgHeightLoc=M|Duration=144|Glo=mm|Loc=mm|MaxAmplitude=37.668|MeanF0=54|MeanF0Step=60.613|PitchRangeGlo=L|PitchRangeLoc=L|Semiton=0|SemitonesFromUtteranceMean=-10.848|Slope=Flat|SlopeGlo=Flat|SlopeLoc=Flat|SylForm=Zys
+29	au	au	ADP	_	_	28	comp:obj	_	AlignBegin=16693|AlignEnd=16860
+29.1	_	_	_	_	_	29	Syl=1	_	AlignBegin=16693|AlignEnd=16860|AvgAmplitude=42.295|AvgHeightGlo=M|AvgHeightLoc=M|Duration=166|Glo=mm|Loc=mm|MaxAmplitude=43.118|MeanF0=102.4|MeanF0Step=114.94|PitchRangeGlo=L|PitchRangeLoc=L|Semiton=0|SemitonesFromUtteranceMean=0.23|Slope=Flat|SlopeGlo=Flat|SlopeLoc=Flat|SylForm=ko
+30	Palais	Palais	PROPN	_	_	29	comp:obj	_	AlignBegin=16860|AlignEnd=17985|Gender[lex]=Unknown|Overlap=Rhap_D0001-7
+30.1	_	_	_	_	_	30	Syl=1	_	AlignBegin=16860|AlignEnd=16965|AvgAmplitude=56.741|AvgHeightGlo=L|AvgHeightLoc=M|Duration=104|Glo=ll|Loc=mm|MaxAmplitude=56.741|MeanF0=100|MeanF0Step=112.246|PitchRangeGlo=L|PitchRangeLoc=L|Semiton=0.35|SemitonesFromUtteranceMean=-0.18|Slope=Flat|SlopeGlo=Flat|SlopeLoc=Flat|SylForm=pa
+30.2	_	_	_	_	_	30	Syl=2	_	AlignBegin=16965|AlignEnd=17285|AvgAmplitude=54.772|AvgHeightGlo=L|AvgHeightLoc=M|Duration=320|Glo=ll|Loc=mm|MaxAmplitude=55.562|MeanF0=97.851|MeanF0Step=109.834|PitchRangeGlo=L|PitchRangeLoc=L|Semiton=-0.176|SemitonesFromUtteranceMean=-0.556|Slope=Flat|SlopeGlo=Flat|SlopeLoc=Flat|SylForm=lE
+30.3	_	_	_	_	_	30	Syl=3	_	AlignBegin=17285|AlignEnd=17395|AvgAmplitude=48.102|AvgHeightGlo=M|AvgHeightLoc=M|Duration=110|Glo=lm|Loc=lm|MaxAmplitude=48.102|MeanF0=102.478|MeanF0Step=115.028|PitchRangeGlo=L|PitchRangeLoc=L|Semiton=-1.824|SemitonesFromUtteranceMean=0.244|Slope=Fall|SlopeGlo=Rise|SlopeLoc=Rise|SylForm=Rwa
+30.4	_	_	_	_	_	30	Syl=4	_	AlignBegin=17395|AlignEnd=17985|AvgAmplitude=48.577|AvgHeightGlo=H|AvgHeightLoc=H|Duration=589|Glo=mH|Loc=mh|MaxAmplitude=60.086|MeanF0=136.105|MeanF0Step=152.773|PitchRangeGlo=M|PitchRangeLoc=L|Semiton=-3.417|SemitonesFromUtteranceMean=5.157|Slope=Fall|SlopeGlo=Rise|SlopeLoc=Rise|SylForm=jal
+31	Royal	Royal	PROPN	_	_	30	flat@name	_	AlignBegin=16860|AlignEnd=17985|Gender[lex]=Unknown|Overlap=Rhap_D0001-7|SpaceAfter=No
+32	#	#	PUNCT	_	_	31	punct	_	AlignBegin=17985|AlignEnd=16860|BeforeAvgAmplitude=0.0|BeforeGlo=0.0|BeforeLoc=0.0|BeforeMeanF0=0.0|BeforeMeanF0Step=0.0|BeforePitchRangeGlo=0.0|BeforePitchRangeLoc=0.0|BeforeSemiton=0.0|BeforeSemitonesFromUtterance=0.0|BeforeSlope=0.0|BeforeSlopeGlo=0.0|BeforeSlopeLoc=0.0|Duration=0|NextAvgAmplitude=0.0|NextGlo=0.0|NextLoc=0.0|NextMeanF0=0.0|NextMeanF0Step=0.0|NextPitchRangeGlo=0.0|NextPitchRangeLoc=0.0|NextSemiton=0.0|NextSemitonsFromUtterance=0.0|NextSlope=0.0|NextSlopeGlo=0.0|NextSlopeLoc=0.0|NucleusType=Nucleus|pauseID=3-D0001-6|SilentPauseType=D
+33	.	.	PUNCT	_	_	9	punct	_	AlignBegin=17985|AlignEnd=17985|Overlap=Rhap_D0001-4bis

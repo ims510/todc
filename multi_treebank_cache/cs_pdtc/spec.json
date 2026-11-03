@@ -1,0 +1,13 @@
+{
+  "name": "cs_pdtc",
+  "language": "Czech",
+  "ud_lang": "cs",
+  "ud_package": "pdtc",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Czech-PDTC",
+  "train_file": "cs_pdtc-ud-train.conllu",
+  "test_file": "cs_pdtc-ud-test.conllu",
+  "stanza_lang": "cs",
+  "n_train": 2749813,
+  "n_test": 305808,
+  "n_tokens": 3055621
+}

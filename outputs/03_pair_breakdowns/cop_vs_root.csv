@@ -1,0 +1,12 @@
+head_upos,dep_upos,n_total,n_cop,n_root,majority,cell_entropy
+NOUN,AUX,2699,2699,0,cop,0.0
+ADJ,AUX,1410,1410,0,cop,0.0
+VERB,AUX,378,378,0,cop,0.0
+PRON,AUX,202,202,0,cop,0.0
+PROPN,AUX,114,114,0,cop,0.0
+ADV,AUX,46,46,0,cop,0.0
+NUM,AUX,26,26,0,cop,0.0
+ADP,AUX,22,22,0,cop,0.0
+SYM,AUX,17,17,0,cop,0.0
+X,AUX,6,6,0,cop,0.0
+DET,AUX,2,2,0,cop,0.0

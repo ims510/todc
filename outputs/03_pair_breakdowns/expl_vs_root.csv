@@ -1,0 +1,11 @@
+head_upos,dep_upos,n_total,n_expl,n_root,majority,cell_entropy
+VERB,PRON,2195,2195,0,expl,0.0
+NOUN,PRON,114,114,0,expl,0.0
+ADJ,PRON,101,101,0,expl,0.0
+ADV,PRON,24,24,0,expl,0.0
+PROPN,PRON,23,23,0,expl,0.0
+PRON,PRON,22,22,0,expl,0.0
+NUM,PRON,5,5,0,expl,0.0
+ADP,PRON,2,2,0,expl,0.0
+SYM,PRON,1,1,0,expl,0.0
+X,PRON,1,1,0,expl,0.0

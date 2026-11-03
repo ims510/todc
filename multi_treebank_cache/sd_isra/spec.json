@@ -1,0 +1,13 @@
+{
+  "name": "sd_isra",
+  "language": "Sindhi",
+  "ud_lang": "sd",
+  "ud_package": "isra",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Sindhi-Isra",
+  "train_file": "sd_isra-ud-train.conllu",
+  "test_file": "sd_isra-ud-test.conllu",
+  "stanza_lang": "sd",
+  "n_train": 74589,
+  "n_test": 11059,
+  "n_tokens": 85648
+}

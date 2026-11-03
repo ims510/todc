@@ -1,0 +1,13 @@
+{
+  "name": "tr_penn",
+  "language": "Turkish",
+  "ud_lang": "tr",
+  "ud_package": "penn",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Turkish-Penn",
+  "train_file": "tr_penn-ud-train.conllu",
+  "test_file": "tr_penn-ud-test.conllu",
+  "stanza_lang": "tr",
+  "n_train": 166514,
+  "n_test": 10047,
+  "n_tokens": 176561
+}

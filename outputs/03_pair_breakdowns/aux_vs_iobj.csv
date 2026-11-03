@@ -1,0 +1,12 @@
+head_upos,dep_upos,n_total,n_aux,n_iobj,majority,cell_entropy
+VERB,AUX,6516,6516,0,aux,0.0
+VERB,PRON,790,0,790,iobj,0.0
+NOUN,AUX,68,68,0,aux,0.0
+ADJ,AUX,45,45,0,aux,0.0
+ADJ,PRON,23,0,23,iobj,0.0
+PRON,AUX,7,7,0,aux,0.0
+ADP,AUX,2,2,0,aux,0.0
+X,AUX,2,2,0,aux,0.0
+PROPN,AUX,1,1,0,aux,0.0
+ADV,AUX,1,1,0,aux,0.0
+AUX,AUX,1,1,0,aux,0.0

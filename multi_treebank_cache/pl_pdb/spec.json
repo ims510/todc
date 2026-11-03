@@ -1,0 +1,13 @@
+{
+  "name": "pl_pdb",
+  "language": "Polish",
+  "ud_lang": "pl",
+  "ud_package": "pdb",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Polish-PDB",
+  "train_file": "pl_pdb-ud-train.conllu",
+  "test_file": "pl_pdb-ud-test.conllu",
+  "stanza_lang": "pl",
+  "n_train": 281685,
+  "n_test": 33616,
+  "n_tokens": 315301
+}

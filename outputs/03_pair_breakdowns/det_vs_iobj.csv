@@ -1,0 +1,17 @@
+head_upos,dep_upos,n_total,n_det,n_iobj,majority,cell_entropy
+NOUN,DET,47384,47384,0,det,0.0
+PROPN,DET,4231,4231,0,det,0.0
+NUM,DET,979,979,0,det,0.0
+VERB,PRON,790,0,790,iobj,0.0
+ADJ,DET,488,488,0,det,0.0
+PRON,DET,274,274,0,det,0.0
+X,DET,256,256,0,det,0.0
+NOUN,ADP,67,67,0,det,0.0
+ADJ,PRON,23,0,23,iobj,0.0
+VERB,DET,14,14,0,det,0.0
+SYM,DET,13,13,0,det,0.0
+ADV,DET,12,12,0,det,0.0
+NOUN,ADV,3,3,0,det,0.0
+ADP,DET,3,3,0,det,0.0
+PROPN,ADP,1,1,0,det,0.0
+PRON,ADV,1,1,0,det,0.0

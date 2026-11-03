@@ -1,0 +1,13 @@
+{
+  "name": "lv_lvtb",
+  "language": "Latvian",
+  "ud_lang": "lv",
+  "ud_package": "lvtb",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Latvian-LVTB",
+  "train_file": "lv_lvtb-ud-train.conllu",
+  "test_file": "lv_lvtb-ud-test.conllu",
+  "stanza_lang": "lv",
+  "n_train": 258266,
+  "n_test": 37323,
+  "n_tokens": 295589
+}

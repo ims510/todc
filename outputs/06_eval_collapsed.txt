@@ -1,0 +1,24 @@
+preds/test_collapsed.conllu vs outputs/test_collapsed.conllu
+n_tokens (excl. punct): 8831
+UAS: 0.9152
+LAS: 0.8927
+
+Per-label LAS-recall:
+  nmod           1395/1729 = 0.8068
+  det            1448/1459 = 0.9925
+  case           1294/1309 = 0.9885
+  conj           820/940 = 0.8723
+  nsubj          653/761 = 0.8581
+  amod           474/535 = 0.8860
+  root           388/416 = 0.9327
+  aux            349/359 = 0.9721
+  obl            219/319 = 0.6865
+  cc             240/256 = 0.9375
+  obj            234/244 = 0.9590
+  acl            172/238 = 0.7227
+  nummod         106/110 = 0.9636
+  fixed          64/105 = 0.6095
+  parataxis      21/34 = 0.6176
+  dislocated     1/8 = 0.1250
+  discourse      5/7 = 0.7143
+  goeswith       0/2 = 0.0000

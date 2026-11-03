@@ -1,0 +1,13 @@
+{
+  "name": "cu_proiel",
+  "language": "Old_Church_Slavonic",
+  "ud_lang": "cu",
+  "ud_package": "proiel",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Old_Church_Slavonic-PROIEL",
+  "train_file": "cu_proiel-ud-train.conllu",
+  "test_file": "cu_proiel-ud-test.conllu",
+  "stanza_lang": "cu",
+  "n_train": 159710,
+  "n_test": 20149,
+  "n_tokens": 179859
+}

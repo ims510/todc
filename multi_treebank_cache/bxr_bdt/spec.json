@@ -1,0 +1,13 @@
+{
+  "name": "bxr_bdt",
+  "language": "Buryat",
+  "ud_lang": "bxr",
+  "ud_package": "bdt",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Buryat-BDT",
+  "train_file": "bxr_bdt-ud-train.conllu",
+  "test_file": "bxr_bdt-ud-test.conllu",
+  "stanza_lang": "bxr",
+  "n_train": 158,
+  "n_test": 10029,
+  "n_tokens": 10187
+}

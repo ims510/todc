@@ -1,0 +1,65 @@
+Train file: /home/claude/UD_English-EWT/en_ewt-ud-train.conllu
+Sentences: 12544
+Tokens (analysed): 204578
+Distinct base relations: 36
+Distinct (head_upos, dep_upos) pairs: 229
+
+Relation totals (descending):
+  punct                   23556
+  case                    17448
+  nsubj                   17377
+  det                     15902
+  root                    12544
+  nmod                    12041
+  advmod                  11301
+  obl                     10137
+  obj                      9892
+  amod                     9585
+  compound                 7927
+  aux                      7859
+  conj                     7617
+  mark                     7124
+  cc                       6837
+  cop                      4728
+  advcl                    3930
+  acl                      3415
+  xcomp                    3087
+  ccomp                    2115
+  flat                     1859
+  parataxis                1551
+  nummod                   1477
+  appos                    1388
+  discourse                 812
+  list                      670
+  iobj                      649
+  expl                      601
+  fixed                     523
+  csubj                     286
+  vocative                  139
+  goeswith                  131
+  reparandum                 36
+  orphan                     26
+  dislocated                  5
+  dep                         3
+
+Top 20 (head_upos, dep_upos) pairs by count:
+        VERB -> NOUN          16766
+        NOUN -> DET           14488
+        VERB -> PRON          12402
+        NOUN -> NOUN          11899
+        NOUN -> ADP           11248
+        VERB -> PUNCT         10795
+        VERB -> VERB           9000
+        NOUN -> ADJ            8302
+        VERB -> AUX            7480
+        ROOT -> VERB           7246
+        VERB -> ADV            5919
+        NOUN -> PUNCT          5589
+        VERB -> PART           4363
+       PROPN -> PROPN          4354
+        NOUN -> PRON           4157
+        NOUN -> VERB           4076
+        VERB -> PROPN          3213
+        NOUN -> PROPN          3120
+       PROPN -> ADP            2989
+        VERB -> SCONJ          2944

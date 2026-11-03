@@ -1,0 +1,101 @@
+# Candidate collapse rules from deterministic-given-POS pairs.
+# Format:  source=target   # tvd / acc / entropy / n_shared_cells
+# Filters: deterministic_pos=True, tvd <= 0.99,
+#          shared cells (>= 3 tokens of each) >= 2
+# Direction: less frequent -> more frequent. Sorted by TVD ascending.
+# THIS IS A CANDIDATE LIST, NOT A RECOMMENDATION. Statistical
+# similarity is not the same as linguistic redundancy. iobj/nsubj
+# will pass; collapsing them is wrong. obl/nmod will pass; collapsing
+# them is fine. Review and delete the lines you do not want before
+# passing the rest to stage 4 / pipeline as --rules src=tgt,src2=tgt2.
+# Avoid chains: do not keep both 'a=b' and 'b=c' in the final list.
+
+orphan=nmod    # tvd=0.5315 acc=0.9945 H=0.0402 shared=18
+csubj=xcomp    # tvd=0.5696 acc=0.9534 H=0.1864 shared=4
+orphan=appos    # tvd=0.5887 acc=0.9725 H=0.1313 shared=16
+iobj=nsubj    # tvd=0.6287 acc=0.9613 H=0.1826 shared=2
+orphan=conj    # tvd=0.6955 acc=0.9886 H=0.0628 shared=13
+parataxis=nsubj    # tvd=0.7003 acc=0.9822 H=0.1125 shared=18
+csubj=conj    # tvd=0.7114 acc=0.9850 H=0.0718 shared=4
+parataxis=obl    # tvd=0.7618 acc=0.9848 H=0.0885 shared=15
+xcomp=obl    # tvd=0.7957 acc=0.9672 H=0.1901 shared=9
+xcomp=nsubj    # tvd=0.7976 acc=0.9630 H=0.1862 shared=7
+parataxis=obj    # tvd=0.8128 acc=0.9816 H=0.1132 shared=9
+parataxis=acl    # tvd=0.8143 acc=0.9695 H=0.1684 shared=11
+orphan=nsubj    # tvd=0.8336 acc=0.9938 H=0.0323 shared=15
+orphan=nummod    # tvd=0.8523 acc=0.9893 H=0.0726 shared=3
+parataxis=expl    # tvd=0.8863 acc=0.9677 H=0.1647 shared=4
+ccomp=obl    # tvd=0.8909 acc=0.9913 H=0.0538 shared=8
+ccomp=obj    # tvd=0.8946 acc=0.9872 H=0.0831 shared=8
+advcl=acl    # tvd=0.9007 acc=0.9684 H=0.1794 shared=9
+csubj=acl    # tvd=0.9039 acc=0.9943 H=0.0368 shared=3
+cop=aux    # tvd=0.9042 acc=0.9564 H=0.2542 shared=4
+orphan=amod    # tvd=0.9087 acc=0.9985 H=0.0127 shared=2
+advcl=nsubj    # tvd=0.9110 acc=0.9849 H=0.0896 shared=9
+advcl=obl    # tvd=0.9132 acc=0.9873 H=0.0832 shared=9
+parataxis=appos    # tvd=0.9140 acc=0.9725 H=0.1134 shared=14
+ccomp=nsubj    # tvd=0.9182 acc=0.9907 H=0.0492 shared=7
+appos=flat    # tvd=0.9208 acc=0.9627 H=0.2131 shared=9
+orphan=advmod    # tvd=0.9209 acc=0.9976 H=0.0144 shared=4
+parataxis=nmod    # tvd=0.9226 acc=0.9942 H=0.0330 shared=12
+advcl=obj    # tvd=0.9259 acc=0.9830 H=0.1122 shared=7
+orphan=obl    # tvd=0.9264 acc=0.9945 H=0.0209 shared=13
+fixed=case    # tvd=0.9284 acc=0.9945 H=0.0389 shared=8
+orphan=advcl    # tvd=0.9296 acc=0.9817 H=0.0602 shared=5
+conj=obl    # tvd=0.9332 acc=0.9689 H=0.1608 shared=31
+iobj=parataxis    # tvd=0.9347 acc=0.9643 H=0.1790 shared=2
+fixed=advmod    # tvd=0.9348 acc=0.9749 H=0.0877 shared=13
+orphan=acl    # tvd=0.9376 acc=0.9866 H=0.0468 shared=7
+expl=obl    # tvd=0.9441 acc=0.9505 H=0.1347 shared=5
+acl=conj    # tvd=0.9447 acc=0.9726 H=0.1451 shared=17
+iobj=obl    # tvd=0.9476 acc=0.9661 H=0.0808 shared=2
+flat=nmod    # tvd=0.9485 acc=0.9725 H=0.1287 shared=11
+ccomp=fixed    # tvd=0.9486 acc=0.9780 H=0.0880 shared=9
+orphan=ccomp    # tvd=0.9566 acc=0.9890 H=0.0477 shared=3
+orphan=flat    # tvd=0.9567 acc=0.9932 H=0.0271 shared=5
+obj=conj    # tvd=0.9649 acc=0.9821 H=0.1049 shared=16
+orphan=fixed    # tvd=0.9649 acc=0.9910 H=0.0320 shared=4
+appos=acl    # tvd=0.9677 acc=0.9830 H=0.0941 shared=9
+orphan=xcomp    # tvd=0.9677 acc=0.9971 H=0.0167 shared=2
+advmod=case    # tvd=0.9683 acc=0.9927 H=0.0529 shared=13
+orphan=obj    # tvd=0.9692 acc=0.9987 H=0.0076 shared=3
+acl=nmod    # tvd=0.9696 acc=0.9927 H=0.0446 shared=10
+fixed=conj    # tvd=0.9701 acc=0.9886 H=0.0538 shared=20
+fixed=advcl    # tvd=0.9726 acc=0.9863 H=0.0518 shared=7
+fixed=obl    # tvd=0.9739 acc=0.9867 H=0.0515 shared=13
+appos=obl    # tvd=0.9749 acc=0.9850 H=0.0669 shared=17
+obl=nmod    # tvd=0.9755 acc=0.9886 H=0.0711 shared=21
+acl=nsubj    # tvd=0.9756 acc=0.9931 H=0.0355 shared=9
+advcl=appos    # tvd=0.9761 acc=0.9891 H=0.0587 shared=5
+parataxis=fixed    # tvd=0.9763 acc=0.9878 H=0.0565 shared=6
+parataxis=amod    # tvd=0.9785 acc=0.9980 H=0.0150 shared=4
+fixed=xcomp    # tvd=0.9794 acc=0.9900 H=0.0440 shared=7
+fixed=acl    # tvd=0.9798 acc=0.9926 H=0.0390 shared=6
+orphan=cc    # tvd=0.9799 acc=0.9978 H=0.0097 shared=3
+orphan=mark    # tvd=0.9806 acc=0.9972 H=0.0102 shared=2
+cc=advmod    # tvd=0.9817 acc=0.9915 H=0.0503 shared=8
+advcl=nmod    # tvd=0.9820 acc=0.9979 H=0.0168 shared=5
+flat=nsubj    # tvd=0.9824 acc=0.9952 H=0.0224 shared=3
+expl=nmod    # tvd=0.9828 acc=0.9949 H=0.0172 shared=5
+orphan=case    # tvd=0.9839 acc=0.9985 H=0.0054 shared=7
+acl=amod    # tvd=0.9845 acc=0.9953 H=0.0367 shared=5
+obj=advmod    # tvd=0.9849 acc=0.9925 H=0.0507 shared=8
+acl=obl    # tvd=0.9850 acc=0.9947 H=0.0158 shared=7
+fixed=mark    # tvd=0.9851 acc=0.9918 H=0.0409 shared=6
+expl=appos    # tvd=0.9852 acc=0.9899 H=0.0260 shared=2
+csubj=obl    # tvd=0.9854 acc=0.9994 H=0.0032 shared=2
+ccomp=acl    # tvd=0.9856 acc=0.9943 H=0.0305 shared=5
+mark=case    # tvd=0.9861 acc=0.9956 H=0.0193 shared=11
+advmod=conj    # tvd=0.9865 acc=0.9932 H=0.0440 shared=17
+parataxis=flat    # tvd=0.9867 acc=0.9977 H=0.0166 shared=2
+xcomp=acl    # tvd=0.9868 acc=0.9940 H=0.0420 shared=4
+fixed=appos    # tvd=0.9868 acc=0.9942 H=0.0221 shared=6
+fixed=nsubj    # tvd=0.9874 acc=0.9963 H=0.0186 shared=9
+expl=conj    # tvd=0.9874 acc=0.9907 H=0.0378 shared=5
+advmod=obl    # tvd=0.9878 acc=0.9930 H=0.0499 shared=11
+mark=obj    # tvd=0.9888 acc=0.9928 H=0.0218 shared=3
+ccomp=appos    # tvd=0.9889 acc=0.9935 H=0.0225 shared=4
+conj=amod    # tvd=0.9894 acc=0.9952 H=0.0381 shared=7
+ccomp=advmod    # tvd=0.9897 acc=0.9972 H=0.0150 shared=5
+mark=obl    # tvd=0.9899 acc=0.9931 H=0.0250 shared=6
+fixed=obj    # tvd=0.9899 acc=0.9973 H=0.0170 shared=7

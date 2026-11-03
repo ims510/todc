@@ -1,0 +1,13 @@
+{
+  "name": "nl_lassysmall",
+  "language": "Dutch",
+  "ud_lang": "nl",
+  "ud_package": "lassysmall",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Dutch-LassySmall",
+  "train_file": "nl_lassysmall-ud-train.conllu",
+  "test_file": "nl_lassysmall-ud-test.conllu",
+  "stanza_lang": "nl",
+  "n_train": 239941,
+  "n_test": 28995,
+  "n_tokens": 268936
+}

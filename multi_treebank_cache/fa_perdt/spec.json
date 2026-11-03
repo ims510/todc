@@ -1,0 +1,13 @@
+{
+  "name": "fa_perdt",
+  "language": "Persian",
+  "ud_lang": "fa",
+  "ud_package": "perdt",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Persian-PerDT",
+  "train_file": "fa_perdt-ud-train.conllu",
+  "test_file": "fa_perdt-ud-test.conllu",
+  "stanza_lang": "fa",
+  "n_train": 452496,
+  "n_test": 24133,
+  "n_tokens": 476629
+}

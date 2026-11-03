@@ -1,0 +1,13 @@
+{
+  "name": "sl_ssj",
+  "language": "Slovenian",
+  "ud_lang": "sl",
+  "ud_package": "ssj",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Slovenian-SSJ",
+  "train_file": "sl_ssj-ud-train.conllu",
+  "test_file": "sl_ssj-ud-test.conllu",
+  "stanza_lang": "sl",
+  "n_train": 215155,
+  "n_test": 25442,
+  "n_tokens": 240597
+}

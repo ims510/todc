@@ -1,0 +1,17 @@
+# Candidate rules from /Users/madalina/Documents/M2TAL/stage/check_coherent_labels/dep_stability_matrix.csv
+# Filters: min_mutual_affinity=0.2, min_target_coherence=0.5
+# Rules use FULL deprels (with subtypes); collapse code must match exactly.
+
+csubj=xcomp  # mutual=0.817  src_coh=0.000  tgt_coh=0.726  asymmetric (a pulled toward b)
+orphan=appos  # mutual=0.674  src_coh=0.000  tgt_coh=0.830  asymmetric (b pulled toward a)
+cop=case  # mutual=0.670  src_coh=0.000  tgt_coh=0.953  asymmetric (b pulled toward a)
+discourse=advmod  # mutual=0.640  src_coh=0.000  tgt_coh=0.686  asymmetric (b pulled toward a)
+obl:arg=obl:mod  # mutual=0.515  src_coh=0.625  tgt_coh=0.693  symmetric (chose by self-coherence)
+det=nummod  # mutual=0.450  src_coh=0.640  tgt_coh=0.821  asymmetric (a pulled toward b)
+discourse=cc  # mutual=0.373  src_coh=0.000  tgt_coh=0.704  asymmetric (b pulled toward a)
+ccomp=advcl  # mutual=0.334  src_coh=0.603  tgt_coh=0.655  asymmetric (b pulled toward a)
+csubj=advcl  # mutual=0.314  src_coh=0.000  tgt_coh=0.655  asymmetric (b pulled toward a)
+parataxis=ccomp  # mutual=0.230  src_coh=0.335  tgt_coh=0.603  asymmetric (b pulled toward a)
+nsubj:pass=nsubj  # mutual=0.215  src_coh=0.608  tgt_coh=0.792  asymmetric (b pulled toward a)
+
+# CHAIN NODES (need resolution): ['ccomp']

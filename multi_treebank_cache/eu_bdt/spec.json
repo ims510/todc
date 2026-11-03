@@ -1,0 +1,13 @@
+{
+  "name": "eu_bdt",
+  "language": "Basque",
+  "ud_lang": "eu",
+  "ud_package": "bdt",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Basque-BDT",
+  "train_file": "eu_bdt-ud-train.conllu",
+  "test_file": "eu_bdt-ud-test.conllu",
+  "stanza_lang": "eu",
+  "n_train": 72974,
+  "n_test": 24374,
+  "n_tokens": 97348
+}

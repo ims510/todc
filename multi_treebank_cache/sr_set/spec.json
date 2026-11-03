@@ -1,0 +1,13 @@
+{
+  "name": "sr_set",
+  "language": "Serbian",
+  "ud_lang": "sr",
+  "ud_package": "set",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Serbian-SET",
+  "train_file": "sr_set-ud-train.conllu",
+  "test_file": "sr_set-ud-test.conllu",
+  "stanza_lang": "sr",
+  "n_train": 74259,
+  "n_test": 11421,
+  "n_tokens": 85680
+}

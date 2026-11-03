@@ -1,0 +1,13 @@
+{
+  "name": "ug_udt",
+  "language": "Uyghur",
+  "ud_lang": "ug",
+  "ud_package": "udt",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Uyghur-UDT",
+  "train_file": "ug_udt-ud-train.conllu",
+  "test_file": "ug_udt-ud-test.conllu",
+  "stanza_lang": "ug",
+  "n_train": 19262,
+  "n_test": 10330,
+  "n_tokens": 29592
+}

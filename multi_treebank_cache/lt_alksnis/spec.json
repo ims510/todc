@@ -1,0 +1,13 @@
+{
+  "name": "lt_alksnis",
+  "language": "Lithuanian",
+  "ud_lang": "lt",
+  "ud_package": "alksnis",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Lithuanian-ALKSNIS",
+  "train_file": "lt_alksnis-ud-train.conllu",
+  "test_file": "lt_alksnis-ud-test.conllu",
+  "stanza_lang": "lt",
+  "n_train": 47641,
+  "n_test": 10846,
+  "n_tokens": 58487
+}

@@ -1,0 +1,13 @@
+{
+  "name": "kk_ktb",
+  "language": "Kazakh",
+  "ud_lang": "kk",
+  "ud_package": "ktb",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Kazakh-KTB",
+  "train_file": "kk_ktb-ud-train.conllu",
+  "test_file": "kk_ktb-ud-test.conllu",
+  "stanza_lang": "kk",
+  "n_train": 529,
+  "n_test": 10007,
+  "n_tokens": 10536
+}

@@ -1,0 +1,17 @@
+head_upos,dep_upos,n_total,n_aux,n_csubj,majority,cell_entropy
+VERB,AUX,6516,6516,0,aux,0.0
+ADJ,VERB,94,0,94,csubj,0.0
+VERB,VERB,73,0,73,csubj,0.0
+NOUN,AUX,68,68,0,aux,0.0
+ADJ,AUX,45,45,0,aux,0.0
+NOUN,VERB,18,0,18,csubj,0.0
+PRON,AUX,7,7,0,aux,0.0
+ADJ,ADJ,4,0,4,csubj,0.0
+VERB,ADJ,2,0,2,csubj,0.0
+ADJ,NOUN,2,0,2,csubj,0.0
+ADP,AUX,2,2,0,aux,0.0
+X,AUX,2,2,0,aux,0.0
+PROPN,AUX,1,1,0,aux,0.0
+ADV,AUX,1,1,0,aux,0.0
+VERB,ADP,1,0,1,csubj,0.0
+AUX,AUX,1,1,0,aux,0.0

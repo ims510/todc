@@ -1,0 +1,13 @@
+{
+  "name": "la_ittb",
+  "language": "Latin",
+  "ud_lang": "la",
+  "ud_package": "ittb",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Latin-ITTB",
+  "train_file": "la_ittb-ud-train.conllu",
+  "test_file": "la_ittb-ud-test.conllu",
+  "stanza_lang": "la",
+  "n_train": 390787,
+  "n_test": 29842,
+  "n_tokens": 420629
+}

@@ -1,0 +1,13 @@
+{
+  "name": "ga_idt",
+  "language": "Irish",
+  "ud_lang": "ga",
+  "ud_package": "idt",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Irish-IDT",
+  "train_file": "ga_idt-ud-train.conllu",
+  "test_file": "ga_idt-ud-test.conllu",
+  "stanza_lang": "ga",
+  "n_train": 95881,
+  "n_test": 10109,
+  "n_tokens": 105990
+}

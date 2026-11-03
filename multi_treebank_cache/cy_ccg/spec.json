@@ -1,0 +1,13 @@
+{
+  "name": "cy_ccg",
+  "language": "Welsh",
+  "ud_lang": "cy",
+  "ud_package": "ccg",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Welsh-CCG",
+  "train_file": "cy_ccg-ud-train.conllu",
+  "test_file": "cy_ccg-ud-test.conllu",
+  "stanza_lang": "cy",
+  "n_train": 28563,
+  "n_test": 17026,
+  "n_tokens": 45589
+}

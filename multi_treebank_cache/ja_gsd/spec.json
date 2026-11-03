@@ -1,0 +1,13 @@
+{
+  "name": "ja_gsd",
+  "language": "Japanese",
+  "ud_lang": "ja",
+  "ud_package": "gsd",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Japanese-GSD",
+  "train_file": "ja_gsd-ud-train.conllu",
+  "test_file": "ja_gsd-ud-test.conllu",
+  "stanza_lang": "ja",
+  "n_train": 168333,
+  "n_test": 13034,
+  "n_tokens": 181367
+}

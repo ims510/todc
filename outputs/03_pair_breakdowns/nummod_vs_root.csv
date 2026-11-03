@@ -1,0 +1,8 @@
+head_upos,dep_upos,n_total,n_nummod,n_root,majority,cell_entropy
+NOUN,NUM,2787,2787,0,nummod,0.0
+SYM,NUM,342,342,0,nummod,0.0
+PROPN,NUM,36,36,0,nummod,0.0
+ADJ,NUM,15,15,0,nummod,0.0
+PRON,NUM,5,5,0,nummod,0.0
+X,NUM,5,5,0,nummod,0.0
+VERB,NUM,1,1,0,nummod,0.0

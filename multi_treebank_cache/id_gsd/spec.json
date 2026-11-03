@@ -1,0 +1,13 @@
+{
+  "name": "id_gsd",
+  "language": "Indonesian",
+  "ud_lang": "id",
+  "ud_package": "gsd",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Indonesian-GSD",
+  "train_file": "id_gsd-ud-train.conllu",
+  "test_file": "id_gsd-ud-test.conllu",
+  "stanza_lang": "id",
+  "n_train": 97602,
+  "n_test": 11756,
+  "n_tokens": 109358
+}

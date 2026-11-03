@@ -1,0 +1,13 @@
+{
+  "name": "af_afribooms",
+  "language": "Afrikaans",
+  "ud_lang": "af",
+  "ud_package": "afribooms",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Afrikaans-AfriBooms",
+  "train_file": "af_afribooms-ud-train.conllu",
+  "test_file": "af_afribooms-ud-test.conllu",
+  "stanza_lang": "af",
+  "n_train": 33878,
+  "n_test": 10063,
+  "n_tokens": 43941
+}

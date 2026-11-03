@@ -1,0 +1,13 @@
+{
+  "name": "zh_gsd",
+  "language": "Chinese",
+  "ud_lang": "zh",
+  "ud_package": "gsd",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Chinese-GSD",
+  "train_file": "zh_gsd-ud-train.conllu",
+  "test_file": "zh_gsd-ud-test.conllu",
+  "stanza_lang": "zh-hant",
+  "n_train": 98614,
+  "n_test": 12010,
+  "n_tokens": 110624
+}

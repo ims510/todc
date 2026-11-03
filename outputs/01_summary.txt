@@ -1,0 +1,62 @@
+Train file: /Users/madalina/Documents/PHD/code/data/small_test/UD_French-GSD/fr_gsd-ud-train.conllu
+Sentences: 14450
+Tokens seen: 354648
+Tokens kept (after filtering punct/root/PUNCT-UPOS): 301181
+Distinct base relations: 32
+Distinct (head_upos, dep_upos) pairs: 186
+
+Relation totals (descending):
+  det                     53726
+  case                    51366
+  nmod                    31538
+  obl                     23189
+  nsubj                   20209
+  amod                    17690
+  conj                    12713
+  advmod                  12133
+  obj                     12044
+  cc                       9602
+  flat                     7221
+  acl                      7218
+  aux                      6643
+  mark                     5916
+  appos                    5633
+  cop                      4922
+  xcomp                    3971
+  nummod                   3191
+  advcl                    3095
+  fixed                    3038
+  expl                     2488
+  ccomp                    1277
+  parataxis                 980
+  iobj                      813
+  csubj                     194
+  orphan                    180
+  dislocated                 61
+  dep                        42
+  discourse                  39
+  goeswith                   29
+  vocative                   14
+  compound                    6
+
+Top 20 (head_upos, dep_upos) pairs by count:
+        NOUN -> DET           47404
+        NOUN -> ADP           36813
+        VERB -> NOUN          30650
+        NOUN -> NOUN          25811
+        NOUN -> ADJ           17545
+        VERB -> PRON          13250
+       PROPN -> ADP           10246
+        NOUN -> PROPN          9700
+        VERB -> VERB           8727
+       PROPN -> PROPN          8566
+        VERB -> ADV            7036
+        VERB -> AUX            6898
+        NOUN -> VERB           6447
+        VERB -> PROPN          5608
+        NOUN -> NUM            5150
+        VERB -> ADP            4483
+       PROPN -> DET            4233
+        NOUN -> CCONJ          3752
+        VERB -> CCONJ          2965
+        NOUN -> AUX            2768

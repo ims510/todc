@@ -1,0 +1,13 @@
+{
+  "name": "hi_hdtb",
+  "language": "Hindi",
+  "ud_lang": "hi",
+  "ud_package": "hdtb",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Hindi-HDTB",
+  "train_file": "hi_hdtb-ud-train.conllu",
+  "test_file": "hi_hdtb-ud-test.conllu",
+  "stanza_lang": "hi",
+  "n_train": 281057,
+  "n_test": 35430,
+  "n_tokens": 316487
+}

@@ -1,0 +1,225 @@
+scope: pattern{X[upos<>PUNCT]} without{X["InIdiom"=Yes]} without{X["Idiom"=Yes]} without{X["InTitle"=Yes]} without{X["Title"=Yes]} without{X["Scrap"=Yes]} without{X["Foreign"]} without{X["Lang"]} without{X-[fixed]->Y} without{Y-[flat:name]->X} without{Y-[goeswith]->X}
+conclusion: X[]
+
+templates:
+    base:
+        own:
+            method: exclude
+            regexp: ["form", "textform", "wordform", "lemma", "SpaceAfter", "Typo", "xpos", "CorrectForm", 
+            "CorrectGender", "CorrectMood", "CorrectNumber", "CorrectPerson", "CorrectSpaceAfter",
+            "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom", "upos", "ExtPos", "Title", "InTitle", "Idiom", "InIdiom",
+            "Foreign", "Lang", "Scrap"]            
+            lemma_top_k: 0
+        parent:
+            method: include
+            regexp: ["upos", "position", "rel_shallow","Abbr", "Aspect", "Animacy", "Case", "Clusivity", "Definite", "Deixis", 
+            "DeixisRef", "Evident", "Negation","Number", "Gender", "Degree", "ExtPos", "Foreign", "Mood", "NounClass", "NumType", 
+            "Person", "Polarity", "Polite", "Poss", "PronType", "Reflex", "Tense", "Typo", "VerbForm", "Voice", 
+            "Foot", "FootTone", "FootType", "Group", "GroupTone", "IU", "Nucleus", "Package", "Package_type", "PackageTone",
+            "ProminenceFinal", "ProminenceInitial", "RhythmGroup", "Period", "Period_tone"]             
+            lemma_top_k: 0
+        child:
+            method: include
+            regexp: ["upos", "position", "rel_shallow", "Abbr", "Aspect", "Animacy", "Case", "Clusivity", "Definite", "Deixis", 
+            "DeixisRef", "Evident", "Negation","Number", "Gender", "Degree", "ExtPos", "Foreign", "Mood", "NounClass", "NumType", 
+            "Person", "Polarity", "Polite", "Poss", "PronType", "Reflex", "Tense", "Typo", "VerbForm", "Voice", 
+            "Foot", "FootTone", "FootType", "Group", "GroupTone", "IU", "Nucleus", "Package", "Package_type", "PackageTone",
+            "ProminenceFinal", "ProminenceInitial", "RhythmGroup", "Period", "Period_tone"]               
+            lemma_top_k: 0
+        prev:
+            method: include
+            regexp: ["upos", "position", "rel_shallow","Abbr", "Aspect", "Animacy", "Case", "Clusivity", "Definite", "Deixis", 
+            "DeixisRef", "Evident", "Negation","Number", "Gender", "Degree", "ExtPos", "Foreign", "Mood", "NounClass", "NumType", 
+            "Person", "Polarity", "Polite", "Poss", "PronType", "Reflex", "Tense", "Typo", "VerbForm", "Voice", 
+            "Foot", "FootTone", "FootType", "Group", "GroupTone", "IU", "Nucleus", "Package", "Package_type", "PackageTone",
+            "ProminenceFinal", "ProminenceInitial", "RhythmGroup", "Period", "Period_tone", "GovInnucleus", "GovPostnucleus", 
+            "Graft", "Hesitation", "IU", "IU_embedded", "IU_graft", "IU_parenthesis", "Innucleus", "Intro_IU", "Layer", "Postnucleus", "Prenucleus",    ]     
+            lemma_top_k: -1
+        next:
+            method: include
+            regexp: ["upos", "position", "rel_shallow","Abbr", "Aspect", "Animacy", "Case", "Clusivity", "Definite", "Deixis", 
+            "DeixisRef", "Evident", "Negation","Number", "Gender", "Degree", "ExtPos", "Foreign", "Mood", "NounClass", "NumType", 
+            "Person", "Polarity", "Polite", "Poss", "PronType", "Reflex", "Tense", "Typo", "VerbForm", "Voice", 
+            "Foot", "FootTone", "FootType", "Group", "GroupTone", "IU", "Nucleus", "Package", "Package_type", "PackageTone",
+            "ProminenceFinal", "ProminenceInitial", "RhythmGroup", "Period", "Period_tone", "GovInnucleus", "GovPostnucleus", 
+            "Graft", "Hesitation", "IU", "IU_embedded", "IU_graft", "IU_parenthesis", "Innucleus", "Intro_IU", "Layer", "Postnucleus", "Prenucleus",    ] 
+            lemma_top_k: -1
+        childSyl1:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSyl2:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSyl3:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSyl4:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSyl5:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSyl6:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSyl7:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSyl8:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSyl9:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSyl10:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSylExt1:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSylExt2:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSylExt3:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSylExt4:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSylExt5:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        prevSyl:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        nextSyl:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1           
+features:
+    X: 
+        own:
+            method: exclude
+            regexp: ["form", "textform", "wordform", "lemma", "SpaceAfter", "Typo", "xpos", "CorrectForm", 
+            "CorrectGender", "CorrectMood", "CorrectNumber", "CorrectPerson", "CorrectSpaceAfter",
+            "CorrectTense", "CorrectVerbForm", "CorrectVoice", "wordfom", "Title", "InTitle", "Idiom", "InIdiom",
+            "Foreign", "Lang", "Scrap", "upos", "ExtPos"]              
+            lemma_top_k: 0
+        parent:
+            method: include
+            regexp: ["upos", "position", "rel_shallow","Abbr", "Aspect", "Animacy", "Case", "Clusivity", "Definite", "Deixis", 
+            "DeixisRef", "Evident", "Negation","Number", "Gender", "Degree", "ExtPos", "Foreign", "Mood", "NounClass", "NumType", 
+            "Person", "Polarity", "Polite", "Poss", "PronType", "Reflex", "Tense", "Typo", "VerbForm", "Voice", 
+            "Foot", "FootTone", "FootType", "Group", "GroupTone", "IU", "Nucleus", "Package", "Package_type", "PackageTone",
+            "ProminenceFinal", "ProminenceInitial", "RhythmGroup", "Period", "Period_tone"]         
+            lemma_top_k: 0
+        child:
+            method: include
+            regexp: ["upos", "position", "rel_shallow","Abbr", "Aspect", "Animacy", "Case", "Clusivity", "Definite", "Deixis", 
+            "DeixisRef", "Evident", "Negation","Number", "Gender", "Degree", "ExtPos", "Foreign", "Mood", "NounClass", "NumType", 
+            "Person", "Polarity", "Polite", "Poss", "PronType", "Reflex", "Tense", "Typo", "VerbForm", "Voice", 
+            "Foot", "FootTone", "FootType", "Group", "GroupTone", "IU", "Nucleus", "Package", "Package_type", "PackageTone",
+            "ProminenceFinal", "ProminenceInitial", "RhythmGroup", "Period", "Period_tone"]                 
+            lemma_top_k: 0
+        prev:
+            method: include
+            regexp: ["upos", "position", "rel_shallow","Abbr", "Aspect", "Animacy", "Case", "Clusivity", "Definite", "Deixis", 
+            "DeixisRef", "Evident", "Negation","Number", "Gender", "Degree", "ExtPos", "Foreign", "Mood", "NounClass", "NumType", 
+            "Person", "Polarity", "Polite", "Poss", "PronType", "Reflex", "Tense", "Typo", "VerbForm", "Voice" ,
+            "Foot", "FootTone", "FootType", "Group", "GroupTone", "IU", "Nucleus", "Package", "Package_type", "PackageTone",
+            "ProminenceFinal", "ProminenceInitial", "RhythmGroup", "Period", "Period_tone", "GovInnucleus", "GovPostnucleus", 
+            "Graft", "Hesitation", "IU", "IU_embedded", "IU_graft", "IU_parenthesis", "Innucleus", "Intro_IU", "Layer", "Postnucleus", "Prenucleus",    ]        
+            lemma_top_k: -1
+        next:
+            method: include
+            regexp: ["upos", "position", "rel_shallow","Abbr", "Aspect", "Animacy", "Case", "Clusivity", "Definite", "Deixis", 
+            "DeixisRef", "Evident", "Negation","Number", "Gender", "Degree", "ExtPos", "Foreign", "Mood", "NounClass", "NumType", 
+            "Person", "Polarity", "Polite", "Poss", "PronType", "Reflex", "Tense", "Typo", "VerbForm", "Voice", 
+            "Foot", "FootTone", "FootType", "Group", "GroupTone", "IU", "Nucleus", "Package", "Package_type", "PackageTone",
+            "ProminenceFinal", "ProminenceInitial", "RhythmGroup", "Period", "Period_tone", "GovInnucleus", "GovPostnucleus", 
+            "Graft", "Hesitation", "IU", "IU_embedded", "IU_graft", "IU_parenthesis", "Innucleus", "Intro_IU", "Layer", "Postnucleus", "Prenucleus",    ] 
+            lemma_top_k: -1
+        childSyl1:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSyl2:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSyl3:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSyl4:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSyl5:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSylExt1:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSylExt2:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSylExt3:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSylExt4:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSylExt5:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        prevSyl:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        nextSyl:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1    
+        childSyl6:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSyl7:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSyl8:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSyl9:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1
+        childSyl10:
+            method: exclude
+            regexp: ["form", "textform", "wordform"]
+            lemma_top_k: -1

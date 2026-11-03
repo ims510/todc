@@ -1,0 +1,13 @@
+{
+  "name": "cop_scriptorium",
+  "language": "Coptic",
+  "ud_lang": "cop",
+  "ud_package": "scriptorium",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Coptic-Scriptorium",
+  "train_file": "cop_scriptorium-ud-train.conllu",
+  "test_file": "cop_scriptorium-ud-test.conllu",
+  "stanza_lang": "cop",
+  "n_train": 35769,
+  "n_test": 10372,
+  "n_tokens": 46141
+}

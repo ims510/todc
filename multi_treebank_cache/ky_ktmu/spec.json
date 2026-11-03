@@ -1,0 +1,13 @@
+{
+  "name": "ky_ktmu",
+  "language": "Kyrgyz",
+  "ud_lang": "ky",
+  "ud_package": "ktmu",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Kyrgyz-KTMU",
+  "train_file": "ky_ktmu-ud-train.conllu",
+  "test_file": "ky_ktmu-ud-test.conllu",
+  "stanza_lang": "ky",
+  "n_train": 12357,
+  "n_test": 11771,
+  "n_tokens": 24128
+}

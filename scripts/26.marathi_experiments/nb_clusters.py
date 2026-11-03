@@ -156,20 +156,20 @@ def find_optimal_nb_clusters(corpus: tod.corpus.Corpus, max_clusters: int = 50):
     # print(f"Optimal number of clusters according to Jaccard stability: {jaccard_optimal_k} with score {max_jaccard_value}")
 
 
-treebank_path = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/data/input/Universal_Dependencies/ud-treebanks-v2.15/UD_Romanian-RRT"
-grew_pattern = "pattern{X[upos<>PUNCT]}"
-patterns_text_file = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/scripts/3. probability_matrix/patterns_all_nodes.txt"
-analysed_category = "all_nodes"
+# treebank_path = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/data/input/Universal_Dependencies/ud-treebanks-v2.15/UD_Romanian-RRT"
+# grew_pattern = "pattern{X[upos<>PUNCT]}"
+# patterns_text_file = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/scripts/3. probability_matrix/patterns_all_nodes.txt"
+# analysed_category = "all_nodes"
 
-corpus = tod.corpus.Corpus(
-    treebank_path=treebank_path,
-    grew_pattern=grew_pattern,
-    patterns_text_file=patterns_text_file,
-    use_sud=False,
-    matrix_type="coverage"
+# corpus = tod.corpus.Corpus(
+#     treebank_path=treebank_path,
+#     grew_pattern=grew_pattern,
+#     patterns_text_file=patterns_text_file,
+#     use_sud=False,
+#     matrix_type="coverage"
 
     # excluded_feature_patterns=[r"Translit=", r"Ltranslit="]
-)
+# )
 
 # for testing with adverbs (it's much quicker)
 # corpus = tod.corpus.Corpus(
@@ -199,7 +199,30 @@ corpus = tod.corpus.Corpus(
 #     feature_names_path=f"/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/UD_French-GSD_feature_names.npy"
 # )
 
+# corpus = tod.corpus.CorpusProsody(
+#     treebank_path="/Users/madalina/Downloads/pSUD_Naija-NSC",
+#     grew_pattern="pattern { X[upos<>PUNCT] }",
+#     patterns_text_file = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/scripts/3. probability_matrix/patterns_all_nodes.txt",
+#     min_occurrences=3,
+# )
+
+treebank_path = "/Users/madalina/Downloads/bUD_English-GUM"
+grew_pattern = "pattern{X[upos<>PUNCT]}"
+patterns_text_file = "/Users/madalina/Documents/M2TAL/stage/check_coherent_labels/scripts/3. probability_matrix/patterns_all_nodes.txt"
+analysed_category = "all_nodes"
+
+corpus = tod.corpus.Corpus(
+    treebank_path=treebank_path,
+    grew_pattern=grew_pattern,
+    patterns_text_file=patterns_text_file,
+    use_sud=False,
+    matrix_type="coverage",
+    # excluded_feature_patterns=[r"CxnElt=", r"Cxn=", r"own", r"Gender"]
+        excluded_feature_patterns=[r"CxnElt=", r"Cxn=", r"XML=", r"PDTB=", r"SplitAnte=", r"MSeg=", r"Entity=", r"Discourse=", r"Bridge=", r"own"]
+)
+
 print("Made corpus")
+print("features:", corpus._idx2feature)
 print("Feature matrix shape:", corpus.feature_matrix.shape)
 print("="*50)
 print("Checking clustering tendency...")

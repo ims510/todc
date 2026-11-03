@@ -1,0 +1,13 @@
+{
+  "name": "hbo_ptnk",
+  "language": "Ancient_Hebrew",
+  "ud_lang": "hbo",
+  "ud_package": "ptnk",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Ancient_Hebrew-PTNK",
+  "train_file": "hbo_ptnk-ud-train.conllu",
+  "test_file": "hbo_ptnk-ud-test.conllu",
+  "stanza_lang": "hbo",
+  "n_train": 114434,
+  "n_test": 14972,
+  "n_tokens": 129406
+}

@@ -1,0 +1,13 @@
+{
+  "name": "ur_udtb",
+  "language": "Urdu",
+  "ud_lang": "ur",
+  "ud_package": "udtb",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Urdu-UDTB",
+  "train_file": "ur_udtb-ud-train.conllu",
+  "test_file": "ur_udtb-ud-test.conllu",
+  "stanza_lang": "ur",
+  "n_train": 108690,
+  "n_test": 14806,
+  "n_tokens": 123496
+}

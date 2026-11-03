@@ -1,0 +1,13 @@
+{
+  "name": "sk_snk",
+  "language": "Slovak",
+  "ud_lang": "sk",
+  "ud_package": "snk",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Slovak-SNK",
+  "train_file": "sk_snk-ud-train.conllu",
+  "test_file": "sk_snk-ud-test.conllu",
+  "stanza_lang": "sk",
+  "n_train": 80874,
+  "n_test": 12744,
+  "n_tokens": 93618
+}

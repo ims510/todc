@@ -1,0 +1,143 @@
+Cluster 0 - Top 10 defining features:
+================================================================================
+  1. node:X:own:Gender=Fem                              importance: 0.413412
+  2. node:X:own:Case=Acc,Nom                            importance: 0.230583
+  3. node:X:own:Definite=Ind                            importance: 0.114415
+  4. node:X:child:rel_shallow=case                      importance: 0.079774
+  5. node:X:own:Number=Sing                             importance: 0.076213
+  6. node:X:child:upos=ADP                              importance: 0.068590
+  7. node:X:prev:upos=ADP                               importance: 0.055931
+  8. node:X:own:Definite=Def                            importance: 0.054947
+  9. node:X:child:Case=Acc                              importance: 0.033919
+ 10. node:X:own:rel_shallow=obl                         importance: 0.033503
+
+Cluster 1 - Top 10 defining features:
+================================================================================
+  1. node:X:own:Gender=Masc                             importance: 0.295028
+  2. node:X:own:Case=Acc,Nom                            importance: 0.152114
+  3. node:X:own:Definite=Ind                            importance: 0.067818
+  4. node:X:child:rel_shallow=case                      importance: 0.061075
+  5. node:X:own:Number=Sing                             importance: 0.058213
+  6. node:X:child:upos=ADP                              importance: 0.052827
+  7. node:X:own:Definite=Def                            importance: 0.041846
+  8. node:X:prev:upos=ADP                               importance: 0.037824
+  9. node:X:parent:upos=VERB                            importance: 0.037393
+ 10. node:X:own:Gender=Fem                              importance: 0.034310
+
+Cluster 2 - Top 10 defining features:
+================================================================================
+  1. node:X:own:Gender=Masc                             importance: 0.379206
+  2. node:X:own:Definite=Ind                            importance: 0.270816
+  3. node:X:own:Case=Acc,Nom                            importance: 0.248898
+  4. node:X:own:Number=Sing                             importance: 0.102441
+  5. node:X:parent:Case=Acc,Nom                         importance: 0.034387
+  6. node:X:parent:position=before                      importance: 0.031732
+  7. node:X:child:rel_shallow=case                      importance: 0.030538
+  8. node:X:child:upos=ADP                              importance: 0.026500
+  9. node:X:own:rel_shallow=nmod                        importance: 0.023562
+ 10. node:X:prev:upos=ADP                               importance: 0.020561
+
+Cluster 3 - Top 10 defining features:
+================================================================================
+  1. node:X:parent:position=after                       importance: 0.107935
+  2. node:X:parent:upos=VERB                            importance: 0.062001
+  3. node:X:own:rel_shallow=advmod                      importance: 0.033115
+  4. node:X:parent:VerbForm=Fin                         importance: 0.018382
+  5. node:X:parent:Case=Acc,Nom                         importance: 0.011246
+  6. node:X:parent:Number=Sing                          importance: 0.010646
+  7. node:X:prev:upos=PUNCT                             importance: 0.009858
+  8. node:X:parent:Person=3                             importance: 0.008368
+  9. node:X:parent:Mood=Ind                             importance: 0.008177
+ 10. node:X:prev:Case=Acc,Nom                           importance: 0.007980
+
+Cluster 4 - Top 10 defining features:
+================================================================================
+  1. node:X:own:Gender=Masc                             importance: 0.367182
+  2. node:X:own:Case=Acc,Nom                            importance: 0.221114
+  3. node:X:own:Number=Sing                             importance: 0.096123
+  4. node:X:own:Definite=Def                            importance: 0.082958
+  5. node:X:own:Definite=Ind                            importance: 0.080070
+  6. node:X:child:rel_shallow=case                      importance: 0.051046
+  7. node:X:child:upos=ADP                              importance: 0.044044
+  8. node:X:parent:upos=VERB                            importance: 0.043018
+  9. node:X:parent:position=after                       importance: 0.041181
+ 10. node:X:prev:upos=ADP                               importance: 0.034536
+
+Cluster 5 - Top 10 defining features:
+================================================================================
+  1. node:X:own:Gender=Masc                             importance: 0.385206
+  2. node:X:own:Case=Acc,Nom                            importance: 0.246058
+  3. node:X:own:Definite=Ind                            importance: 0.198842
+  4. node:X:child:rel_shallow=case                      importance: 0.187008
+  5. node:X:child:upos=ADP                              importance: 0.159826
+  6. node:X:prev:upos=ADP                               importance: 0.131430
+  7. node:X:own:rel_shallow=obl                         importance: 0.090785
+  8. node:X:own:Number=Sing                             importance: 0.086470
+  9. node:X:child:Case=Acc                              importance: 0.079091
+ 10. node:X:prev:Case=Acc                               importance: 0.070237
+
+Cluster 6 - Top 10 defining features:
+================================================================================
+  1. node:X:parent:position=after                       importance: 0.095173
+  2. node:X:parent:Case=Acc,Nom                         importance: 0.065284
+  3. node:X:parent:upos=NOUN                            importance: 0.048812
+  4. node:X:parent:Definite=Ind                         importance: 0.038606
+  5. node:X:next:Case=Acc,Nom                           importance: 0.022391
+  6. node:X:parent:Gender=Masc                          importance: 0.021394
+  7. node:X:parent:Gender=Fem                           importance: 0.019241
+  8. node:X:parent:Number=Sing                          importance: 0.016950
+  9. node:X:prev:upos=ADP                               importance: 0.015589
+ 10. node:X:next:Definite=Ind                           importance: 0.012740
+
+Cluster 7 - Top 10 defining features:
+================================================================================
+  1. node:X:own:Gender=Fem                              importance: 0.475437
+  2. node:X:own:Case=Acc,Nom                            importance: 0.253003
+  3. node:X:own:Definite=Ind                            importance: 0.200313
+  4. node:X:child:rel_shallow=case                      importance: 0.162041
+  5. node:X:child:upos=ADP                              importance: 0.138223
+  6. node:X:prev:upos=ADP                               importance: 0.110173
+  7. node:X:own:Number=Sing                             importance: 0.100916
+  8. node:X:own:rel_shallow=obl                         importance: 0.076943
+  9. node:X:child:Case=Acc                              importance: 0.068743
+ 10. node:X:prev:Case=Acc                               importance: 0.059113
+
+Cluster 8 - Top 10 defining features:
+================================================================================
+  1. node:X:own:rel_shallow=advmod                      importance: 0.147764
+  2. node:X:parent:upos=VERB                            importance: 0.056705
+  3. node:X:parent:position=after                       importance: 0.045598
+  4. node:X:child:upos=ADP                              importance: 0.034971
+  5. node:X:prev:upos=ADP                               importance: 0.030053
+  6. node:X:parent:position=before                      importance: 0.027132
+  7. node:X:parent:VerbForm=Fin                         importance: 0.020122
+  8. node:X:prev:Case=Acc                               importance: 0.019130
+  9. node:X:child:Case=Acc                              importance: 0.019010
+ 10. node:X:next:upos=PUNCT                             importance: 0.014540
+
+Cluster 9 - Top 10 defining features:
+================================================================================
+  1. node:X:own:VerbForm=Fin                            importance: 0.048491
+  2. node:X:child:upos=PRON                             importance: 0.037612
+  3. node:X:own:Number=Sing                             importance: 0.030386
+  4. node:X:child:Person=3                              importance: 0.029900
+  5. node:X:child:Strength=Weak                         importance: 0.027296
+  6. node:X:parent:position=before                      importance: 0.023769
+  7. node:X:child:Case=Acc                              importance: 0.022049
+  8. node:X:child:upos=PUNCT                            importance: 0.021634
+  9. node:X:child:rel_shallow=punct                     importance: 0.021634
+ 10. node:X:parent:upos=VERB                            importance: 0.020736
+
+Cluster 10 - Top 10 defining features:
+================================================================================
+  1. node:X:own:Degree=Pos                              importance: 0.516529
+  2. node:X:own:rel_shallow=amod                        importance: 0.252828
+  3. node:X:own:Gender=Fem                              importance: 0.219669
+  4. node:X:own:Case=Acc,Nom                            importance: 0.198025
+  5. node:X:own:Definite=Ind                            importance: 0.184836
+  6. node:X:own:Gender=Masc                             importance: 0.162693
+  7. node:X:own:Number=Sing                             importance: 0.085287
+  8. node:X:parent:upos=NOUN                            importance: 0.055819
+  9. node:X:parent:Case=Acc,Nom                         importance: 0.053596
+ 10. node:X:parent:position=before                      importance: 0.032763
+

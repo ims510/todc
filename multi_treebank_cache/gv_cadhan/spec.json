@@ -1,0 +1,13 @@
+{
+  "name": "gv_cadhan",
+  "language": "Manx",
+  "ud_lang": "gv",
+  "ud_package": "cadhan",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Manx-Cadhan",
+  "train_file": "gv_cadhan-ud-train.conllu",
+  "test_file": "gv_cadhan-ud-test.conllu",
+  "stanza_lang": "gv",
+  "n_train": 10378,
+  "n_test": 10347,
+  "n_tokens": 20725
+}

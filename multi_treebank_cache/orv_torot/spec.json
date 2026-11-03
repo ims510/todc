@@ -1,0 +1,13 @@
+{
+  "name": "orv_torot",
+  "language": "Old_East_Slavic",
+  "ud_lang": "orv",
+  "ud_package": "torot",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Old_East_Slavic-TOROT",
+  "train_file": "orv_torot-ud-train.conllu",
+  "test_file": "orv_torot-ud-test.conllu",
+  "stanza_lang": "orv",
+  "n_train": 191350,
+  "n_test": 27878,
+  "n_tokens": 219228
+}

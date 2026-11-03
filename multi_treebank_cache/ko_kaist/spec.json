@@ -1,0 +1,13 @@
+{
+  "name": "ko_kaist",
+  "language": "Korean",
+  "ud_lang": "ko",
+  "ud_package": "kaist",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Korean-Kaist",
+  "train_file": "ko_kaist-ud-train.conllu",
+  "test_file": "ko_kaist-ud-test.conllu",
+  "stanza_lang": "ko",
+  "n_train": 296446,
+  "n_test": 28366,
+  "n_tokens": 324812
+}

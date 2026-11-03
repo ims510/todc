@@ -1,0 +1,13 @@
+{
+  "name": "pcm_nsc",
+  "language": "Naija",
+  "ud_lang": "pcm",
+  "ud_package": "nsc",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Naija-NSC",
+  "train_file": "pcm_nsc-ud-train.conllu",
+  "test_file": "pcm_nsc-ud-test.conllu",
+  "stanza_lang": "pcm",
+  "n_train": 111916,
+  "n_test": 14350,
+  "n_tokens": 126266
+}

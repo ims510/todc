@@ -1,0 +1,13 @@
+{
+  "name": "hu_szeged",
+  "language": "Hungarian",
+  "ud_lang": "hu",
+  "ud_package": "szeged",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Hungarian-Szeged",
+  "train_file": "hu_szeged-ud-train.conllu",
+  "test_file": "hu_szeged-ud-test.conllu",
+  "stanza_lang": "hu",
+  "n_train": 20166,
+  "n_test": 10448,
+  "n_tokens": 30614
+}

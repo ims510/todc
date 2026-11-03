@@ -1,0 +1,13 @@
+{
+  "name": "pt_cintil",
+  "language": "Portuguese",
+  "ud_lang": "pt",
+  "ud_package": "cintil",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Portuguese-CINTIL",
+  "train_file": "pt_cintil-ud-train.conllu",
+  "test_file": "pt_cintil-ud-test.conllu",
+  "stanza_lang": "pt",
+  "n_train": 346576,
+  "n_test": 82298,
+  "n_tokens": 428874
+}

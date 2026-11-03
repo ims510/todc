@@ -1,0 +1,13 @@
+{
+  "name": "kmr_kurmanji",
+  "language": "Northern_Kurdish",
+  "ud_lang": "kmr",
+  "ud_package": "kurmanji",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Northern_Kurdish-Kurmanji",
+  "train_file": "kmr_kurmanji-ud-train.conllu",
+  "test_file": "kmr_kurmanji-ud-test.conllu",
+  "stanza_lang": "kmr",
+  "n_train": 242,
+  "n_test": 10017,
+  "n_tokens": 10259
+}

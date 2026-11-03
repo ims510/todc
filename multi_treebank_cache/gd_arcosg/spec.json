@@ -1,0 +1,13 @@
+{
+  "name": "gd_arcosg",
+  "language": "Scottish_Gaelic",
+  "ud_lang": "gd",
+  "ud_package": "arcosg",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Scottish_Gaelic-ARCOSG",
+  "train_file": "gd_arcosg-ud-train.conllu",
+  "test_file": "gd_arcosg-ud-test.conllu",
+  "stanza_lang": "gd",
+  "n_train": 68775,
+  "n_test": 10597,
+  "n_tokens": 79372
+}

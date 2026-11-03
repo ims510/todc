@@ -1,0 +1,13 @@
+{
+  "name": "no_nynorsk",
+  "language": "Norwegian",
+  "ud_lang": "no",
+  "ud_package": "nynorsk",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Norwegian-Nynorsk",
+  "train_file": "no_nynorsk-ud-train.conllu",
+  "test_file": "no_nynorsk-ud-test.conllu",
+  "stanza_lang": "nn",
+  "n_train": 245330,
+  "n_test": 24773,
+  "n_tokens": 270103
+}

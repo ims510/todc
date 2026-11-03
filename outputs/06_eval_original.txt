@@ -1,0 +1,36 @@
+preds/test_orig.conllu vs /Users/madalina/Documents/PHD/code/data/small_test/UD_French-GSD/fr_gsd-ud-test.conllu
+n_tokens (excl. punct): 8831
+UAS: 0.9101
+LAS: 0.8838
+
+Per-label LAS-recall:
+  det            1444/1459 = 0.9897
+  case           1294/1309 = 0.9885
+  nmod           673/856 = 0.7862
+  nsubj          537/589 = 0.9117
+  obl            458/569 = 0.8049
+  amod           460/485 = 0.9485
+  advmod         400/462 = 0.8658
+  root           385/416 = 0.9255
+  obj            322/368 = 0.8750
+  conj           217/319 = 0.6803
+  cc             235/256 = 0.9180
+  mark           227/244 = 0.9303
+  aux            204/206 = 0.9903
+  acl            109/177 = 0.6158
+  cop            143/153 = 0.9346
+  flat           120/127 = 0.9449
+  advcl          80/117 = 0.6838
+  xcomp          92/115 = 0.8000
+  appos          71/112 = 0.6339
+  nummod         106/110 = 0.9636
+  fixed          75/105 = 0.7143
+  expl           75/98 = 0.7653
+  ccomp          33/55 = 0.6000
+  parataxis      15/50 = 0.3000
+  iobj           22/34 = 0.6471
+  csubj          2/12 = 0.1667
+  orphan         1/11 = 0.0909
+  dislocated     0/8 = 0.0000
+  discourse      5/7 = 0.7143
+  goeswith       0/2 = 0.0000

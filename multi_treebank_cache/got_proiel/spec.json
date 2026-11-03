@@ -1,0 +1,13 @@
+{
+  "name": "got_proiel",
+  "language": "Gothic",
+  "ud_lang": "got",
+  "ud_package": "proiel",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Gothic-PROIEL",
+  "train_file": "got_proiel-ud-train.conllu",
+  "test_file": "got_proiel-ud-test.conllu",
+  "stanza_lang": "got",
+  "n_train": 35024,
+  "n_test": 10198,
+  "n_tokens": 45222
+}

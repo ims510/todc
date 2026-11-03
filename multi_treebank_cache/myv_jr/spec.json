@@ -1,0 +1,13 @@
+{
+  "name": "myv_jr",
+  "language": "Erzya",
+  "ud_lang": "myv",
+  "ud_package": "jr",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Erzya-JR",
+  "train_file": "myv_jr-ud-train.conllu",
+  "test_file": "myv_jr-ud-test.conllu",
+  "stanza_lang": "myv",
+  "n_train": 10294,
+  "n_test": 10409,
+  "n_tokens": 20703
+}

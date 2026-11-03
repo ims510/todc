@@ -1,0 +1,13 @@
+{
+  "name": "sme_giella",
+  "language": "North_Sami",
+  "ud_lang": "sme",
+  "ud_package": "giella",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_North_Sami-Giella",
+  "train_file": "sme_giella-ud-train.conllu",
+  "test_file": "sme_giella-ud-test.conllu",
+  "stanza_lang": "sme",
+  "n_train": 16835,
+  "n_test": 10010,
+  "n_tokens": 26845
+}

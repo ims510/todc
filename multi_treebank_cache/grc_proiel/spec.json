@@ -1,0 +1,13 @@
+{
+  "name": "grc_proiel",
+  "language": "Ancient_Greek",
+  "ud_lang": "grc",
+  "ud_package": "proiel",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Ancient_Greek-PROIEL",
+  "train_file": "grc_proiel-ud-train.conllu",
+  "test_file": "grc_proiel-ud-test.conllu",
+  "stanza_lang": "grc",
+  "n_train": 187039,
+  "n_test": 13314,
+  "n_tokens": 200353
+}

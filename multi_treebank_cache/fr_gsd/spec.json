@@ -1,0 +1,13 @@
+{
+  "name": "fr_gsd",
+  "language": "French",
+  "ud_lang": "fr",
+  "ud_package": "gsd",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_French-GSD",
+  "train_file": "fr_gsd-ud-train.conllu",
+  "test_file": "fr_gsd-ud-test.conllu",
+  "stanza_lang": "fr",
+  "n_train": 354648,
+  "n_test": 10017,
+  "n_tokens": 364665
+}

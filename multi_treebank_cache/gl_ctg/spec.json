@@ -1,0 +1,13 @@
+{
+  "name": "gl_ctg",
+  "language": "Galician",
+  "ud_lang": "gl",
+  "ud_package": "ctg",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Galician-CTG",
+  "train_file": "gl_ctg-ud-train.conllu",
+  "test_file": "gl_ctg-ud-test.conllu",
+  "stanza_lang": "gl",
+  "n_train": 79327,
+  "n_test": 29738,
+  "n_tokens": 109065
+}

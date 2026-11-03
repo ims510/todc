@@ -1,0 +1,13 @@
+{
+  "name": "uk_iu",
+  "language": "Ukrainian",
+  "ud_lang": "uk",
+  "ud_package": "iu",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Ukrainian-IU",
+  "train_file": "uk_iu-ud-train.conllu",
+  "test_file": "uk_iu-ud-test.conllu",
+  "stanza_lang": "uk",
+  "n_train": 92927,
+  "n_test": 17217,
+  "n_tokens": 110144
+}

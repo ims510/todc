@@ -1,0 +1,13 @@
+{
+  "name": "hr_set",
+  "language": "Croatian",
+  "ud_lang": "hr",
+  "ud_package": "set",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Croatian-SET",
+  "train_file": "hr_set-ud-train.conllu",
+  "test_file": "hr_set-ud-test.conllu",
+  "stanza_lang": "hr",
+  "n_train": 152857,
+  "n_test": 24260,
+  "n_tokens": 177117
+}

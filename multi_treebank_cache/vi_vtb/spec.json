@@ -1,0 +1,13 @@
+{
+  "name": "vi_vtb",
+  "language": "Vietnamese",
+  "ud_lang": "vi",
+  "ud_package": "vtb",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Vietnamese-VTB",
+  "train_file": "vi_vtb-ud-train.conllu",
+  "test_file": "vi_vtb-ud-test.conllu",
+  "stanza_lang": "vi",
+  "n_train": 20215,
+  "n_test": 11692,
+  "n_tokens": 31907
+}

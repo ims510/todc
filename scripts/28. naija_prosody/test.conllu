@@ -1,0 +1,30 @@
+# global.columns = ID FORM LEMMA UPOS XPOS FEATS HEAD DEPREL DEPS MISC
+# sent_id = JOS_12_How-To-Prepare-Gote-Soup_MG__4
+# sound_url = http://naijasyncor.huma-num.fr/carte/mp3/JOS_12_How-to-Prepare-Gote-soup_MG.mp3
+# speaker_age = 46-60
+# speaker_birthplace = Plateau
+# speaker_education = Tertiary
+# speaker_id = Sp126
+# speaker_naija_competency = High
+# speaker_primary_other_language = Ngas
+# speaker_residence = Plateau
+# speaker_sex = F
+# text = # na just about five minute //
+# text_en = It's just... about five minutes.
+# text_ortho = Na just about five minute.
+1	#	#	PUNCT	_	_	2	punct	_	AlignBegin=27380|AlignEnd=27760|Gloss=PUNCT
+2	na	na	PART	_	PartType=Cop	0	root	_	AlignBegin=27760|AlignEnd=27930|Gloss=be|phoneticform=na|UtteranceMeanF0=123.239
+2.1	_	_	_	_	_	2	Syl=1	_	AlignBegin=27760|AlignEnd=27930|AvgAmplitude=64.581|AvgAmplitudeGlobalZscore=0.26|AvgAmplitudeLocalZscore=0.261|AvgAmplitudeNormalized=0.722|AvgHeightGlo=M|AvgHeightLoc=M|Coda=None|Duration=169|DurationGlobalZscore=-0.328|DurationLocalZscore=-0.429|DurationNormalized=0.234|Glo=mm|Loc=mm|MaxAmplitude=67.355|MaxAmplitudeGlobalZscore=0.052|MaxAmplitudeLocalZscore=-0.181|MaxAmplitudeNormalized=0.562|MeanF0=121.791|MeanF0GlobalZscore=0.662|MeanF0LocalZscore=0.243|MeanF0Normalized=0.562|Nucleus=a|Onset=n|PitchRangeGlo=L|PitchRangeLoc=L|SemitonesFromUtteranceMean=0.265|Slope=Rise|SlopeGlo=Flat|SlopeLoc=Flat|StepsFromLeft=1|StepsFromRight=1|SylForm=na
+3	just	just	ADV	_	_	4	mod	_	AlignBegin=27930|AlignEnd=28160|Gloss=just|phoneticform=dZOs
+3.1	_	_	_	_	_	3|4.1	Syl=1|ExternalOnset=Yes	_	AlignBegin=27930|AlignEnd=28060|AvgAmplitude=69.49|AvgAmplitudeGlobalZscore=0.703|AvgAmplitudeLocalZscore=1.126|AvgAmplitudeNormalized=1|AvgHeightGlo=H|AvgHeightLoc=H|Coda=None|Duration=129|DurationGlobalZscore=-1.02|DurationLocalZscore=-0.87|DurationNormalized=0.073|Glo=mh|Loc=mh|MaxAmplitude=73.283|MaxAmplitudeGlobalZscore=0.988|MaxAmplitudeLocalZscore=1.383|MaxAmplitudeNormalized=1|MeanF0=133.89|MeanF0GlobalZscore=1.296|MeanF0LocalZscore=1.623|MeanF0Normalized=1|Nucleus=O|Onset=dZ|PitchRangeGlo=L|PitchRangeLoc=L|SemitonesFromUtteranceMean=1.905|Slope=Fall|SlopeGlo=Rise|SlopeLoc=Rise|StepsFromLeft=1|StepsFromRight=1|SylForm=dZO
+4	about	about	ADP	_	_	2	comp:pred	_	AlignBegin=28160|AlignEnd=28420|Gloss=about|phoneticform=abat
+4.1	_	_	_	_	_	4	Syl=1	_	AlignBegin=28060|AlignEnd=28210|AvgAmplitude=66.06|AvgAmplitudeGlobalZscore=0.292|AvgAmplitudeLocalZscore=0.522|AvgAmplitudeNormalized=0.806|AvgHeightGlo=H|AvgHeightLoc=H|Coda=None|Duration=150|DurationGlobalZscore=-1.079|DurationLocalZscore=-0.638|DurationNormalized=0.157|ExternalOnset=True|Glo=hm|Loc=hm|MaxAmplitude=69.286|MaxAmplitudeGlobalZscore=0.018|MaxAmplitudeLocalZscore=0.328|MaxAmplitudeNormalized=0.704|MeanF0=126.813|MeanF0GlobalZscore=1.218|MeanF0LocalZscore=0.816|MeanF0Normalized=0.744|Nucleus=a|Onset=s|PitchRangeGlo=L|PitchRangeLoc=L|SemitonesFromUtteranceMean=0.965|Slope=Rise|SlopeGlo=Fall|SlopeLoc=Fall|StepsFromLeft=1|StepsFromRight=2|SylForm=sa
+4.2	_	_	_	_	_	4	Syl=2	_	AlignBegin=28210|AlignEnd=28420|AvgAmplitude=58.986|AvgAmplitudeGlobalZscore=-0.495|AvgAmplitudeLocalZscore=-0.725|AvgAmplitudeNormalized=0.405|AvgHeightGlo=M|AvgHeightLoc=M|Coda=t|Duration=210|DurationGlobalZscore=-1.042|DurationLocalZscore=0.024|DurationNormalized=0.399|Glo=mm|Loc=mm|MaxAmplitude=68.412|MaxAmplitudeGlobalZscore=-0.585|MaxAmplitudeLocalZscore=0.097|MaxAmplitudeNormalized=0.64|MeanF0=120.345|MeanF0GlobalZscore=0.788|MeanF0LocalZscore=0.078|MeanF0Normalized=0.51|Nucleus=a|Onset=b|PitchRangeGlo=L|PitchRangeLoc=L|SemitonesFromUtteranceMean=0.058|Slope=Flat|SlopeGlo=Flat|SlopeLoc=Flat|StepsFromLeft=2|StepsFromRight=1|SylForm=bat
+5	five	five	NUM	_	NumType=Card	6	det:num	_	AlignBegin=28420|AlignEnd=28780|Gloss=five.CARD|phoneticform=faIf
+5.1	_	_	_	_	_	5	Syl=1	_	AlignBegin=28420|AlignEnd=28780|AvgAmplitude=62.243|AvgAmplitudeGlobalZscore=0.334|AvgAmplitudeLocalZscore=-0.151|AvgAmplitudeNormalized=0.589|AvgHeightGlo=M|AvgHeightLoc=M|Coda=f|Duration=359|DurationGlobalZscore=0.33|DurationLocalZscore=1.668|DurationNormalized=1|Glo=mm|Loc=mm|MaxAmplitude=69.305|MaxAmplitudeGlobalZscore=-0.419|MaxAmplitudeLocalZscore=0.333|MaxAmplitudeNormalized=0.706|MeanF0=118.81|MeanF0GlobalZscore=-0.53|MeanF0LocalZscore=-0.097|MeanF0Normalized=0.455|Nucleus=aI|Onset=f|PitchRangeGlo=L|PitchRangeLoc=L|SemitonesFromUtteranceMean=-0.164|Slope=Rise|SlopeGlo=Flat|SlopeLoc=Flat|StepsFromLeft=1|StepsFromRight=1|SylForm=faIf
+6	minute	minute	NOUN	_	_	4	comp:obj	_	AlignBegin=28780|AlignEnd=29220|Gloss=minute|phoneticform=minit
+6.1	_	_	_	_	_	6	Syl=1	_	AlignBegin=28780|AlignEnd=28892|AvgAmplitude=68.501|AvgAmplitudeGlobalZscore=0.998|AvgAmplitudeLocalZscore=0.952|AvgAmplitudeNormalized=0.944|AvgHeightGlo=M|AvgHeightLoc=M|Coda=None|Duration=111|DurationGlobalZscore=-0.829|DurationLocalZscore=-1.069|DurationNormalized=0|Glo=mm|Loc=mm|MaxAmplitude=68.895|MaxAmplitudeGlobalZscore=0.558|MaxAmplitudeLocalZscore=0.225|MaxAmplitudeNormalized=0.675|MeanF0=109.745|MeanF0GlobalZscore=-1.479|MeanF0LocalZscore=-1.131|MeanF0Normalized=0.127|Nucleus=i|Onset=m|PitchRangeGlo=L|PitchRangeLoc=L|SemitonesFromUtteranceMean=-1.538|Slope=Flat|SlopeGlo=Flat|SlopeLoc=Flat|StepsFromLeft=1|StepsFromRight=2|SylForm=mi
+6.2	_	_	_	_	_	6	Syl=2	_	AlignBegin=28892|AlignEnd=29220|AvgAmplitude=51.845|AvgAmplitudeGlobalZscore=-1.827|AvgAmplitudeLocalZscore=-1.984|AvgAmplitudeNormalized=0|AvgHeightGlo=L|AvgHeightLoc=M|Coda=t|Duration=327|DurationGlobalZscore=0.054|DurationLocalZscore=1.315|DurationNormalized=0.871|Glo=ll|Loc=mm|MaxAmplitude=59.762|MaxAmplitudeGlobalZscore=-2.08|MaxAmplitudeLocalZscore=-2.185|MaxAmplitudeNormalized=0|MeanF0=106.236|MeanF0GlobalZscore=-1.562|MeanF0LocalZscore=-1.532|MeanF0Normalized=0|Nucleus=i|Onset=n|PitchRangeGlo=L|PitchRangeLoc=L|SemitonesFromUtteranceMean=-2.101|Slope=Flat|SlopeGlo=Flat|SlopeLoc=Flat|StepsFromLeft=2|StepsFromRight=1|SylForm=nit
+7	//	//	PUNCT	_	_	2	punct	_	AlignBegin=29220|AlignEnd=29220|Gloss=PUNCT
+
+

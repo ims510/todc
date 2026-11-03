@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Categories — Fuzzy Boundaries over Time</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="mark">Fuzzy Boundaries <span>/ over time</span></div>
+  <nav>
+    <a href="index.html">Method</a>
+    <a href="explorer.html">Word explorer</a>
+    <a href="categories.html" class="active">Categories</a>
+  </nav>
+</header>
+
+<main>
+  <p class="eyebrow">Category level</p>
+  <h1>Do the boundaries themselves move?</h1>
+  <p class="lede">Beneath the individual words, the categories barely budge. We track how
+  the average profile of each part of speech relates to every other, across time.</p>
+
+  <div class="controls">
+    <div class="toggle" id="resToggle" role="group" aria-label="Time resolution">
+      <button data-res="annee" class="active">By year</button>
+      <button data-res="decennie">By decade</button>
+    </div>
+  </div>
+
+  <h2>How much each pair's relationship varies</h2>
+  <p>Darker cells mark category pairs whose similarity moved most over the period. The
+  numbers are small everywhere — the categories hold their shape.</p>
+  <div class="card">
+    <img id="variation" alt="Heatmap: variation in category-pair similarity over time"
+         style="width:100%;border-radius:8px" onerror="this.replaceWith(missing())">
+  </div>
+
+  <h2>Which way they moved</h2>
+  <p>Signed change from the first period to the last: positive means two categories grew
+  more alike, negative means they drifted apart. Even the largest shifts are diffuse — no
+  single feature explains them — which is why we read this as <em>stability</em>, and put
+  the real story at the word level.</p>
+  <div class="card">
+    <img id="signed" alt="Heatmap: signed change in category-pair similarity"
+         style="width:100%;border-radius:8px" onerror="this.replaceWith(missing())">
+  </div>
+
+  <p style="margin-top:24px"><a href="explorer.html">See the words that did move →</a></p>
+</main>
+
+<footer>Distributional study of POS overlap · UD_French · board minutes 1984–2018</footer>
+
+<script>
+function missing() {
+  const d = document.createElement("div");
+  d.className = "nodetail";
+  d.textContent = "Heatmap not generated yet — run category_level.py, then build_site.py.";
+  return d;
+}
+function setRes(res) {
+  document.getElementById("variation").src = `data/${res}/overlap_variation.png`;
+  document.getElementById("signed").src = `data/${res}/overlap_signed.png`;
+}
+document.querySelectorAll("#resToggle button").forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll("#resToggle button").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    setRes(btn.dataset.res);
+  };
+});
+setRes("annee");
+</script>
+</body>
+</html>

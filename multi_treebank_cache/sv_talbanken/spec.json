@@ -1,0 +1,13 @@
+{
+  "name": "sv_talbanken",
+  "language": "Swedish",
+  "ud_lang": "sv",
+  "ud_package": "talbanken",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Swedish-Talbanken",
+  "train_file": "sv_talbanken-ud-train.conllu",
+  "test_file": "sv_talbanken-ud-test.conllu",
+  "stanza_lang": "sv",
+  "n_train": 66646,
+  "n_test": 20377,
+  "n_tokens": 87023
+}

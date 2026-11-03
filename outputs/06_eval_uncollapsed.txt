@@ -1,0 +1,552 @@
+uncollapsed predictions vs /Users/madalina/Documents/PHD/code/data/small_test/UD_French-GSD/fr_gsd-ud-test.conllu
+n_tokens (excl. punct): 8831
+UAS: 0.9152
+LAS: 0.8745
+
+Per-label LAS-recall:
+  det            1448/1459 = 0.9925
+  case           1294/1309 = 0.9885
+  nmod           677/856 = 0.7909
+  nsubj          535/589 = 0.9083
+  obl            440/569 = 0.7733
+  amod           459/485 = 0.9464
+  advmod         398/462 = 0.8615
+  root           388/416 = 0.9327
+  obj            276/368 = 0.7500
+  conj           219/319 = 0.6865
+  cc             240/256 = 0.9375
+  mark           234/244 = 0.9590
+  aux            200/206 = 0.9709
+  acl            121/177 = 0.6836
+  cop            140/153 = 0.9150
+  flat           112/127 = 0.8819
+  advcl          73/117 = 0.6239
+  xcomp          97/115 = 0.8435
+  appos          73/112 = 0.6518
+  nummod         106/110 = 0.9636
+  fixed          64/105 = 0.6095
+  expl           80/98 = 0.8163
+  ccomp          5/55 = 0.0909
+  parataxis      15/50 = 0.3000
+  iobj           21/34 = 0.6176
+  csubj          2/12 = 0.1667
+  orphan         0/11 = 0.0000
+  dislocated     1/8 = 0.1250
+  discourse      5/7 = 0.7143
+  goeswith       0/2 = 0.0000
+
+Collapse rules: {'parataxis': 'amod', 'orphan': 'acl', 'expl': 'conj', 'ccomp': 'nsubj', 'appos': 'acl', 'acl': 'nmod', 'obl': 'nmod', 'csubj': 'conj', 'flat': 'nmod', 'advcl': 'nsubj', 'xcomp': 'acl', 'conj': 'obl', 'iobj': 'parataxis', 'cop': 'aux', 'advmod': 'conj', 'mark': 'obj', 'obj': 'conj'}
+Uncollapse cells:
+  fallback (   acl, h=   ADJ) -> xcomp
+  fallback (   acl, h=   ADP) -> xcomp
+  fallback (   acl, h=   ADV) -> xcomp
+  fallback (   acl, h=   AUX) -> xcomp
+  fallback (   acl, h=  NOUN) -> appos
+  fallback (   acl, h=   NUM) -> appos
+  fallback (   acl, h=  PRON) -> appos
+  fallback (   acl, h= PROPN) -> appos
+  fallback (   acl, h=   SYM) -> appos
+  fallback (   acl, h=  VERB) -> xcomp
+  fallback (   acl, h=     X) -> appos
+  fallback (  amod, h=   ADJ) -> parataxis
+  fallback (  amod, h=   ADP) -> amod
+  fallback (  amod, h=   ADV) -> parataxis
+  fallback (  amod, h=   AUX) -> parataxis
+  fallback (  amod, h=   DET) -> amod
+  fallback (  amod, h=  INTJ) -> parataxis
+  fallback (  amod, h=  NOUN) -> amod
+  fallback (  amod, h=   NUM) -> amod
+  fallback (  amod, h=  PRON) -> amod
+  fallback (  amod, h= PROPN) -> amod
+  fallback (  amod, h=   SYM) -> amod
+  fallback (  amod, h=  VERB) -> parataxis
+  fallback (  amod, h=     X) -> amod
+  fallback (   aux, h=   ADJ) -> cop
+  fallback (   aux, h=   ADP) -> cop
+  fallback (   aux, h=   ADV) -> cop
+  fallback (   aux, h=   AUX) -> aux
+  fallback (   aux, h=   DET) -> cop
+  fallback (   aux, h=  NOUN) -> cop
+  fallback (   aux, h=   NUM) -> cop
+  fallback (   aux, h=  PRON) -> cop
+  fallback (   aux, h= PROPN) -> cop
+  fallback (   aux, h=   SYM) -> cop
+  fallback (   aux, h=  VERB) -> aux
+  fallback (   aux, h=     X) -> cop
+  fallback (  conj, h=   ADJ) -> advmod
+  fallback (  conj, h=   ADP) -> advmod
+  fallback (  conj, h=   ADV) -> advmod
+  fallback (  conj, h=   AUX) -> advmod
+  fallback (  conj, h=   DET) -> advmod
+  fallback (  conj, h=  INTJ) -> advmod
+  fallback (  conj, h=  NOUN) -> advmod
+  fallback (  conj, h=   NUM) -> advmod
+  fallback (  conj, h=  PRON) -> advmod
+  fallback (  conj, h= PROPN) -> advmod
+  fallback (  conj, h=   SYM) -> advmod
+  fallback (  conj, h=  VERB) -> obj
+  fallback (  conj, h=     X) -> advmod
+  fallback (  nmod, h=   ADJ) -> obl
+  fallback (  nmod, h=   ADP) -> obl
+  fallback (  nmod, h=   ADV) -> obl
+  fallback (  nmod, h=   AUX) -> obl
+  fallback (  nmod, h=   DET) -> obl
+  fallback (  nmod, h=  INTJ) -> obl
+  fallback (  nmod, h=  NOUN) -> nmod
+  fallback (  nmod, h=   NUM) -> nmod
+  fallback (  nmod, h=  PRON) -> nmod
+  fallback (  nmod, h= PROPN) -> flat
+  fallback (  nmod, h=   SYM) -> nmod
+  fallback (  nmod, h=  VERB) -> obl
+  fallback (  nmod, h=     X) -> flat
+  fallback ( nsubj, h=   ADJ) -> nsubj
+  fallback ( nsubj, h=   ADP) -> ccomp
+  fallback ( nsubj, h=   ADV) -> ccomp
+  fallback ( nsubj, h=   AUX) -> nsubj
+  fallback ( nsubj, h=   DET) -> ccomp
+  fallback ( nsubj, h=  INTJ) -> ccomp
+  fallback ( nsubj, h=  NOUN) -> nsubj
+  fallback ( nsubj, h=   NUM) -> nsubj
+  fallback ( nsubj, h=  PRON) -> nsubj
+  fallback ( nsubj, h= PROPN) -> nsubj
+  fallback ( nsubj, h=   SYM) -> nsubj
+  fallback ( nsubj, h=  VERB) -> nsubj
+  fallback ( nsubj, h=     X) -> nsubj
+  fallback (   obj, h=   ADJ) -> mark
+  fallback (   obj, h=   ADP) -> mark
+  fallback (   obj, h=   ADV) -> mark
+  fallback (   obj, h=   AUX) -> mark
+  fallback (   obj, h=  NOUN) -> mark
+  fallback (   obj, h=   NUM) -> mark
+  fallback (   obj, h=  PRON) -> mark
+  fallback (   obj, h= PROPN) -> mark
+  fallback (   obj, h=   SYM) -> mark
+  fallback (   obj, h=  VERB) -> mark
+  fallback (   obj, h=     X) -> mark
+  fallback (   obl, h=   ADJ) -> conj
+  fallback (   obl, h=   ADP) -> conj
+  fallback (   obl, h=   ADV) -> conj
+  fallback (   obl, h=   AUX) -> conj
+  fallback (   obl, h= CCONJ) -> conj
+  fallback (   obl, h=   DET) -> conj
+  fallback (   obl, h=  INTJ) -> conj
+  fallback (   obl, h=  NOUN) -> conj
+  fallback (   obl, h=   NUM) -> conj
+  fallback (   obl, h=  PRON) -> conj
+  fallback (   obl, h= PROPN) -> conj
+  fallback (   obl, h=   SYM) -> conj
+  fallback (   obl, h=  VERB) -> conj
+  fallback (   obl, h=     X) -> conj
+  fallback (parataxis, h=   ADJ) -> iobj
+  fallback (parataxis, h=  VERB) -> iobj
+  full     (   acl, h=   ADJ, d=   ADJ) -> xcomp
+  full     (   acl, h=   ADJ, d=   ADV) -> orphan
+  full     (   acl, h=   ADJ, d=  NOUN) -> orphan
+  full     (   acl, h=   ADJ, d=   NUM) -> appos
+  full     (   acl, h=   ADJ, d= PROPN) -> appos
+  full     (   acl, h=   ADJ, d=   SYM) -> appos
+  full     (   acl, h=   ADJ, d=  VERB) -> xcomp
+  full     (   acl, h=   ADJ, d=     X) -> appos
+  full     (   acl, h=   ADP, d=  VERB) -> xcomp
+  full     (   acl, h=   ADV, d=   ADJ) -> xcomp
+  full     (   acl, h=   ADV, d=   ADV) -> appos
+  full     (   acl, h=   ADV, d=  NOUN) -> appos
+  full     (   acl, h=   ADV, d=  VERB) -> xcomp
+  full     (   acl, h=   AUX, d=  VERB) -> xcomp
+  full     (   acl, h=  NOUN, d=   ADJ) -> appos
+  full     (   acl, h=  NOUN, d=   ADP) -> orphan
+  full     (   acl, h=  NOUN, d=   ADV) -> orphan
+  full     (   acl, h=  NOUN, d=  INTJ) -> appos
+  full     (   acl, h=  NOUN, d=  NOUN) -> appos
+  full     (   acl, h=  NOUN, d=   NUM) -> appos
+  full     (   acl, h=  NOUN, d=  PRON) -> appos
+  full     (   acl, h=  NOUN, d= PROPN) -> appos
+  full     (   acl, h=  NOUN, d=   SYM) -> appos
+  full     (   acl, h=  NOUN, d=  VERB) -> xcomp
+  full     (   acl, h=  NOUN, d=     X) -> appos
+  full     (   acl, h=   NUM, d=  NOUN) -> appos
+  full     (   acl, h=   NUM, d=   NUM) -> appos
+  full     (   acl, h=   NUM, d=  PRON) -> orphan
+  full     (   acl, h=   NUM, d= PROPN) -> appos
+  full     (   acl, h=   NUM, d=   SYM) -> appos
+  full     (   acl, h=   NUM, d=     X) -> appos
+  full     (   acl, h=  PRON, d=   ADV) -> orphan
+  full     (   acl, h=  PRON, d=  NOUN) -> appos
+  full     (   acl, h=  PRON, d=   NUM) -> orphan
+  full     (   acl, h=  PRON, d= PROPN) -> appos
+  full     (   acl, h=  PRON, d=  VERB) -> orphan
+  full     (   acl, h=  PRON, d=     X) -> appos
+  full     (   acl, h= PROPN, d=   ADJ) -> appos
+  full     (   acl, h= PROPN, d=   ADV) -> orphan
+  full     (   acl, h= PROPN, d=  NOUN) -> appos
+  full     (   acl, h= PROPN, d=   NUM) -> appos
+  full     (   acl, h= PROPN, d=  PRON) -> appos
+  full     (   acl, h= PROPN, d= PROPN) -> appos
+  full     (   acl, h= PROPN, d=   SYM) -> orphan
+  full     (   acl, h= PROPN, d=  VERB) -> appos
+  full     (   acl, h= PROPN, d=     X) -> appos
+  full     (   acl, h=   SYM, d=   ADV) -> appos
+  full     (   acl, h=   SYM, d=  NOUN) -> appos
+  full     (   acl, h=   SYM, d=   NUM) -> orphan
+  full     (   acl, h=   SYM, d=  PRON) -> orphan
+  full     (   acl, h=   SYM, d=   SYM) -> appos
+  full     (   acl, h=  VERB, d=   ADJ) -> xcomp
+  full     (   acl, h=  VERB, d=   ADP) -> xcomp
+  full     (   acl, h=  VERB, d=   ADV) -> xcomp
+  full     (   acl, h=  VERB, d=   AUX) -> xcomp
+  full     (   acl, h=  VERB, d=  NOUN) -> xcomp
+  full     (   acl, h=  VERB, d=   NUM) -> xcomp
+  full     (   acl, h=  VERB, d=  PRON) -> xcomp
+  full     (   acl, h=  VERB, d= PROPN) -> xcomp
+  full     (   acl, h=  VERB, d=   SYM) -> xcomp
+  full     (   acl, h=  VERB, d=  VERB) -> xcomp
+  full     (   acl, h=  VERB, d=     X) -> xcomp
+  full     (   acl, h=     X, d=   ADJ) -> appos
+  full     (   acl, h=     X, d=   ADV) -> appos
+  full     (   acl, h=     X, d=  NOUN) -> appos
+  full     (   acl, h=     X, d=   NUM) -> orphan
+  full     (   acl, h=     X, d=  PRON) -> appos
+  full     (   acl, h=     X, d= PROPN) -> appos
+  full     (   acl, h=     X, d=  VERB) -> appos
+  full     (   acl, h=     X, d=     X) -> appos
+  full     (  amod, h=   ADJ, d=   ADV) -> parataxis
+  full     (  amod, h=   ADJ, d=  NOUN) -> parataxis
+  full     (  amod, h=   ADJ, d=   NUM) -> parataxis
+  full     (  amod, h=   ADJ, d=  PRON) -> parataxis
+  full     (  amod, h=   ADJ, d= PROPN) -> parataxis
+  full     (  amod, h=   ADJ, d=   SYM) -> parataxis
+  full     (  amod, h=   ADJ, d=  VERB) -> parataxis
+  full     (  amod, h=   ADP, d=   ADP) -> parataxis
+  full     (  amod, h=   ADP, d=   SYM) -> parataxis
+  full     (  amod, h=   ADV, d=   AUX) -> parataxis
+  full     (  amod, h=   ADV, d=  VERB) -> parataxis
+  full     (  amod, h=   AUX, d=  NOUN) -> parataxis
+  full     (  amod, h=  INTJ, d=   SYM) -> parataxis
+  full     (  amod, h=  NOUN, d=   ADV) -> parataxis
+  full     (  amod, h=  NOUN, d=  NOUN) -> parataxis
+  full     (  amod, h=  NOUN, d=   NUM) -> parataxis
+  full     (  amod, h=  NOUN, d=  PRON) -> parataxis
+  full     (  amod, h=  NOUN, d= PROPN) -> parataxis
+  full     (  amod, h=  NOUN, d=   SYM) -> parataxis
+  full     (  amod, h=  NOUN, d=  VERB) -> parataxis
+  full     (  amod, h=   NUM, d=  NOUN) -> parataxis
+  full     (  amod, h=   NUM, d=  PRON) -> parataxis
+  full     (  amod, h=   NUM, d= PROPN) -> parataxis
+  full     (  amod, h=   NUM, d=  VERB) -> parataxis
+  full     (  amod, h=  PRON, d=   ADV) -> parataxis
+  full     (  amod, h=  PRON, d=  VERB) -> parataxis
+  full     (  amod, h= PROPN, d=  NOUN) -> parataxis
+  full     (  amod, h= PROPN, d=  PRON) -> parataxis
+  full     (  amod, h= PROPN, d= PROPN) -> parataxis
+  full     (  amod, h= PROPN, d=   SYM) -> parataxis
+  full     (  amod, h= PROPN, d=  VERB) -> parataxis
+  full     (  amod, h= PROPN, d=     X) -> parataxis
+  full     (  amod, h=   SYM, d=  VERB) -> parataxis
+  full     (  amod, h=  VERB, d=   ADJ) -> parataxis
+  full     (  amod, h=  VERB, d=   ADV) -> parataxis
+  full     (  amod, h=  VERB, d=   AUX) -> parataxis
+  full     (  amod, h=  VERB, d=  INTJ) -> parataxis
+  full     (  amod, h=  VERB, d=  NOUN) -> parataxis
+  full     (  amod, h=  VERB, d=   NUM) -> parataxis
+  full     (  amod, h=  VERB, d=  PRON) -> parataxis
+  full     (  amod, h=  VERB, d= PROPN) -> parataxis
+  full     (  amod, h=  VERB, d=   SYM) -> parataxis
+  full     (  amod, h=  VERB, d=  VERB) -> parataxis
+  full     (  amod, h=  VERB, d=     X) -> parataxis
+  full     (  amod, h=     X, d=  NOUN) -> parataxis
+  full     (  amod, h=     X, d=  PRON) -> parataxis
+  full     (  amod, h=     X, d=  VERB) -> parataxis
+  full     (  amod, h=     X, d=     X) -> parataxis
+  full     (   aux, h=   ADJ, d=   AUX) -> cop
+  full     (   aux, h=   ADP, d=   AUX) -> cop
+  full     (   aux, h=   ADV, d=   AUX) -> cop
+  full     (   aux, h=   DET, d=   AUX) -> cop
+  full     (   aux, h=  NOUN, d=   AUX) -> cop
+  full     (   aux, h=   NUM, d=   AUX) -> cop
+  full     (   aux, h=  PRON, d=   AUX) -> cop
+  full     (   aux, h= PROPN, d=   AUX) -> cop
+  full     (   aux, h=   SYM, d=   AUX) -> cop
+  full     (   aux, h=     X, d=   AUX) -> cop
+  full     (  conj, h=   ADJ, d=   ADJ) -> csubj
+  full     (  conj, h=   ADJ, d=   ADP) -> advmod
+  full     (  conj, h=   ADJ, d=   ADV) -> advmod
+  full     (  conj, h=   ADJ, d= CCONJ) -> advmod
+  full     (  conj, h=   ADJ, d=   DET) -> advmod
+  full     (  conj, h=   ADJ, d=  NOUN) -> obj
+  full     (  conj, h=   ADJ, d=  PRON) -> expl
+  full     (  conj, h=   ADJ, d= PROPN) -> obj
+  full     (  conj, h=   ADJ, d=   SYM) -> advmod
+  full     (  conj, h=   ADJ, d=  VERB) -> csubj
+  full     (  conj, h=   ADJ, d=     X) -> obj
+  full     (  conj, h=   ADP, d=   ADP) -> advmod
+  full     (  conj, h=   ADP, d=   ADV) -> advmod
+  full     (  conj, h=   ADP, d= CCONJ) -> advmod
+  full     (  conj, h=   ADP, d=   DET) -> advmod
+  full     (  conj, h=   ADP, d=  NOUN) -> obj
+  full     (  conj, h=   ADP, d=  PRON) -> expl
+  full     (  conj, h=   ADP, d= PROPN) -> obj
+  full     (  conj, h=   ADV, d=   ADJ) -> obj
+  full     (  conj, h=   ADV, d=   ADP) -> advmod
+  full     (  conj, h=   ADV, d=   ADV) -> advmod
+  full     (  conj, h=   ADV, d= CCONJ) -> advmod
+  full     (  conj, h=   ADV, d=   DET) -> advmod
+  full     (  conj, h=   ADV, d=  NOUN) -> obj
+  full     (  conj, h=   ADV, d=  PRON) -> expl
+  full     (  conj, h=   ADV, d= PROPN) -> obj
+  full     (  conj, h=   ADV, d=     X) -> obj
+  full     (  conj, h=   AUX, d=   ADV) -> advmod
+  full     (  conj, h=   DET, d=   ADV) -> advmod
+  full     (  conj, h=  INTJ, d=   ADV) -> advmod
+  full     (  conj, h=  NOUN, d=   ADJ) -> advmod
+  full     (  conj, h=  NOUN, d=   ADP) -> advmod
+  full     (  conj, h=  NOUN, d=   ADV) -> advmod
+  full     (  conj, h=  NOUN, d= CCONJ) -> advmod
+  full     (  conj, h=  NOUN, d=   DET) -> advmod
+  full     (  conj, h=  NOUN, d=  PRON) -> expl
+  full     (  conj, h=  NOUN, d=   SYM) -> advmod
+  full     (  conj, h=  NOUN, d=  VERB) -> csubj
+  full     (  conj, h=  NOUN, d=     X) -> advmod
+  full     (  conj, h=   NUM, d=   ADP) -> advmod
+  full     (  conj, h=   NUM, d=   ADV) -> advmod
+  full     (  conj, h=   NUM, d=  PRON) -> expl
+  full     (  conj, h=  PRON, d=   ADP) -> advmod
+  full     (  conj, h=  PRON, d=   ADV) -> advmod
+  full     (  conj, h=  PRON, d=  PRON) -> expl
+  full     (  conj, h= PROPN, d=   ADP) -> advmod
+  full     (  conj, h= PROPN, d=   ADV) -> advmod
+  full     (  conj, h= PROPN, d= CCONJ) -> advmod
+  full     (  conj, h= PROPN, d=   DET) -> advmod
+  full     (  conj, h= PROPN, d=  PRON) -> expl
+  full     (  conj, h= PROPN, d=   SYM) -> advmod
+  full     (  conj, h=   SYM, d=   ADP) -> advmod
+  full     (  conj, h=   SYM, d=   ADV) -> advmod
+  full     (  conj, h=   SYM, d= CCONJ) -> advmod
+  full     (  conj, h=   SYM, d=  NOUN) -> obj
+  full     (  conj, h=   SYM, d=   NUM) -> obj
+  full     (  conj, h=   SYM, d=  PRON) -> expl
+  full     (  conj, h=   SYM, d= PROPN) -> obj
+  full     (  conj, h=   SYM, d=   SYM) -> advmod
+  full     (  conj, h=  VERB, d=   ADJ) -> obj
+  full     (  conj, h=  VERB, d=   ADP) -> advmod
+  full     (  conj, h=  VERB, d=   ADV) -> advmod
+  full     (  conj, h=  VERB, d= CCONJ) -> advmod
+  full     (  conj, h=  VERB, d=   DET) -> advmod
+  full     (  conj, h=  VERB, d=  INTJ) -> obj
+  full     (  conj, h=  VERB, d=  NOUN) -> obj
+  full     (  conj, h=  VERB, d=   NUM) -> obj
+  full     (  conj, h=  VERB, d=  PRON) -> expl
+  full     (  conj, h=  VERB, d= PROPN) -> obj
+  full     (  conj, h=  VERB, d= SCONJ) -> advmod
+  full     (  conj, h=  VERB, d=   SYM) -> obj
+  full     (  conj, h=  VERB, d=  VERB) -> csubj
+  full     (  conj, h=  VERB, d=     X) -> obj
+  full     (  conj, h=     X, d=   ADP) -> advmod
+  full     (  conj, h=     X, d=   ADV) -> advmod
+  full     (  conj, h=     X, d=  NOUN) -> obj
+  full     (  conj, h=     X, d=  PRON) -> expl
+  full     (  conj, h=     X, d= PROPN) -> obj
+  full     (  nmod, h=   ADJ, d=   ADJ) -> obl
+  full     (  nmod, h=   ADJ, d=   ADP) -> obl
+  full     (  nmod, h=   ADJ, d=   ADV) -> obl
+  full     (  nmod, h=   ADJ, d=  NOUN) -> obl
+  full     (  nmod, h=   ADJ, d=   NUM) -> obl
+  full     (  nmod, h=   ADJ, d=  PRON) -> obl
+  full     (  nmod, h=   ADJ, d= PROPN) -> obl
+  full     (  nmod, h=   ADJ, d=   SYM) -> obl
+  full     (  nmod, h=   ADJ, d=  VERB) -> acl
+  full     (  nmod, h=   ADJ, d=     X) -> obl
+  full     (  nmod, h=   ADP, d=   ADJ) -> obl
+  full     (  nmod, h=   ADP, d=   ADP) -> obl
+  full     (  nmod, h=   ADP, d=   ADV) -> obl
+  full     (  nmod, h=   ADP, d=   DET) -> obl
+  full     (  nmod, h=   ADP, d=  NOUN) -> obl
+  full     (  nmod, h=   ADP, d=   NUM) -> obl
+  full     (  nmod, h=   ADP, d=  PRON) -> obl
+  full     (  nmod, h=   ADP, d= PROPN) -> obl
+  full     (  nmod, h=   ADP, d=   SYM) -> obl
+  full     (  nmod, h=   ADP, d=     X) -> obl
+  full     (  nmod, h=   ADV, d=   ADV) -> obl
+  full     (  nmod, h=   ADV, d=  NOUN) -> obl
+  full     (  nmod, h=   ADV, d=   NUM) -> obl
+  full     (  nmod, h=   ADV, d=  PRON) -> obl
+  full     (  nmod, h=   ADV, d= PROPN) -> obl
+  full     (  nmod, h=   ADV, d=   SYM) -> obl
+  full     (  nmod, h=   ADV, d=  VERB) -> acl
+  full     (  nmod, h=   ADV, d=     X) -> obl
+  full     (  nmod, h=   AUX, d=   NUM) -> obl
+  full     (  nmod, h=   DET, d=  NOUN) -> obl
+  full     (  nmod, h=   DET, d= PROPN) -> obl
+  full     (  nmod, h=   DET, d=  VERB) -> acl
+  full     (  nmod, h=  INTJ, d=  NOUN) -> obl
+  full     (  nmod, h=  INTJ, d=   NUM) -> obl
+  full     (  nmod, h=  INTJ, d=  PRON) -> obl
+  full     (  nmod, h=  INTJ, d= PROPN) -> obl
+  full     (  nmod, h=  NOUN, d=   ADP) -> acl
+  full     (  nmod, h=  NOUN, d=  VERB) -> acl
+  full     (  nmod, h=   NUM, d=   NUM) -> obl
+  full     (  nmod, h=   NUM, d=  VERB) -> acl
+  full     (  nmod, h=  PRON, d=   ADP) -> acl
+  full     (  nmod, h=  PRON, d=   ADV) -> acl
+  full     (  nmod, h=  PRON, d=  VERB) -> acl
+  full     (  nmod, h= PROPN, d=   ADV) -> flat
+  full     (  nmod, h= PROPN, d= PROPN) -> flat
+  full     (  nmod, h= PROPN, d=   SYM) -> flat
+  full     (  nmod, h= PROPN, d=  VERB) -> acl
+  full     (  nmod, h= PROPN, d=     X) -> flat
+  full     (  nmod, h=   SYM, d=  VERB) -> acl
+  full     (  nmod, h=  VERB, d=   ADJ) -> obl
+  full     (  nmod, h=  VERB, d=   ADP) -> obl
+  full     (  nmod, h=  VERB, d=   ADV) -> obl
+  full     (  nmod, h=  VERB, d=   DET) -> obl
+  full     (  nmod, h=  VERB, d=  NOUN) -> obl
+  full     (  nmod, h=  VERB, d=   NUM) -> obl
+  full     (  nmod, h=  VERB, d=  PRON) -> obl
+  full     (  nmod, h=  VERB, d= PROPN) -> obl
+  full     (  nmod, h=  VERB, d=   SYM) -> obl
+  full     (  nmod, h=  VERB, d=  VERB) -> obl
+  full     (  nmod, h=  VERB, d=     X) -> obl
+  full     (  nmod, h=     X, d=   AUX) -> acl
+  full     (  nmod, h=     X, d=   SYM) -> flat
+  full     (  nmod, h=     X, d=  VERB) -> acl
+  full     (  nmod, h=     X, d=     X) -> flat
+  full     ( nsubj, h=   ADJ, d=   ADJ) -> advcl
+  full     ( nsubj, h=   ADJ, d=   AUX) -> ccomp
+  full     ( nsubj, h=   ADJ, d=  VERB) -> advcl
+  full     ( nsubj, h=   ADP, d=   ADJ) -> ccomp
+  full     ( nsubj, h=   ADP, d=  VERB) -> ccomp
+  full     ( nsubj, h=   ADV, d=   ADJ) -> ccomp
+  full     ( nsubj, h=   ADV, d=   ADV) -> ccomp
+  full     ( nsubj, h=   ADV, d=  NOUN) -> ccomp
+  full     ( nsubj, h=   ADV, d= PROPN) -> ccomp
+  full     ( nsubj, h=   ADV, d=  VERB) -> ccomp
+  full     ( nsubj, h=   DET, d=  VERB) -> ccomp
+  full     ( nsubj, h=  INTJ, d=   NUM) -> ccomp
+  full     ( nsubj, h=  INTJ, d=  VERB) -> ccomp
+  full     ( nsubj, h=  NOUN, d=   ADJ) -> advcl
+  full     ( nsubj, h=  NOUN, d=   ADP) -> advcl
+  full     ( nsubj, h=  NOUN, d=   AUX) -> advcl
+  full     ( nsubj, h=  NOUN, d=  VERB) -> advcl
+  full     ( nsubj, h=   NUM, d=   ADJ) -> advcl
+  full     ( nsubj, h=   NUM, d=  VERB) -> advcl
+  full     ( nsubj, h=  PRON, d=  VERB) -> advcl
+  full     ( nsubj, h= PROPN, d=  VERB) -> advcl
+  full     ( nsubj, h=   SYM, d=  VERB) -> advcl
+  full     ( nsubj, h=  VERB, d=   ADJ) -> advcl
+  full     ( nsubj, h=  VERB, d=  VERB) -> advcl
+  full     ( nsubj, h=     X, d=  VERB) -> advcl
+  full     (   obj, h=   ADJ, d=   ADP) -> mark
+  full     (   obj, h=   ADJ, d=   ADV) -> mark
+  full     (   obj, h=   ADJ, d= SCONJ) -> mark
+  full     (   obj, h=   ADP, d= SCONJ) -> mark
+  full     (   obj, h=   ADV, d=   ADV) -> mark
+  full     (   obj, h=   ADV, d= SCONJ) -> mark
+  full     (   obj, h=   AUX, d= SCONJ) -> mark
+  full     (   obj, h=  NOUN, d=   ADP) -> mark
+  full     (   obj, h=  NOUN, d=   ADV) -> mark
+  full     (   obj, h=  NOUN, d= CCONJ) -> mark
+  full     (   obj, h=  NOUN, d=  PRON) -> mark
+  full     (   obj, h=  NOUN, d= SCONJ) -> mark
+  full     (   obj, h=   NUM, d=   ADV) -> mark
+  full     (   obj, h=   NUM, d= SCONJ) -> mark
+  full     (   obj, h=  PRON, d=   ADP) -> mark
+  full     (   obj, h=  PRON, d= SCONJ) -> mark
+  full     (   obj, h= PROPN, d=   ADP) -> mark
+  full     (   obj, h= PROPN, d=   ADV) -> mark
+  full     (   obj, h= PROPN, d= SCONJ) -> mark
+  full     (   obj, h=   SYM, d=   ADV) -> mark
+  full     (   obj, h=   SYM, d= SCONJ) -> mark
+  full     (   obj, h=  VERB, d=   ADJ) -> mark
+  full     (   obj, h=  VERB, d=   ADP) -> mark
+  full     (   obj, h=  VERB, d=   ADV) -> mark
+  full     (   obj, h=  VERB, d=  NOUN) -> mark
+  full     (   obj, h=  VERB, d= SCONJ) -> mark
+  full     (   obj, h=  VERB, d=  VERB) -> mark
+  full     (   obj, h=     X, d= SCONJ) -> mark
+  full     (   obl, h=   ADJ, d=   ADJ) -> conj
+  full     (   obl, h=   ADJ, d=   ADV) -> conj
+  full     (   obl, h=   ADJ, d=  NOUN) -> conj
+  full     (   obl, h=   ADJ, d=  PRON) -> conj
+  full     (   obl, h=   ADJ, d= PROPN) -> conj
+  full     (   obl, h=   ADJ, d=   SYM) -> conj
+  full     (   obl, h=   ADJ, d=  VERB) -> conj
+  full     (   obl, h=   ADJ, d=     X) -> conj
+  full     (   obl, h=   ADP, d=   ADJ) -> conj
+  full     (   obl, h=   ADP, d=   ADP) -> conj
+  full     (   obl, h=   ADP, d=   ADV) -> conj
+  full     (   obl, h=   ADP, d=  NOUN) -> conj
+  full     (   obl, h=   ADP, d= PROPN) -> conj
+  full     (   obl, h=   ADP, d=  VERB) -> conj
+  full     (   obl, h=   ADV, d=   ADJ) -> conj
+  full     (   obl, h=   ADV, d=   ADP) -> conj
+  full     (   obl, h=   ADV, d=   ADV) -> conj
+  full     (   obl, h=   ADV, d=  NOUN) -> conj
+  full     (   obl, h=   ADV, d=   NUM) -> conj
+  full     (   obl, h=   ADV, d=  VERB) -> conj
+  full     (   obl, h=   AUX, d=   ADJ) -> conj
+  full     (   obl, h=   AUX, d=   AUX) -> conj
+  full     (   obl, h=   AUX, d=  VERB) -> conj
+  full     (   obl, h= CCONJ, d= CCONJ) -> conj
+  full     (   obl, h=   DET, d=   DET) -> conj
+  full     (   obl, h=   DET, d=  NOUN) -> conj
+  full     (   obl, h=  INTJ, d=   ADJ) -> conj
+  full     (   obl, h=  INTJ, d=  INTJ) -> conj
+  full     (   obl, h=  INTJ, d=  VERB) -> conj
+  full     (   obl, h=  NOUN, d=   ADJ) -> conj
+  full     (   obl, h=  NOUN, d=   ADP) -> conj
+  full     (   obl, h=  NOUN, d=   ADV) -> conj
+  full     (   obl, h=  NOUN, d=  NOUN) -> conj
+  full     (   obl, h=  NOUN, d=   NUM) -> conj
+  full     (   obl, h=  NOUN, d=  PRON) -> conj
+  full     (   obl, h=  NOUN, d= PROPN) -> conj
+  full     (   obl, h=  NOUN, d=   SYM) -> conj
+  full     (   obl, h=  NOUN, d=  VERB) -> conj
+  full     (   obl, h=  NOUN, d=     X) -> conj
+  full     (   obl, h=   NUM, d=   ADJ) -> conj
+  full     (   obl, h=   NUM, d=   ADV) -> conj
+  full     (   obl, h=   NUM, d=  NOUN) -> conj
+  full     (   obl, h=   NUM, d=   NUM) -> conj
+  full     (   obl, h=   NUM, d= PROPN) -> conj
+  full     (   obl, h=   NUM, d=  VERB) -> conj
+  full     (   obl, h=   NUM, d=     X) -> conj
+  full     (   obl, h=  PRON, d=   ADJ) -> conj
+  full     (   obl, h=  PRON, d=   ADV) -> conj
+  full     (   obl, h=  PRON, d=  NOUN) -> conj
+  full     (   obl, h=  PRON, d=   NUM) -> conj
+  full     (   obl, h=  PRON, d=  PRON) -> conj
+  full     (   obl, h=  PRON, d= PROPN) -> conj
+  full     (   obl, h=  PRON, d=  VERB) -> conj
+  full     (   obl, h= PROPN, d=   ADJ) -> conj
+  full     (   obl, h= PROPN, d=   ADP) -> conj
+  full     (   obl, h= PROPN, d=   ADV) -> conj
+  full     (   obl, h= PROPN, d=  NOUN) -> conj
+  full     (   obl, h= PROPN, d=   NUM) -> conj
+  full     (   obl, h= PROPN, d=  PRON) -> conj
+  full     (   obl, h= PROPN, d= PROPN) -> conj
+  full     (   obl, h= PROPN, d=  VERB) -> conj
+  full     (   obl, h= PROPN, d=     X) -> conj
+  full     (   obl, h=   SYM, d=   ADJ) -> conj
+  full     (   obl, h=   SYM, d=  NOUN) -> conj
+  full     (   obl, h=   SYM, d=  PRON) -> conj
+  full     (   obl, h=   SYM, d=   SYM) -> conj
+  full     (   obl, h=   SYM, d=  VERB) -> conj
+  full     (   obl, h=  VERB, d=   ADJ) -> conj
+  full     (   obl, h=  VERB, d=   ADP) -> conj
+  full     (   obl, h=  VERB, d=   ADV) -> conj
+  full     (   obl, h=  VERB, d=  NOUN) -> conj
+  full     (   obl, h=  VERB, d=   NUM) -> conj
+  full     (   obl, h=  VERB, d=  PRON) -> conj
+  full     (   obl, h=  VERB, d= PROPN) -> conj
+  full     (   obl, h=  VERB, d=   SYM) -> conj
+  full     (   obl, h=  VERB, d=  VERB) -> conj
+  full     (   obl, h=  VERB, d=     X) -> conj
+  full     (   obl, h=     X, d=  NOUN) -> conj
+  full     (   obl, h=     X, d=   NUM) -> conj
+  full     (   obl, h=     X, d= PROPN) -> conj
+  full     (   obl, h=     X, d=  VERB) -> conj
+  full     (   obl, h=     X, d=     X) -> conj
+  full     (parataxis, h=   ADJ, d=  PRON) -> iobj
+  full     (parataxis, h=  VERB, d=  PRON) -> iobj
+Tokens changed by uncollapse: 3013/10017
+  full-cell rule applied: 3011
+  fallback applied:       2
+  unseen cell, kept pred: 0

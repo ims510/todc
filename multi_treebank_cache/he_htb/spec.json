@@ -1,0 +1,13 @@
+{
+  "name": "he_htb",
+  "language": "Hebrew",
+  "ud_lang": "he",
+  "ud_package": "htb",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Hebrew-HTB",
+  "train_file": "he_htb-ud-train.conllu",
+  "test_file": "he_htb-ud-test.conllu",
+  "stanza_lang": "he",
+  "n_train": 136501,
+  "n_test": 12282,
+  "n_tokens": 148783
+}

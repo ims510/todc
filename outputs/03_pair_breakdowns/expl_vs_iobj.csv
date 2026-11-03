@@ -1,0 +1,11 @@
+head_upos,dep_upos,n_total,n_expl,n_iobj,majority,cell_entropy
+VERB,PRON,2985,2195,790,expl,0.8336922836132061
+ADJ,PRON,124,101,23,expl,0.6919278850058866
+NOUN,PRON,114,114,0,expl,0.0
+ADV,PRON,24,24,0,expl,0.0
+PROPN,PRON,23,23,0,expl,0.0
+PRON,PRON,22,22,0,expl,0.0
+NUM,PRON,5,5,0,expl,0.0
+ADP,PRON,2,2,0,expl,0.0
+SYM,PRON,1,1,0,expl,0.0
+X,PRON,1,1,0,expl,0.0

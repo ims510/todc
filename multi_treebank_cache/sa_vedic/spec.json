@@ -1,0 +1,13 @@
+{
+  "name": "sa_vedic",
+  "language": "Sanskrit",
+  "ud_lang": "sa",
+  "ud_package": "vedic",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Sanskrit-Vedic",
+  "train_file": "sa_vedic-ud-train.conllu",
+  "test_file": "sa_vedic-ud-test.conllu",
+  "stanza_lang": "sa",
+  "n_train": 161959,
+  "n_test": 20619,
+  "n_tokens": 182578
+}

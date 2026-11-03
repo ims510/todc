@@ -1,0 +1,13 @@
+{
+  "name": "da_ddt",
+  "language": "Danish",
+  "ud_lang": "da",
+  "ud_package": "ddt",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Danish-DDT",
+  "train_file": "da_ddt-ud-train.conllu",
+  "test_file": "da_ddt-ud-test.conllu",
+  "stanza_lang": "da",
+  "n_train": 80378,
+  "n_test": 10023,
+  "n_tokens": 90401
+}

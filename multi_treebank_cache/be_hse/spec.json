@@ -1,0 +1,13 @@
+{
+  "name": "be_hse",
+  "language": "Belarusian",
+  "ud_lang": "be",
+  "ud_package": "hse",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Belarusian-HSE",
+  "train_file": "be_hse-ud-train.conllu",
+  "test_file": "be_hse-ud-test.conllu",
+  "stanza_lang": "be",
+  "n_train": 273181,
+  "n_test": 15997,
+  "n_tokens": 289178
+}

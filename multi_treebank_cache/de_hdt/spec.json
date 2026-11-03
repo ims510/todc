@@ -1,0 +1,13 @@
+{
+  "name": "de_hdt",
+  "language": "German",
+  "ud_lang": "de",
+  "ud_package": "hdt",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_German-HDT",
+  "train_file": "de_hdt-ud-train.conllu",
+  "test_file": "de_hdt-ud-test.conllu",
+  "stanza_lang": "de",
+  "n_train": 2799069,
+  "n_test": 331663,
+  "n_tokens": 3130732
+}

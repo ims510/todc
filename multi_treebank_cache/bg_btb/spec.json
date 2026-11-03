@@ -1,0 +1,13 @@
+{
+  "name": "bg_btb",
+  "language": "Bulgarian",
+  "ud_lang": "bg",
+  "ud_package": "btb",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Bulgarian-BTB",
+  "train_file": "bg_btb-ud-train.conllu",
+  "test_file": "bg_btb-ud-test.conllu",
+  "stanza_lang": "bg",
+  "n_train": 124336,
+  "n_test": 15724,
+  "n_tokens": 140060
+}

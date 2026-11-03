@@ -1,0 +1,13 @@
+{
+  "name": "et_edt",
+  "language": "Estonian",
+  "ud_lang": "et",
+  "ud_package": "edt",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Estonian-EDT",
+  "train_file": "et_edt-ud-train.conllu",
+  "test_file": "et_edt-ud-test.conllu",
+  "stanza_lang": "et",
+  "n_train": 344581,
+  "n_test": 48465,
+  "n_tokens": 393046
+}

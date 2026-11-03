@@ -1,0 +1,15 @@
+head_upos,dep_upos,n_total,n_csubj,n_nummod,majority,cell_entropy
+NOUN,NUM,2787,0,2787,nummod,0.0
+SYM,NUM,342,0,342,nummod,0.0
+ADJ,VERB,94,94,0,csubj,0.0
+VERB,VERB,73,73,0,csubj,0.0
+PROPN,NUM,36,0,36,nummod,0.0
+NOUN,VERB,18,18,0,csubj,0.0
+ADJ,NUM,15,0,15,nummod,0.0
+PRON,NUM,5,0,5,nummod,0.0
+X,NUM,5,0,5,nummod,0.0
+ADJ,ADJ,4,4,0,csubj,0.0
+VERB,ADJ,2,2,0,csubj,0.0
+ADJ,NOUN,2,2,0,csubj,0.0
+VERB,NUM,1,0,1,nummod,0.0
+VERB,ADP,1,1,0,csubj,0.0

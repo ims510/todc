@@ -1,0 +1,13 @@
+{
+  "name": "ro_nonstandard",
+  "language": "Romanian",
+  "ud_lang": "ro",
+  "ud_package": "nonstandard",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Romanian-Nonstandard",
+  "train_file": "ro_nonstandard-ud-train.conllu",
+  "test_file": "ro_nonstandard-ud-test.conllu",
+  "stanza_lang": "ro",
+  "n_train": 532881,
+  "n_test": 20986,
+  "n_tokens": 553867
+}

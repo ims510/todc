@@ -1,0 +1,13 @@
+{
+  "name": "zh_gsdsimp",
+  "language": "Chinese",
+  "ud_lang": "zh",
+  "ud_package": "gsdsimp",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Chinese-GSDSimp",
+  "train_file": "zh_gsdsimp-ud-train.conllu",
+  "test_file": "zh_gsdsimp-ud-test.conllu",
+  "stanza_lang": "zh-hans",
+  "n_train": 98614,
+  "n_test": 12010,
+  "n_tokens": 110624
+}

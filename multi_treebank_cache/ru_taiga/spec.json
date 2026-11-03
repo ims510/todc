@@ -1,0 +1,13 @@
+{
+  "name": "ru_taiga",
+  "language": "Russian",
+  "ud_lang": "ru",
+  "ud_package": "taiga",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Russian-Taiga",
+  "train_file": "ru_taiga-ud-train.conllu",
+  "test_file": "ru_taiga-ud-test.conllu",
+  "stanza_lang": "ru",
+  "n_train": 1727873,
+  "n_test": 15440,
+  "n_tokens": 1743313
+}

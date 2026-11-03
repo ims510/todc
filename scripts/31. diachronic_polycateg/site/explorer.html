@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Word explorer — Fuzzy Boundaries over Time</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="mark">Fuzzy Boundaries <span>/ over time</span></div>
+  <nav>
+    <a href="index.html">Method</a>
+    <a href="explorer.html" class="active">Word explorer</a>
+    <a href="categories.html">Categories</a>
+  </nav>
+</header>
+
+<main class="wide">
+  <p class="eyebrow">Word level</p>
+  <h1>Which words drifted?</h1>
+  <p class="lede">Every word in the corpus, ranked by how far its syntactic behaviour
+  travelled. Sort by any measure, filter by part of speech, or search a lemma. Click a
+  row to see what changed.</p>
+
+  <div class="controls">
+    <div class="toggle" id="resToggle" role="group" aria-label="Time resolution">
+      <button data-res="annee" class="active">By year</button>
+      <button data-res="decennie">By decade</button>
+    </div>
+    <input type="search" id="search" class="grow" placeholder="Search a lemma…" aria-label="Search a lemma">
+    <select id="posFilter" aria-label="Filter by part of speech"><option value="">All categories</option></select>
+    <span class="count-note" id="countNote"></span>
+  </div>
+
+  <div class="explorer">
+    <div class="table-wrap">
+      <div class="scroll-body">
+        <table class="data-table">
+          <thead><tr id="headRow"></tr></thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <aside class="detail" id="detail">
+      <p class="placeholder">Select a word to see its movement, the features that changed,
+      and its plots.</p>
+    </aside>
+  </div>
+</main>
+
+<footer>Distributional study of POS overlap · UD_French · board minutes 1984–2018</footer>
+<script src="assets/explorer.js"></script>
+</body>
+</html>

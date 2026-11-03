@@ -1,0 +1,13 @@
+{
+  "name": "qaf_arabizi",
+  "language": "Maghrebi_Arabic_French",
+  "ud_lang": "qaf",
+  "ud_package": "arabizi",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Maghrebi_Arabic_French-Arabizi",
+  "train_file": "qaf_arabizi-ud-train.conllu",
+  "test_file": "qaf_arabizi-ud-test.conllu",
+  "stanza_lang": "qaf",
+  "n_train": 15404,
+  "n_test": 2179,
+  "n_tokens": 17583
+}

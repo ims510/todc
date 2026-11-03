@@ -1,0 +1,13 @@
+{
+  "name": "no_bokmaal",
+  "language": "Norwegian",
+  "ud_lang": "no",
+  "ud_package": "bokmaal",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Norwegian-Bokmaal",
+  "train_file": "no_bokmaal-ud-train.conllu",
+  "test_file": "no_bokmaal-ud-test.conllu",
+  "stanza_lang": "nb",
+  "n_train": 243886,
+  "n_test": 29966,
+  "n_tokens": 273852
+}

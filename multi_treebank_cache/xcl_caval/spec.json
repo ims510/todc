@@ -1,0 +1,13 @@
+{
+  "name": "xcl_caval",
+  "language": "Classical_Armenian",
+  "ud_lang": "xcl",
+  "ud_package": "caval",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_Classical_Armenian-CAVaL",
+  "train_file": "xcl_caval-ud-train.conllu",
+  "test_file": "xcl_caval-ud-test.conllu",
+  "stanza_lang": "xcl",
+  "n_train": 79508,
+  "n_test": 11195,
+  "n_tokens": 90703
+}

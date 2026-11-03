@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fuzzy Boundaries over Time — Method</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="mark">Fuzzy Boundaries <span>/ over time</span></div>
+  <nav>
+    <a href="index.html" class="active">Method</a>
+    <a href="explorer.html">Word explorer</a>
+    <a href="categories.html">Categories</a>
+  </nav>
+</header>
+
+<main>
+  <p class="eyebrow">Distributional POS overlap · UD_French · 1984–2018</p>
+  <h1>How grammatical categories blur, and how words drift across them over time.</h1>
+  <p class="lede">University of Paris Nanterre board minutes, parsed across 35 years.
+  We don't ask which tag a word <em>has</em>; we ask how its syntactic company changes,
+  and which words wander between categories as the decades pass.</p>
+
+  <h2>From a parsed sentence to a feature matrix</h2>
+  <p>Every sentence comes parsed: each token carries a part of speech, morphological
+  features, and dependency links. We read a word's behaviour from the company it keeps —
+  its <span class="chip parent">parent</span>, the
+  <span class="chip prev">previous node</span>, the
+  <span class="chip next">following node</span>, and its
+  <span class="chip child">children</span>. The word itself
+  (<span class="chip self">X</span>) is deliberately left out, so a word never
+  describes itself.</p>
+
+  <div class="card">
+    <p style="margin-top:0"><strong>Drop your poster image here.</strong> Save it as
+    <code>site/assets/pipeline.png</code> and it appears below.</p>
+    <img src="assets/pipeline.png" alt="Pipeline: from a dependency-parsed sentence to a feature matrix"
+         style="width:100%;border:1px solid var(--line);border-radius:10px"
+         onerror="this.style.display='none'">
+  </div>
+
+  <p>For each lexical unit — a <code>(lemma, POS)</code> pair — we count how often each
+  contextual feature appears, as a percentage of that unit's occurrences. The row for
+  <code>histoire, NOUN</code> below reads: its parent is a verb 37% of the time, that
+  parent is singular 77% of the time, and it has an adjectival-modifier child 7% of the time.</p>
+
+  <table class="example-table">
+    <thead><tr>
+      <th>lexical unit</th>
+      <th class="col-parent">parent=VERB</th>
+      <th class="col-parent">parent.number=Sing</th>
+      <th class="col-child">child.rel=amod</th>
+      <th>…</th>
+    </tr></thead>
+    <tbody>
+      <tr><td>histoire, NOUN</td><td>37%</td><td>77%</td><td>7%</td><td>…</td></tr>
+      <tr><td>drôle, ADJ</td><td>16%</td><td>66%</td><td>0%</td><td>…</td></tr>
+      <tr><td>…</td><td>…</td><td>…</td><td>…</td><td>…</td></tr>
+    </tbody>
+  </table>
+  <p>Each unit is now a point in feature space — a vector describing the <em>shape</em> of
+  its distribution, independent of how often it occurs.</p>
+
+  <h2>The diachronic twist</h2>
+  <p>To track change over time, we split each word by period. The unit is no longer just
+  <code>histoire, NOUN</code> — it becomes <code>histoire, 1984</code>,
+  <code>histoire, 1985</code>, <code>histoire, 1986</code>, and so on, each with the same
+  context features computed from that year alone.</p>
+
+  <table class="example-table">
+    <thead><tr>
+      <th>lexical unit</th>
+      <th class="col-parent">parent=VERB</th>
+      <th class="col-parent">parent.number=Sing</th>
+      <th class="col-child">child.rel=amod</th>
+      <th>…</th>
+    </tr></thead>
+    <tbody>
+      <tr><td>histoire, 1984</td><td>41%</td><td>74%</td><td>9%</td><td>…</td></tr>
+      <tr><td>histoire, 1985</td><td>38%</td><td>77%</td><td>6%</td><td>…</td></tr>
+      <tr><td>histoire, 1986</td><td>35%</td><td>79%</td><td>8%</td><td>…</td></tr>
+      <tr><td>…</td><td>…</td><td>…</td><td>…</td><td>…</td></tr>
+    </tbody>
+  </table>
+
+  <p>Now a word is a small cloud of yearly points. A word whose syntax stayed put is a
+  tight cluster; a word that changed leaves a stretched or directed cloud. That dispersion
+  is what we measure.</p>
+
+  <div class="pipeline">
+    <div class="stage">
+      <h3>Clean the noisy annotations</h3>
+      <p>Automatic parsing mistags. We drop any <code>(lemma, POS)</code> unit that is below
+      10% of that lemma's total occurrences — so a handful of tokens where <code>Mme</code>
+      was tagged VERB don't masquerade as a separate word — and merge accent variants like
+      <code>université</code> / <code>universite</code>. Symbols, punctuation, and the
+      catch-all <code>X</code> tag are removed.</p>
+    </div>
+    <div class="stage">
+      <h3>Measure the cloud</h3>
+      <p><strong>Displacement</strong> is how far the cloud's centre travelled from its early
+      years to its late years. <strong>Jitter</strong> is how much it wobbles year to year.
+      <strong>Path length</strong> is the total distance walked through time, and
+      <strong>directness</strong> (displacement ÷ path length) tells a steady march from
+      aimless wandering. The headline <strong>score</strong> is displacement relative to
+      jitter, weighted by how many years back it up.</p>
+    </div>
+    <div class="stage">
+      <h3>Read which features moved</h3>
+      <p>For a word that travelled, we list the context features that changed most — and a
+      2-D map of its yearly points. A clear gradient from old to recent years means a real
+      drift; a shapeless scatter means noise.</p>
+    </div>
+    <div class="stage">
+      <h3>Confirm against the raw text</h3>
+      <p>The distributional method <em>proposes</em> candidates. We confirm each one by
+      counting its construction directly in the corpus — the share of a word's uses that sit
+      in a given pattern, and how dense that pattern is per 1000 tokens.</p>
+    </div>
+  </div>
+
+  <div class="slot-legend">
+    <span class="chip parent">parent</span>
+    <span class="chip prev">previous</span>
+    <span class="chip next">following</span>
+    <span class="chip child">child</span>
+    <span class="chip self">X · the word itself (excluded)</span>
+  </div>
+  <p style="margin-top:22px"><a href="explorer.html">Explore the words →</a></p>
+</main>
+
+<footer>Distributional study of POS overlap · UD_French · board minutes 1984–2018</footer>
+</body>
+</html>

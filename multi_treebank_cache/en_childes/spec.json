@@ -1,0 +1,13 @@
+{
+  "name": "en_childes",
+  "language": "English",
+  "ud_lang": "en",
+  "ud_package": "childes",
+  "path": "/Users/madalina/Documents/PHD/code/data/ud-treebanks-v2.17/UD_English-CHILDES",
+  "train_file": "en_childes-ud-train.conllu",
+  "test_file": "en_childes-ud-test.conllu",
+  "stanza_lang": "en",
+  "n_train": 221030,
+  "n_test": 57400,
+  "n_tokens": 278430
+}
